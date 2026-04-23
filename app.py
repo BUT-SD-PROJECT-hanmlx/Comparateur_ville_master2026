@@ -16,7 +16,7 @@ st.set_page_config(
     page_title="Comparateur de Villes Françaises",
     page_icon="",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="expanded"
 )
 
 # Logo in sidebar
@@ -225,7 +225,7 @@ st.markdown("""
     .footer { text-align: center; color: #bbb; font-size: 0.75rem; margin-top: 24px; }
 
     /* hide default elements */
-    #MainMenu, footer, header { visibility: hidden; }
+    #MainMenu, footer { visibility: hidden; }
     .stDeployButton { display: none; }
 </style>
 """, unsafe_allow_html=True)
@@ -687,28 +687,34 @@ _SECTEUR_SHORT = {
     "Activités immobilières": "Immobilier",
     "Activités spécialisées, scientifiques et techniques et activités de services administratifs et de soutien": "Services techn./admin.",
     "Administration publique, enseignement, santé humaine et action sociale": "Admin./Enseig./Santé",
-    "Autres activités de services": "Autres services",
+    "Autres activités de services": "Services divers",
 }
 
 def build_pie_data(secteurs_dict, top_n=4):
-    """Construit les donnees pour un camembert: top N secteurs + Autres.
+    """Construit les donnees pour un camembert: top N secteurs + Autres secteurs.
+    "Autres activites de services" est toujours fusionne dans "Autres secteurs".
     Retourne (labels, values) ou (None, None) si pas de donnees.
     """
     if not secteurs_dict:
         return None, None
+    # Toujours fusionner "Autres activites de services" dans les restes
+    AUTRES_KEY = "Autres activités de services"
     sorted_items = sorted(secteurs_dict.items(), key=lambda x: x[1], reverse=True)
     labels = []
     values = []
     autres = 0
     for i, (name, val) in enumerate(sorted_items):
+        if name == AUTRES_KEY:
+            autres += val
+            continue
         short = _SECTEUR_SHORT.get(name, name[:20])
-        if i < top_n:
+        if len(labels) < top_n:
             labels.append(short)
             values.append(val)
         else:
             autres += val
     if autres > 0:
-        labels.append("Autres")
+        labels.append("Autres secteurs")
         values.append(autres)
     return labels, values
 
@@ -1097,7 +1103,7 @@ def main():
     # TABS
     # ========================================================================
     st.markdown("")
-    tabs = st.tabs(["Vision globale", "Scores", "Culture & Loisirs", "Meteo"])
+    tabs = st.tabs(["Vision globale", "Qualite de vie", "Scores", "Meteo"])
 
     # ========================================================================
     # TAB 1: VISION GLOBALE
@@ -1251,51 +1257,9 @@ def main():
                     )
                     st.plotly_chart(fig2, use_container_width=True)
 
-        # ======================================================================
-        # SECTION 3: Cadre de vie
-        # ======================================================================
-        st.markdown('<p class="sec-label">Cadre de vie</p>', unsafe_allow_html=True)
-        r4c1, r4c2 = st.columns(2)
-        if ens1:
-            sol1_pct = round(ens1 / 8760 * 100, 1)
-            sol1 = f"{sol1_pct}%"
-            sol1_sub = f"{ens1}h/an (moy. 2020-2024)"
-        else:
-            sol1 = "N/A"
-            sol1_sub = ""
-        if ens2:
-            sol2_pct = round(ens2 / 8760 * 100, 1)
-            sol2 = f"{sol2_pct}%"
-            sol2_sub = f"{ens2}h/an (moy. 2020-2024)"
-        else:
-            sol2 = "N/A"
-            sol2_sub = ""
-        # AQI
-        aqi1_val = d1.get("aqi_moyen")
-        aqi2_val = d2.get("aqi_moyen")
-        aqi1_str = str(aqi1_val) if aqi1_val is not None else "N/A"
-        aqi1_sub = aqi_label(aqi1_val) + " (moy. 2023-2024)" if aqi1_val is not None else "Source a venir"
-        aqi2_str = str(aqi2_val) if aqi2_val is not None else "N/A"
-        aqi2_sub = aqi_label(aqi2_val) + " (moy. 2023-2024)" if aqi2_val is not None else "Source a venir"
-        with r4c1:
-            st.markdown(ind_card_combo(
-                '<i class="fas fa-sun"></i>', f"Ensoleillement — {sel1}",
-                sol1, sol1_sub,
-                '<i class="fas fa-wind"></i>', f"Qualite air — {sel1}",
-                aqi1_str, aqi1_sub,
-                variant=""
-            ), unsafe_allow_html=True)
-        with r4c2:
-            st.markdown(ind_card_combo(
-                '<i class="fas fa-sun"></i>', f"Ensoleillement — {sel2}",
-                sol2, sol2_sub,
-                '<i class="fas fa-wind"></i>', f"Qualite air — {sel2}",
-                aqi2_str, aqi2_sub,
-                variant="v2"
-            ), unsafe_allow_html=True)
 
         # ======================================================================
-        # SECTION 4: Logement
+        # SECTION 3: Logement
         # ======================================================================
         st.markdown('<p class="sec-label">Logement</p>', unsafe_allow_html=True)
         r4c1, r4c2 = st.columns(2)
@@ -1326,25 +1290,68 @@ def main():
                 variant="v2"
             ), unsafe_allow_html=True)
 
-        # ======================================================================
-        # SECTION 5: Securite
-        # ======================================================================
+
+    # ========================================================================
+    # TAB 2: QUALITE DE VIE
+    # ========================================================================
+    with tabs[1]:
+        # Section: Ensoleillement & Qualite de l'air
+        st.markdown('<p class="sec-label">Ensoleillement &amp; Qualite de l\'air</p>', unsafe_allow_html=True)
+        qv1c1, qv1c2 = st.columns(2)
+        if ens1:
+            sol1_pct = round(ens1 / 8760 * 100, 1)
+            sol1 = f"{sol1_pct}%"
+            sol1_sub = f"{ens1}h/an (moy. 2020-2024)"
+        else:
+            sol1 = "N/A"
+            sol1_sub = ""
+        if ens2:
+            sol2_pct = round(ens2 / 8760 * 100, 1)
+            sol2 = f"{sol2_pct}%"
+            sol2_sub = f"{ens2}h/an (moy. 2020-2024)"
+        else:
+            sol2 = "N/A"
+            sol2_sub = ""
+        aqi1_val = d1.get("aqi_moyen")
+        aqi2_val = d2.get("aqi_moyen")
+        aqi1_str = str(aqi1_val) if aqi1_val is not None else "N/A"
+        aqi1_sub = aqi_label(aqi1_val) + " (moy. 2023-2024)" if aqi1_val is not None else "Source a venir"
+        aqi2_str = str(aqi2_val) if aqi2_val is not None else "N/A"
+        aqi2_sub = aqi_label(aqi2_val) + " (moy. 2023-2024)" if aqi2_val is not None else "Source a venir"
+        with qv1c1:
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-sun"></i>', f"Ensoleillement — {sel1}",
+                sol1, sol1_sub,
+                '<i class="fas fa-wind"></i>', f"Qualite air — {sel1}",
+                aqi1_str, aqi1_sub,
+                variant=""
+            ), unsafe_allow_html=True)
+        with qv1c2:
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-sun"></i>', f"Ensoleillement — {sel2}",
+                sol2, sol2_sub,
+                '<i class="fas fa-wind"></i>', f"Qualite air — {sel2}",
+                aqi2_str, aqi2_sub,
+                variant="v2"
+            ), unsafe_allow_html=True)
+
+        # Section: Securite
         st.markdown('<p class="sec-label">Securite</p>', unsafe_allow_html=True)
-        r5c1, r5c2 = st.columns(2)
+        qv2c1, qv2c2 = st.columns(2)
         sec1_val = d1.get("score_securite")
         sec2_val = d2.get("score_securite")
         sec1_str = f"{sec1_val}/100" if sec1_val is not None else "N/A"
         sec1_sub = "Score 2025" if sec1_val is not None else "Source a venir"
         sec2_str = f"{sec2_val}/100" if sec2_val is not None else "N/A"
         sec2_sub = "Score 2025" if sec2_val is not None else "Source a venir"
-        with r5c1:
+        with qv2c1:
             st.markdown(ind_card(
                 f"Securite — {sel1}",
                 sec1_str, sec1_sub,
                 icon='<i class="fas fa-shield-halved"></i>',
                 variant=""
             ), unsafe_allow_html=True)
-        with r5c2:
+        with qv2c2:
             st.markdown(ind_card(
                 f"Securite — {sel2}",
                 sec2_str, sec2_sub,
@@ -1352,10 +1359,112 @@ def main():
                 variant="v2"
             ), unsafe_allow_html=True)
 
+        # Section: Lieux culturels
+        st.markdown('<p class="sec-label">Lieux culturels</p>', unsafe_allow_html=True)
+        # Row 1: Nombre de lieux
+        nb1_str = str(d1.get("nb_lieux_culturels", "N/A")) if d1.get("nb_lieux_culturels") is not None else "N/A"
+        nb2_str = str(d2.get("nb_lieux_culturels", "N/A")) if d2.get("nb_lieux_culturels") is not None else "N/A"
+        cc1, cc2 = st.columns(2)
+        with cc1:
+            st.markdown(ind_card(
+                f"Nb lieux — {sel1}",
+                nb1_str, "Lieux culturels recenses",
+                icon='<i class="fas fa-landmark"></i>',
+                variant=""
+            ), unsafe_allow_html=True)
+        with cc2:
+            st.markdown(ind_card(
+                f"Nb lieux — {sel2}",
+                nb2_str, "Lieux culturels recenses",
+                icon='<i class="fas fa-landmark"></i>',
+                variant="v2"
+            ), unsafe_allow_html=True)
+        # Row 2: Densite culturelle (lieux/1000 hab)
+        den1 = d1.get("densite_culturelle")
+        den2 = d2.get("densite_culturelle")
+        den1_str = f"{den1}" if den1 is not None else "N/A"
+        den1_sub = "Lieux / 1 000 hab." if den1 is not None else "Source a venir"
+        den2_str = f"{den2}" if den2 is not None else "N/A"
+        den2_sub = "Lieux / 1 000 hab." if den2 is not None else "Source a venir"
+        cc3, cc4 = st.columns(2)
+        with cc3:
+            st.markdown(ind_card(
+                f"Densite culturelle — {sel1}",
+                den1_str, den1_sub,
+                icon='<i class="fas fa-chart-bar"></i>',
+                variant=""
+            ), unsafe_allow_html=True)
+        with cc4:
+            st.markdown(ind_card(
+                f"Densite culturelle — {sel2}",
+                den2_str, den2_sub,
+                icon='<i class="fas fa-chart-bar"></i>',
+                variant="v2"
+            ), unsafe_allow_html=True)
+
+        # Section: Restaurants & Bars
+        st.markdown('<p class="sec-label">Restaurants &amp; Bars</p>', unsafe_allow_html=True)
+        # Row 1: Restaurants + Bars (combo)
+        rest1 = d1.get("nb_restaurants")
+        rest2 = d2.get("nb_restaurants")
+        bars1 = d1.get("nb_bars")
+        bars2 = d2.get("nb_bars")
+        rest1_str = str(rest1) if rest1 is not None else "N/A"
+        rest2_str = str(rest2) if rest2 is not None else "N/A"
+        bars1_str = str(bars1) if bars1 is not None else "N/A"
+        bars2_str = str(bars2) if bars2 is not None else "N/A"
+        rc1, rc2 = st.columns(2)
+        with rc1:
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-utensils"></i>', f"Restaurants — {sel1}",
+                rest1_str, "Etablissements recenses",
+                '<i class="fas fa-wine-glass"></i>', f"Bars — {sel1}",
+                bars1_str, "Etablissements recenses",
+                variant=""
+            ), unsafe_allow_html=True)
+        with rc2:
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-utensils"></i>', f"Restaurants — {sel2}",
+                rest2_str, "Etablissements recenses",
+                '<i class="fas fa-wine-glass"></i>', f"Bars — {sel2}",
+                bars2_str, "Etablissements recenses",
+                variant="v2"
+            ), unsafe_allow_html=True)
+        # Row 2: Densite restaurants & bars (/1000 hab)
+        dr1 = d1.get("rest_par_1000")
+        dr2 = d2.get("rest_par_1000")
+        db1 = d1.get("bars_par_1000")
+        db2 = d2.get("bars_par_1000")
+        dr1_str = f"{dr1}" if dr1 is not None else "N/A"
+        dr2_str = f"{dr2}" if dr2 is not None else "N/A"
+        db1_str = f"{db1}" if db1 is not None else "N/A"
+        db2_str = f"{db2}" if db2 is not None else "N/A"
+        dr1_sub = "Rest. / 1 000 hab." if dr1 is not None else "Source a venir"
+        dr2_sub = "Rest. / 1 000 hab." if dr2 is not None else "Source a venir"
+        db1_sub = "Bars / 1 000 hab." if db1 is not None else "Source a venir"
+        db2_sub = "Bars / 1 000 hab." if db2 is not None else "Source a venir"
+        rc3, rc4 = st.columns(2)
+        with rc3:
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-utensils"></i>', f"Densite rest. — {sel1}",
+                dr1_str, dr1_sub,
+                '<i class="fas fa-wine-glass"></i>', f"Densite bars — {sel1}",
+                db1_str, db1_sub,
+                variant=""
+            ), unsafe_allow_html=True)
+        with rc4:
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-utensils"></i>', f"Densite rest. — {sel2}",
+                dr2_str, dr2_sub,
+                '<i class="fas fa-wine-glass"></i>', f"Densite bars — {sel2}",
+                db2_str, db2_sub,
+                variant="v2"
+            ), unsafe_allow_html=True)
+
     # ========================================================================
-    # TAB 2: SCORES
+    # TAB 3: SCORES
     # ========================================================================
-    with tabs[1]:
+    with tabs[2]:
         # Calcul des scores KPI pour les deux villes selectionnees
         # Donnees necessaires : charger toutes les villes pour normalisation min-max
         all_etudiants = load_etudiants_data()
@@ -1514,111 +1623,6 @@ def main():
                    "Loyer, AQI et chomage sont inverses (valeur basse = meilleur score). "
                    "Score global = moyenne equiponderee des indicateurs disponibles.")
 
-    # ========================================================================
-    # TAB 3: CULTURE & LOISIRS
-    # ========================================================================
-    with tabs[2]:
-        # Section: Lieux culturels
-        st.markdown('<p class="sec-label">Lieux culturels</p>', unsafe_allow_html=True)
-        # Row 1: Nombre de lieux
-        nb1_str = str(d1.get("nb_lieux_culturels", "N/A")) if d1.get("nb_lieux_culturels") is not None else "N/A"
-        nb2_str = str(d2.get("nb_lieux_culturels", "N/A")) if d2.get("nb_lieux_culturels") is not None else "N/A"
-        cc1, cc2 = st.columns(2)
-        with cc1:
-            st.markdown(ind_card(
-                f"Nb lieux — {sel1}",
-                nb1_str, "Lieux culturels recenses",
-                icon='<i class="fas fa-landmark"></i>',
-                variant=""
-            ), unsafe_allow_html=True)
-        with cc2:
-            st.markdown(ind_card(
-                f"Nb lieux — {sel2}",
-                nb2_str, "Lieux culturels recenses",
-                icon='<i class="fas fa-landmark"></i>',
-                variant="v2"
-            ), unsafe_allow_html=True)
-        # Row 2: Densite culturelle (lieux/1000 hab)
-        den1 = d1.get("densite_culturelle")
-        den2 = d2.get("densite_culturelle")
-        den1_str = f"{den1}" if den1 is not None else "N/A"
-        den1_sub = "Lieux / 1 000 hab." if den1 is not None else "Source a venir"
-        den2_str = f"{den2}" if den2 is not None else "N/A"
-        den2_sub = "Lieux / 1 000 hab." if den2 is not None else "Source a venir"
-        cc3, cc4 = st.columns(2)
-        with cc3:
-            st.markdown(ind_card(
-                f"Densite culturelle — {sel1}",
-                den1_str, den1_sub,
-                icon='<i class="fas fa-chart-bar"></i>',
-                variant=""
-            ), unsafe_allow_html=True)
-        with cc4:
-            st.markdown(ind_card(
-                f"Densite culturelle — {sel2}",
-                den2_str, den2_sub,
-                icon='<i class="fas fa-chart-bar"></i>',
-                variant="v2"
-            ), unsafe_allow_html=True)
-
-        # Section: Restaurants & Bars
-        st.markdown('<p class="sec-label">Restaurants & Bars</p>', unsafe_allow_html=True)
-        # Row 1: Restaurants + Bars (combo)
-        rest1 = d1.get("nb_restaurants")
-        rest2 = d2.get("nb_restaurants")
-        bars1 = d1.get("nb_bars")
-        bars2 = d2.get("nb_bars")
-        rest1_str = str(rest1) if rest1 is not None else "N/A"
-        rest2_str = str(rest2) if rest2 is not None else "N/A"
-        bars1_str = str(bars1) if bars1 is not None else "N/A"
-        bars2_str = str(bars2) if bars2 is not None else "N/A"
-        rc1, rc2 = st.columns(2)
-        with rc1:
-            st.markdown(ind_card_combo(
-                '<i class="fas fa-utensils"></i>', f"Restaurants — {sel1}",
-                rest1_str, "Etablissements recenses",
-                '<i class="fas fa-wine-glass"></i>', f"Bars — {sel1}",
-                bars1_str, "Etablissements recenses",
-                variant=""
-            ), unsafe_allow_html=True)
-        with rc2:
-            st.markdown(ind_card_combo(
-                '<i class="fas fa-utensils"></i>', f"Restaurants — {sel2}",
-                rest2_str, "Etablissements recenses",
-                '<i class="fas fa-wine-glass"></i>', f"Bars — {sel2}",
-                bars2_str, "Etablissements recenses",
-                variant="v2"
-            ), unsafe_allow_html=True)
-        # Row 2: Densite restaurants & bars (/1000 hab)
-        dr1 = d1.get("rest_par_1000")
-        dr2 = d2.get("rest_par_1000")
-        db1 = d1.get("bars_par_1000")
-        db2 = d2.get("bars_par_1000")
-        dr1_str = f"{dr1}" if dr1 is not None else "N/A"
-        dr2_str = f"{dr2}" if dr2 is not None else "N/A"
-        db1_str = f"{db1}" if db1 is not None else "N/A"
-        db2_str = f"{db2}" if db2 is not None else "N/A"
-        dr1_sub = "Rest. / 1 000 hab." if dr1 is not None else "Source a venir"
-        dr2_sub = "Rest. / 1 000 hab." if dr2 is not None else "Source a venir"
-        db1_sub = "Bars / 1 000 hab." if db1 is not None else "Source a venir"
-        db2_sub = "Bars / 1 000 hab." if db2 is not None else "Source a venir"
-        rc3, rc4 = st.columns(2)
-        with rc3:
-            st.markdown(ind_card_combo(
-                '<i class="fas fa-utensils"></i>', f"Densite rest. — {sel1}",
-                dr1_str, dr1_sub,
-                '<i class="fas fa-wine-glass"></i>', f"Densite bars — {sel1}",
-                db1_str, db1_sub,
-                variant=""
-            ), unsafe_allow_html=True)
-        with rc4:
-            st.markdown(ind_card_combo(
-                '<i class="fas fa-utensils"></i>', f"Densite rest. — {sel2}",
-                dr2_str, dr2_sub,
-                '<i class="fas fa-wine-glass"></i>', f"Densite bars — {sel2}",
-                db2_str, db2_sub,
-                variant="v2"
-            ), unsafe_allow_html=True)
 
     # ========================================================================
     # TAB 4: METEO
