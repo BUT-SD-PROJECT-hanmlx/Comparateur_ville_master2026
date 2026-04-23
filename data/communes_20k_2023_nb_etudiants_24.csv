@@ -1,0 +1,484 @@
+Code région;Nom de la région;Code département;Code commune_x;Nom de la commune;Population municipale;Code postal;Nom du département;Code commune_y;Commune;nb_etudiants_total;nb_etudiants_masculin;nb_etudiants_feminin;taux_etudiants
+93;Provence-Alpes-Côte d'Azur;13;55;Marseille;886040;13055;Bouches-du-Rhône;13055;Marseille;60574.0;27339.0;33235.0;0.07
+84;Auvergne-Rhône-Alpes;69;55;Lyon;519127;69123;Rhône;69123;Lyon;122008.0;45236.0;76772.0;0.24
+11;Île-de-France;75;55;Paris;2103778;75056;Paris;75056;Paris;409323.0;162533.0;246790.0;0.19
+76;Occitanie;31;555;Toulouse;514819;31555;Haute-Garonne;31555;Toulouse;114133.0;48666.0;65467.0;0.22
+93;Provence-Alpes-Côte d'Azur;06;88;Nice;357737;06088;Alpes-Maritimes;06088;Nice;40668.0;17038.0;23630.0;0.11
+52;Pays de la Loire;44;109;Nantes;327734;44109;Loire-Atlantique;44109;Nantes;58193.0;25434.0;32759.0;0.18
+76;Occitanie;34;172;Montpellier;310240;34172;Hérault;34172;Montpellier;84026.0;34238.0;49788.0;0.27
+44;Grand Est;67;482;Strasbourg;293771;67482;Bas-Rhin;67482;Strasbourg;63198.0;26342.0;36856.0;0.22
+75;Nouvelle-Aquitaine;33;63;Bordeaux;267991;33063;Gironde;33063;Bordeaux;44593.0;17237.0;27356.0;0.17
+32;Hauts-de-France;59;350;Lille;238246;59350;Nord;59350;Lille;60247.0;26573.0;33674.0;0.25
+53;Bretagne;35;238;Rennes;230890;35238;Ille-et-Vilaine;35238;Rennes;71389.0;29434.0;41955.0;0.31
+93;Provence-Alpes-Côte d'Azur;83;137;Toulon;179116;83137;Var;83137;Toulon;6163.0;2783.0;3380.0;0.03
+44;Grand Est;51;454;Reims;177674;51454;Marne;51454;Reims;30880.0;13969.0;16911.0;0.17
+84;Auvergne-Rhône-Alpes;42;218;Saint-Étienne;173136;42218;Loire;42218;Saint-Étienne;22867.0;10920.0;11947.0;0.13
+28;Normandie;76;351;Le Havre;166687;76351;Seine-Maritime;76351;Le Havre;11820.0;5790.0;6030.0;0.07
+84;Auvergne-Rhône-Alpes;69;266;Villeurbanne;163684;69266;Rhône;69266;Villeurbanne;30808.0;18496.0;12312.0;0.19
+27;Bourgogne-Franche-Comté;21;231;Dijon;161830;21231;Côte-d'Or;21231;Dijon;37299.0;15568.0;21731.0;0.23
+52;Pays de la Loire;49;7;Angers;159022;49007;Maine-et-Loire;49007;Angers;46814.0;18303.0;28511.0;0.29
+84;Auvergne-Rhône-Alpes;38;185;Grenoble;156140;38185;Isère;38185;Grenoble;17872.0;8934.0;8938.0;0.11
+4;La Réunion;974;411;Saint-Denis;155634;974411;La Réunion;;;;;;
+76;Occitanie;30;189;Nîmes;151839;30189;Gard;30189;Nîmes;13925.0;5721.0;8204.0;0.09
+93;Provence-Alpes-Côte d'Azur;13;1;Aix-en-Provence;149695;13001;Bouches-du-Rhône;13001;Aix-en-Provence;41033.0;15432.0;25601.0;0.27
+11;Île-de-France;93;66;Saint-Denis;149077;93066;Seine-Saint-Denis;93066;Saint-Denis;25808.0;9517.0;16291.0;0.17
+84;Auvergne-Rhône-Alpes;63;113;Clermont-Ferrand;146351;63113;Puy-de-Dôme;63113;Clermont-Ferrand;29476.0;11278.0;18198.0;0.2
+52;Pays de la Loire;72;181;Le Mans;146249;72181;Sarthe;72181;Le Mans;15152.0;7808.0;7344.0;0.1
+53;Bretagne;29;19;Brest;142346;29019;Finistère;29019;Brest;27275.0;12070.0;15205.0;0.19
+24;Centre-Val de Loire;37;261;Tours;139259;37261;Indre-et-Loire;37261;Tours;33753.0;13441.0;20312.0;0.24
+32;Hauts-de-France;80;21;Amiens;136449;80021;Somme;80021;Amiens;30794.0;13546.0;17248.0;0.23
+84;Auvergne-Rhône-Alpes;74;10;Annecy;132117;74010;Haute-Savoie;74010;Annecy;8455.0;4459.0;3996.0;0.06
+75;Nouvelle-Aquitaine;87;85;Limoges;129937;87085;Haute-Vienne;87085;Limoges;19914.0;9111.0;10803.0;0.15
+44;Grand Est;57;463;Metz;122572;57463;Moselle;57463;Metz;21595.0;10422.0;11173.0;0.18
+76;Occitanie;66;136;Perpignan;121616;66136;Pyrénées-Orientales;66136;Perpignan;9502.0;4075.0;5427.0;0.08
+11;Île-de-France;92;12;Boulogne-Billancourt;119019;92012;Hauts-de-Seine;92012;Boulogne-Billancourt;7110.0;2437.0;4673.0;0.06
+27;Bourgogne-Franche-Comté;25;56;Besançon;118489;25056;Doubs;25056;Besançon;24506.0;10684.0;13822.0;0.21
+28;Normandie;76;540;Rouen;117662;76540;Seine-Maritime;76540;Rouen;16864.0;6027.0;10837.0;0.14
+24;Centre-Val de Loire;45;234;Orléans;116357;45234;Loiret;45234;Orléans;20084.0;10077.0;10007.0;0.17
+11;Île-de-France;93;48;Montreuil;111934;93048;Seine-Saint-Denis;93048;Montreuil;2750.0;1480.0;1270.0;0.02
+28;Normandie;14;118;Caen;109400;14118;Calvados;14118;Caen;37864.0;15519.0;22345.0;0.35
+4;La Réunion;974;415;Saint-Paul;108088;974415;La Réunion;;;;;;
+11;Île-de-France;95;18;Argenteuil;106130;95018;Val-d'Oise;95018;Argenteuil;1704.0;1085.0;619.0;0.02
+44;Grand Est;68;224;Mulhouse;104978;68224;Haut-Rhin;68224;Mulhouse;11062.0;4658.0;6404.0;0.11
+44;Grand Est;54;395;Nancy;103671;54395;Meurthe-et-Moselle;54395;Nancy;30709.0;12691.0;18018.0;0.3
+32;Hauts-de-France;59;599;Tourcoing;98772;59599;Nord;59599;Tourcoing;3058.0;1177.0;1881.0;0.03
+32;Hauts-de-France;59;512;Roubaix;98286;59512;Nord;59512;Roubaix;13195.0;5491.0;7704.0;0.13
+11;Île-de-France;92;50;Nanterre;97783;92050;Hauts-de-Seine;92050;Nanterre;40035.0;15091.0;24944.0;0.41
+11;Île-de-France;94;81;Vitry-sur-Seine;93963;94081;Val-de-Marne;94081;Vitry-sur-Seine;1143.0;689.0;454.0;0.01
+11;Île-de-France;92;4;Asnières-sur-Seine;93941;92004;Hauts-de-Seine;92004;Asnières-sur-Seine;266.0;104.0;162.0;0.0
+11;Île-de-France;94;28;Créteil;93397;94028;Val-de-Marne;94028;Créteil;30204.0;11009.0;19195.0;0.32
+93;Provence-Alpes-Côte d'Azur;84;7;Avignon;92188;84007;Vaucluse;84007;Avignon;10618.0;4486.0;6132.0;0.12
+11;Île-de-France;92;25;Colombes;91053;92025;Hauts-de-Seine;92025;Colombes;586.0;170.0;416.0;0.01
+75;Nouvelle-Aquitaine;86;194;Poitiers;89916;86194;Vienne;86194;Poitiers;28824.0;11769.0;17055.0;0.32
+11;Île-de-France;93;1;Aubervilliers;88365;93001;Seine-Saint-Denis;93001;Aubervilliers;1633.0;540.0;1093.0;0.02
+11;Île-de-France;93;5;Aulnay-sous-Bois;87599;93005;Seine-Saint-Denis;93005;Aulnay-sous-Bois;1122.0;544.0;578.0;0.01
+32;Hauts-de-France;59;183;Dunkerque;86263;59183;Nord;59183;Dunkerque;5002.0;2433.0;2569.0;0.06
+4;La Réunion;974;416;Saint-Pierre;85038;974416;La Réunion;;;;;;
+11;Île-de-France;78;646;Versailles;84095;78646;Yvelines;78646;Versailles;10875.0;5844.0;5031.0;0.13
+11;Île-de-France;92;26;Courbevoie;82902;92026;Hauts-de-Seine;92026;Courbevoie;13607.0;8224.0;5383.0;0.16
+11;Île-de-France;92;63;Rueil-Malmaison;82874;92063;Hauts-de-Seine;92063;Rueil-Malmaison;1007.0;527.0;480.0;0.01
+4;La Réunion;974;422;Le Tampon;82579;974422;La Réunion;;;;;;
+76;Occitanie;34;32;Béziers;81545;34032;Hérault;34032;Béziers;2602.0;1123.0;1479.0;0.03
+75;Nouvelle-Aquitaine;64;445;Pau;80441;64445;Pyrénées-Atlantiques;64445;Pau;11859.0;5250.0;6609.0;0.15
+75;Nouvelle-Aquitaine;17;300;La Rochelle;79851;17300;Charente-Maritime;17300;La Rochelle;13984.0;6833.0;7151.0;0.18
+28;Normandie;50;129;Cherbourg-en-Cotentin;78258;50129;Manche;50129;Cherbourg-en-Cotentin;2015.0;1133.0;882.0;0.03
+75;Nouvelle-Aquitaine;33;281;Mérignac;78090;33281;Gironde;33281;Mérignac;1577.0;542.0;1035.0;0.02
+11;Île-de-France;94;17;Champigny-sur-Marne;78072;94017;Val-de-Marne;94017;Champigny-sur-Marne;267.0;200.0;67.0;0.0
+93;Provence-Alpes-Côte d'Azur;06;4;Antibes;77637;06004;Alpes-Maritimes;06004;Antibes;886.0;561.0;325.0;0.01
+11;Île-de-France;94;68;Saint-Maur-des-Fossés;76572;94068;Val-de-Marne;94068;Saint-Maur-des-Fossés;1907.0;1104.0;803.0;0.02
+94;Corse;2A;4;Ajaccio;76320;2A004;Corse-du-Sud;2A004;Ajaccio;627.0;279.0;348.0;0.01
+2;Martinique;972;209;Fort-de-France;75506;972209;Martinique;;;;;;
+52;Pays de la Loire;44;184;Saint-Nazaire;74568;44184;Loire-Atlantique;44184;Saint-Nazaire;3452.0;2261.0;1191.0;0.05
+93;Provence-Alpes-Côte d'Azur;06;29;Cannes;74350;06029;Alpes-Maritimes;06029;Cannes;2950.0;1083.0;1867.0;0.04
+11;Île-de-France;93;51;Noisy-le-Grand;72978;93051;Seine-Saint-Denis;93051;Noisy-le-Grand;2548.0;1978.0;570.0;0.03
+11;Île-de-France;93;29;Drancy;72390;93029;Seine-Saint-Denis;93029;Drancy;236.0;123.0;113.0;0.0
+11;Île-de-France;95;127;Cergy;70906;95127;Val-d'Oise;95127;Cergy;22223.0;10433.0;11790.0;0.31
+11;Île-de-France;92;44;Levallois-Perret;68092;92044;Hauts-de-Seine;92044;Levallois-Perret;2478.0;1169.0;1309.0;0.04
+11;Île-de-France;92;40;Issy-les-Moulineaux;67669;92040;Hauts-de-Seine;92040;Issy-les-Moulineaux;2280.0;1040.0;1240.0;0.03
+32;Hauts-de-France;62;193;Calais;67571;62193;Pas-de-Calais;62193;Calais;3752.0;2158.0;1594.0;0.06
+75;Nouvelle-Aquitaine;33;318;Pessac;67339;33318;Gironde;33318;Pessac;28770.0;10355.0;18415.0;0.43
+44;Grand Est;68;66;Colmar;66970;68066;Haut-Rhin;68066;Colmar;3382.0;1558.0;1824.0;0.05
+11;Île-de-France;91;228;Évry-Courcouronnes;66919;91228;Essonne;91228;Évry-Courcouronnes;15240.0;7950.0;7290.0;0.23
+84;Auvergne-Rhône-Alpes;69;259;Vénissieux;65502;69259;Rhône;69259;Vénissieux;450.0;316.0;134.0;0.01
+11;Île-de-France;94;41;Ivry-sur-Seine;65064;94041;Val-de-Marne;94041;Ivry-sur-Seine;6453.0;4479.0;1974.0;0.1
+84;Auvergne-Rhône-Alpes;26;362;Valence;64458;26362;Drôme;26362;Valence;7364.0;3620.0;3744.0;0.11
+11;Île-de-France;92;24;Clichy;64410;92024;Hauts-de-Seine;92024;Clichy;4062.0;2044.0;2018.0;0.06
+53;Bretagne;29;232;Quimper;64385;29232;Finistère;29232;Quimper;4842.0;1907.0;2935.0;0.08
+11;Île-de-France;92;2;Antony;64263;92002;Hauts-de-Seine;92002;Antony;999.0;448.0;551.0;0.02
+24;Centre-Val de Loire;18;33;Bourges;64186;18033;Cher;18033;Bourges;3913.0;1970.0;1943.0;0.06
+93;Provence-Alpes-Côte d'Azur;83;126;La Seyne-sur-Mer;63732;83126;Var;83126;La Seyne-sur-Mer;413.0;275.0;138.0;0.01
+76;Occitanie;82;121;Montauban;62945;82121;Tarn-et-Garonne;82121;Montauban;1952.0;714.0;1238.0;0.03
+32;Hauts-de-France;59;9;Villeneuve-d'Ascq;62868;59009;Nord;59009;Villeneuve-d'Ascq;41375.0;18572.0;22803.0;0.66
+3;Guyane;973;302;Cayenne;62675;973302;Guyane;;;;;;
+11;Île-de-France;93;7;Le Blanc-Mesnil;62376;93007;Seine-Saint-Denis;93007;Le Blanc-Mesnil;5.0;3.0;2.0;0.0
+44;Grand Est;10;387;Troyes;62088;10387;Aube;10387;Troyes;8687.0;4691.0;3996.0;0.14
+11;Île-de-France;93;55;Pantin;61929;93055;Seine-Saint-Denis;93055;Pantin;267.0;90.0;177.0;0.0
+11;Île-de-France;94;76;Villejuif;60183;94076;Val-de-Marne;94076;Villejuif;4610.0;2815.0;1795.0;0.08
+84;Auvergne-Rhône-Alpes;73;65;Chambéry;59964;73065;Savoie;73065;Chambéry;7031.0;2274.0;4757.0;0.12
+75;Nouvelle-Aquitaine;79;191;Niort;59854;79191;Deux-Sèvres;79191;Niort;2916.0;1250.0;1666.0;0.05
+93;Provence-Alpes-Côte d'Azur;83;61;Fréjus;59719;83061;Var;83061;Fréjus;281.0;116.0;165.0;0.0
+11;Île-de-France;92;51;Neuilly-sur-Seine;59538;92051;Hauts-de-Seine;92051;Neuilly-sur-Seine;2316.0;917.0;1399.0;0.04
+11;Île-de-France;95;585;Sarcelles;59173;95585;Val-d'Oise;95585;Sarcelles;1166.0;438.0;728.0;0.02
+4;La Réunion;974;409;Saint-André;58885;974409;La Réunion;;;;;;
+11;Île-de-France;92;23;Clamart;58576;92023;Hauts-de-Seine;92023;Clamart;391.0;78.0;313.0;0.01
+53;Bretagne;56;121;Lorient;58329;56121;Morbihan;56121;Lorient;7142.0;3633.0;3509.0;0.12
+76;Occitanie;11;262;Narbonne;57587;11262;Aude;11262;Narbonne;2194.0;780.0;1414.0;0.04
+11;Île-de-France;93;8;Bobigny;56927;93008;Seine-Saint-Denis;93008;Bobigny;8037.0;2925.0;5112.0;0.14
+11;Île-de-France;77;284;Meaux;56905;77284;Seine-et-Marne;77284;Meaux;1194.0;587.0;607.0;0.02
+11;Île-de-France;94;46;Maisons-Alfort;56799;94046;Val-de-Marne;94046;Maisons-Alfort;1131.0;336.0;795.0;0.02
+93;Provence-Alpes-Côte d'Azur;83;69;Hyères;55858;83069;Var;83069;Hyères;342.0;202.0;140.0;0.01
+53;Bretagne;56;260;Vannes;55790;56260;Morbihan;56260;Vannes;7655.0;4007.0;3648.0;0.14
+32;Hauts-de-France;60;57;Beauvais;55550;60057;Oise;60057;Beauvais;4850.0;2100.0;2750.0;0.09
+4;La Réunion;974;414;Saint-Louis;54941;974414;La Réunion;;;;;;
+52;Pays de la Loire;85;191;La Roche-sur-Yon;54849;85191;Vendée;85191;La Roche-sur-Yon;6673.0;3070.0;3603.0;0.12
+11;Île-de-France;77;108;Chelles;54620;77108;Seine-et-Marne;77108;Chelles;331.0;173.0;158.0;0.01
+11;Île-de-France;91;174;Corbeil-Essonnes;54471;91174;Essonne;91174;Corbeil-Essonnes;1215.0;513.0;702.0;0.02
+3;Guyane;973;311;Saint-Laurent-du-Maroni;54429;973311;Guyane;;;;;;
+52;Pays de la Loire;49;99;Cholet;54404;49099;Maine-et-Loire;49099;Cholet;2523.0;891.0;1632.0;0.05
+75;Nouvelle-Aquitaine;64;102;Bayonne;54306;64102;Pyrénées-Atlantiques;64102;Bayonne;4230.0;1718.0;2512.0;0.08
+11;Île-de-France;94;33;Fontenay-sous-Bois;53757;94033;Val-de-Marne;94033;Fontenay-sous-Bois;171.0;70.0;101.0;0.0
+11;Île-de-France;93;70;Saint-Ouen-sur-Seine;53615;93070;Seine-Saint-Denis;93070;Saint-Ouen-sur-Seine;1608.0;967.0;641.0;0.03
+93;Provence-Alpes-Côte d'Azur;06;27;Cagnes-sur-Mer;53354;06027;Alpes-Maritimes;06027;Cagnes-sur-Mer;142.0;59.0;83.0;0.0
+84;Auvergne-Rhône-Alpes;69;256;Vaulx-en-Velin;53069;69256;Rhône;69256;Vaulx-en-Velin;1778.0;815.0;963.0;0.03
+11;Île-de-France;93;31;Épinay-sur-Seine;52833;93031;Seine-Saint-Denis;93031;Épinay-sur-Seine;186.0;62.0;124.0;0.0
+32;Hauts-de-France;02;691;Saint-Quentin;52813;02691;Aisne;02691;Saint-Quentin;2212.0;1300.0;912.0;0.04
+11;Île-de-France;78;586;Sartrouville;52763;78586;Yvelines;78586;Sartrouville;222.0;101.0;121.0;0.0
+11;Île-de-France;93;71;Sevran;52535;93071;Seine-Saint-Denis;;;;;;
+93;Provence-Alpes-Côte d'Azur;13;4;Arles;51811;13004;Bouches-du-Rhône;13004;Arles;1507.0;627.0;880.0;0.03
+11;Île-de-France;91;377;Massy;51729;91377;Essonne;91377;Massy;1227.0;756.0;471.0;0.02
+76;Occitanie;81;4;Albi;51290;81004;Tarn;81004;Albi;6378.0;3087.0;3291.0;0.12
+1;Guadeloupe;971;101;Les Abymes;51055;971101;Guadeloupe;;;;;;
+11;Île-de-France;92;36;Gennevilliers;50979;92036;Hauts-de-Seine;92036;Gennevilliers;984.0;320.0;664.0;0.02
+52;Pays de la Loire;44;162;Saint-Herblain;50973;44162;Loire-Atlantique;44162;Saint-Herblain;2150.0;821.0;1329.0;0.04
+93;Provence-Alpes-Côte d'Azur;06;69;Grasse;50970;06069;Alpes-Maritimes;06069;Grasse;424.0;276.0;148.0;0.01
+11;Île-de-France;93;10;Bondy;50595;93010;Seine-Saint-Denis;93010;Bondy;243.0;81.0;162.0;0.0
+52;Pays de la Loire;85;194;Les Sables-d'Olonne;49603;85194;Vendée;85194;Les Sables-d'Olonne;303.0;128.0;175.0;0.01
+52;Pays de la Loire;53;130;Laval;49400;53130;Mayenne;53130;Laval;4337.0;2661.0;1676.0;0.09
+28;Normandie;27;229;Évreux;49360;27229;Eure;27229;Évreux;3469.0;1471.0;1998.0;0.07
+84;Auvergne-Rhône-Alpes;69;290;Saint-Priest;49229;69290;Rhône;69290;Saint-Priest;204.0;119.0;85.0;0.0
+11;Île-de-France;92;73;Suresnes;48956;92073;Hauts-de-Seine;92073;Suresnes;3605.0;1462.0;2143.0;0.07
+93;Provence-Alpes-Côte d'Azur;13;56;Martigues;48298;13056;Bouches-du-Rhône;13056;Martigues;549.0;187.0;362.0;0.01
+11;Île-de-France;94;80;Vincennes;48193;94080;Val-de-Marne;94080;Vincennes;2260.0;1181.0;1079.0;0.05
+93;Provence-Alpes-Côte d'Azur;13;5;Aubagne;47529;13005;Bouches-du-Rhône;13005;Aubagne;947.0;336.0;611.0;0.02
+53;Bretagne;35;288;Saint-Malo;47439;35288;Ille-et-Vilaine;35288;Saint-Malo;1651.0;908.0;743.0;0.03
+11;Île-de-France;93;46;Livry-Gargan;47228;93046;Seine-Saint-Denis;93046;Livry-Gargan;220.0;75.0;145.0;0.0
+24;Centre-Val de Loire;41;18;Blois;47219;41018;Loir-et-Cher;41018;Blois;2980.0;1705.0;1275.0;0.06
+11;Île-de-France;93;64;Rosny-sous-Bois;47180;93064;Seine-Saint-Denis;93064;Rosny-sous-Bois;79.0;40.0;39.0;0.0
+11;Île-de-France;93;27;La Courneuve;47167;93027;Seine-Saint-Denis;93027;La Courneuve;267.0;116.0;151.0;0.01
+75;Nouvelle-Aquitaine;19;31;Brive-la-Gaillarde;47095;19031;Corrèze;19031;Brive-la-Gaillarde;1576.0;781.0;795.0;0.03
+94;Corse;2B;33;Bastia;46867;2B033;Haute-Corse;2B033;Bastia;785.0;315.0;470.0;0.02
+75;Nouvelle-Aquitaine;33;522;Talence;46338;33522;Gironde;33522;Talence;24442.0;13401.0;11041.0;0.53
+11;Île-de-France;92;48;Meudon;46334;92048;Hauts-de-Seine;92048;Meudon;37.0;21.0;16.0;0.0
+11;Île-de-France;92;49;Montrouge;46324;92049;Hauts-de-Seine;92049;Montrouge;596.0;153.0;443.0;0.01
+76;Occitanie;30;7;Alès;46125;30007;Gard;30007;Alès;2054.0;1275.0;779.0;0.04
+76;Occitanie;11;69;Carcassonne;46080;11069;Aude;11069;Carcassonne;1640.0;713.0;927.0;0.04
+11;Île-de-France;77;288;Melun;45995;77288;Seine-et-Marne;77288;Melun;3806.0;1707.0;2099.0;0.08
+11;Île-de-France;94;22;Choisy-le-Roi;45946;94022;Val-de-Marne;94022;Choisy-le-Roi;29.0;26.0;3.0;0.0
+11;Île-de-France;78;551;Saint-Germain-en-Laye;45931;78551;Yvelines;78551;Saint-Germain-en-Laye;3767.0;1408.0;2359.0;0.08
+27;Bourgogne-Franche-Comté;90;10;Belfort;45912;90010;Territoire de Belfort;90010;Belfort;3784.0;2313.0;1471.0;0.08
+44;Grand Est;08;105;Charleville-Mézières;45560;08105;Ardennes;08105;Charleville-Mézières;1912.0;919.0;993.0;0.04
+11;Île-de-France;94;2;Alfortville;45531;94002;Val-de-Marne;94002;Alfortville;212.0;209.0;3.0;0.0
+11;Île-de-France;93;53;Noisy-le-Sec;45510;93053;Seine-Saint-Denis;93053;Noisy-le-Sec;137.0;72.0;65.0;0.0
+76;Occitanie;34;301;Sète;45337;34301;Hérault;34301;Sète;827.0;430.0;397.0;0.02
+27;Bourgogne-Franche-Comté;71;76;Chalon-sur-Saône;45102;71076;Saône-et-Loire;71076;Chalon-sur-Saône;1701.0;888.0;813.0;0.04
+11;Île-de-France;92;7;Bagneux;44572;92007;Hauts-de-Seine;92007;Bagneux;126.0;96.0;30.0;0.0
+76;Occitanie;65;440;Tarbes;44399;65440;Hautes-Pyrénées;65440;Tarbes;5350.0;3465.0;1885.0;0.12
+53;Bretagne;22;278;Saint-Brieuc;44364;22278;Côtes-d'Armor;22278;Saint-Brieuc;4056.0;1820.0;2236.0;0.09
+93;Provence-Alpes-Côte d'Azur;13;47;Istres;44292;13047;Bouches-du-Rhône;13047;Istres;376.0;318.0;58.0;0.01
+93;Provence-Alpes-Côte d'Azur;13;103;Salon-de-Provence;44194;13103;Bouches-du-Rhône;13103;Salon-de-Provence;1001.0;529.0;472.0;0.02
+11;Île-de-France;92;62;Puteaux;44002;92062;Hauts-de-Seine;92062;Puteaux;7016.0;3267.0;3749.0;0.16
+84;Auvergne-Rhône-Alpes;69;34;Caluire-et-Cuire;43597;69034;Rhône;69034;Caluire-et-Cuire;27.0;3.0;24.0;0.0
+52;Pays de la Loire;44;143;Rezé;43556;44143;Loire-Atlantique;44143;Rezé;1979.0;517.0;1462.0;0.05
+11;Île-de-France;78;361;Mantes-la-Jolie;43526;78361;Yvelines;78361;Mantes-la-Jolie;1179.0;599.0;580.0;0.03
+32;Hauts-de-France;59;606;Valenciennes;43468;59606;Nord;59606;Valenciennes;11090.0;5610.0;5480.0;0.26
+75;Nouvelle-Aquitaine;64;24;Anglet;43271;64024;Pyrénées-Atlantiques;64024;Anglet;2180.0;1375.0;805.0;0.05
+11;Île-de-France;93;6;Bagnolet;43086;93006;Seine-Saint-Denis;93006;Bagnolet;350.0;207.0;143.0;0.01
+84;Auvergne-Rhône-Alpes;69;29;Bron;42982;69029;Rhône;69029;Bron;13071.0;3872.0;9199.0;0.3
+44;Grand Est;51;108;Châlons-en-Champagne;42971;51108;Marne;51108;Châlons-en-Champagne;1955.0;947.0;1008.0;0.05
+24;Centre-Val de Loire;36;44;Châteauroux;42963;36044;Indre;36044;Châteauroux;1888.0;872.0;1016.0;0.04
+32;Hauts-de-France;62;41;Arras;42875;62041;Pas-de-Calais;62041;Arras;8640.0;3571.0;5069.0;0.2
+44;Grand Est;57;672;Thionville;42658;57672;Moselle;57672;Thionville;674.0;264.0;410.0;0.02
+75;Nouvelle-Aquitaine;33;550;Villenave-d'Ornon;42545;33550;Gironde;33550;Villenave-d'Ornon;511.0;243.0;268.0;0.01
+76;Occitanie;81;65;Castres;42505;81065;Tarn;81065;Castres;1723.0;801.0;922.0;0.04
+84;Auvergne-Rhône-Alpes;01;53;Bourg-en-Bresse;42372;01053;Ain;01053;Bourg-en-Bresse;2761.0;1003.0;1758.0;0.07
+11;Île-de-France;93;32;Gagny;42313;93032;Seine-Saint-Denis;93032;Gagny;177.0;117.0;60.0;0.0
+93;Provence-Alpes-Côte d'Azur;06;30;Le Cannet;41938;06030;Alpes-Maritimes;;;;;;
+75;Nouvelle-Aquitaine;16;15;Angoulême;41908;16015;Charente;16015;Angoulême;2270.0;1215.0;1055.0;0.05
+11;Île-de-France;95;268;Garges-lès-Gonesse;41791;95268;Val-d'Oise;95268;Garges-lès-Gonesse;50.0;50.0;0.0;0.0
+11;Île-de-France;93;78;Villepinte;41470;93078;Seine-Saint-Denis;93078;Villepinte;138.0;121.0;17.0;0.0
+11;Île-de-France;93;72;Stains;41388;93072;Seine-Saint-Denis;93072;Stains;60.0;37.0;23.0;0.0
+93;Provence-Alpes-Côte d'Azur;05;61;Gap;41293;05061;Hautes-Alpes;05061;Gap;1008.0;539.0;469.0;0.02
+11;Île-de-France;78;498;Poissy;40983;78498;Yvelines;78498;Poissy;700.0;371.0;329.0;0.02
+76;Occitanie;31;149;Colomiers;40882;31149;Haute-Garonne;31149;Colomiers;241.0;174.0;67.0;0.01
+32;Hauts-de-France;59;650;Wattrelos;40847;59650;Nord;59650;Wattrelos;142.0;78.0;64.0;0.0
+93;Provence-Alpes-Côte d'Azur;83;50;Draguignan;40826;83050;Var;83050;Draguignan;689.0;219.0;470.0;0.02
+32;Hauts-de-France;60;159;Compiègne;40761;60159;Oise;60159;Compiègne;5865.0;3041.0;2824.0;0.14
+84;Auvergne-Rhône-Alpes;26;198;Montélimar;40595;26198;Drôme;26198;Montélimar;648.0;292.0;356.0;0.02
+32;Hauts-de-France;62;160;Boulogne-sur-Mer;40539;62160;Pas-de-Calais;62160;Boulogne-sur-Mer;3678.0;1501.0;2177.0;0.09
+32;Hauts-de-France;59;178;Douai;40250;59178;Nord;59178;Douai;3076.0;1404.0;1672.0;0.08
+32;Hauts-de-France;59;378;Marcq-en-Barœul;40184;59378;Nord;59378;Marcq-en-Barul;345.0;230.0;115.0;0.01
+11;Île-de-France;93;50;Neuilly-sur-Marne;39800;93050;Seine-Saint-Denis;93050;Neuilly-sur-Marne;1361.0;194.0;1167.0;0.03
+2;Martinique;972;213;Le Lamentin;39400;972213;Martinique;;;;;;
+4;La Réunion;974;412;Saint-Joseph;39207;974412;La Réunion;;;;;;
+11;Île-de-France;77;373;Pontault-Combault;39096;77373;Seine-et-Marne;77373;Pontault-Combault;48.0;33.0;15.0;0.0
+4;La Réunion;974;410;Saint-Benoît;38604;974410;La Réunion;;;;;;
+93;Provence-Alpes-Côte d'Azur;13;28;La Ciotat;38477;13028;Bouches-du-Rhône;13028;La Ciotat;304.0;239.0;65.0;0.01
+24;Centre-Val de Loire;37;122;Joué-lès-Tours;38423;37122;Indre-et-Loire;37122;Joué-lès-Tours;477.0;288.0;189.0;0.01
+11;Île-de-France;93;73;Tremblay-en-France;38348;93073;Seine-Saint-Denis;93073;Tremblay-en-France;1334.0;1058.0;276.0;0.03
+24;Centre-Val de Loire;28;85;Chartres;38324;28085;Eure-et-Loir;28085;Chartres;1989.0;920.0;1069.0;0.05
+84;Auvergne-Rhône-Alpes;69;149;Oullins-Pierre-Bénite;38168;69149;Rhône;69149;Oullins;5496.0;1998.0;3498.0;0.14
+84;Auvergne-Rhône-Alpes;74;281;Thonon-les-Bains;37928;74281;Haute-Savoie;74281;Thonon-les-Bains;704.0;252.0;452.0;0.02
+11;Île-de-France;95;252;Franconville;37754;95252;Val-d'Oise;95252;Franconville;249.0;87.0;162.0;0.01
+84;Auvergne-Rhône-Alpes;38;421;Saint-Martin-d'Hères;37695;38421;Isère;38421;Saint-Martin-d'Hères;35203.0;17158.0;18045.0;0.93
+84;Auvergne-Rhône-Alpes;74;12;Annemasse;37628;74012;Haute-Savoie;74012;Annemasse;147.0;57.0;90.0;0.0
+11;Île-de-France;91;589;Savigny-sur-Orge;37601;91589;Essonne;91589;Savigny-sur-Orge;618.0;397.0;221.0;0.02
+84;Auvergne-Rhône-Alpes;38;151;Échirolles;37491;38151;Isère;38151;Échirolles;597.0;116.0;481.0;0.02
+11;Île-de-France;91;477;Palaiseau;37471;91477;Essonne;91477;Palaiseau;11086.0;7573.0;3513.0;0.3
+11;Île-de-France;93;63;Romainville;37152;93063;Seine-Saint-Denis;;;;;;
+93;Provence-Alpes-Côte d'Azur;83;118;Saint-Raphaël;37113;83118;Var;83118;Saint-Raphaël;395.0;125.0;270.0;0.01
+93;Provence-Alpes-Côte d'Azur;83;129;Six-Fours-les-Plages;37109;83129;Var;83129;Six-Fours-les-Plages;50.0;36.0;14.0;0.0
+4;La Réunion;974;418;Sainte-Marie;37093;974418;La Réunion;;;;;;
+11;Île-de-France;78;172;Conflans-Sainte-Honorine;36958;78172;Yvelines;78172;Conflans-Sainte-Honorine;55.0;52.0;3.0;0.0
+93;Provence-Alpes-Côte d'Azur;13;117;Vitrolles;36758;13117;Bouches-du-Rhône;13117;Vitrolles;723.0;391.0;332.0;0.02
+11;Île-de-France;92;20;Châtillon;36705;92020;Hauts-de-Seine;;;;;;
+84;Auvergne-Rhône-Alpes;69;282;Meyzieu;36687;69282;Rhône;;;;;;
+11;Île-de-France;91;27;Athis-Mons;36613;91027;Essonne;91027;Athis-Mons;382.0;238.0;144.0;0.01
+4;La Réunion;974;408;La Possession;36568;974408;La Réunion;;;;;;
+3;Guyane;973;307;Matoury;36512;973307;Guyane;;;;;;
+11;Île-de-France;95;63;Bezons;36434;95063;Val-d'Oise;;;;;;
+44;Grand Est;67;180;Haguenau;36391;67180;Bas-Rhin;67180;Haguenau;1316.0;809.0;507.0;0.04
+32;Hauts-de-France;60;175;Creil;36301;60175;Oise;60175;Creil;821.0;430.0;391.0;0.02
+11;Île-de-France;94;78;Villeneuve-Saint-Georges;36221;94078;Val-de-Marne;94078;Villeneuve-Saint-Georges;288.0;56.0;232.0;0.01
+84;Auvergne-Rhône-Alpes;69;264;Villefranche-sur-Saône;36172;69264;Rhône;69264;Villefranche-sur-Saône;442.0;171.0;271.0;0.01
+4;La Réunion;974;413;Saint-Leu;36163;974413;La Réunion;;;;;;
+11;Île-de-France;92;19;Châtenay-Malabry;35825;92019;Hauts-de-Seine;92019;Châtenay-Malabry;3387.0;1106.0;2281.0;0.09
+84;Auvergne-Rhône-Alpes;42;207;Saint-Chamond;35646;42207;Loire;42207;Saint-Chamond;391.0;134.0;257.0;0.01
+11;Île-de-France;91;549;Sainte-Geneviève-des-Bois;35438;91549;Essonne;91549;Sainte-Geneviève-des-Bois;439.0;93.0;346.0;0.01
+84;Auvergne-Rhône-Alpes;42;187;Roanne;35409;42187;Loire;42187;Roanne;2143.0;1112.0;1031.0;0.06
+11;Île-de-France;94;58;Le Perreux-sur-Marne;35260;94058;Val-de-Marne;94058;Le Perreux-sur-Marne;279.0;152.0;127.0;0.01
+27;Bourgogne-Franche-Comté;71;270;Mâcon;35177;71270;Saône-et-Loire;71270;Mâcon;1043.0;416.0;627.0;0.03
+27;Bourgogne-Franche-Comté;89;24;Auxerre;35097;89024;Yonne;89024;Auxerre;1521.0;738.0;783.0;0.04
+44;Grand Est;67;447;Schiltigheim;34708;67447;Bas-Rhin;67447;Schiltigheim;2108.0;1294.0;814.0;0.06
+11;Île-de-France;78;621;Trappes;34689;78621;Yvelines;78621;Trappes;290.0;196.0;94.0;0.01
+11;Île-de-France;78;440;Les Mureaux;34632;78440;Yvelines;78440;Les Mureaux;497.0;165.0;332.0;0.01
+11;Île-de-France;78;311;Houilles;33983;78311;Yvelines;;;;;;
+4;La Réunion;974;407;Le Port;33969;974407;La Réunion;;;;;;
+93;Provence-Alpes-Côte d'Azur;13;54;Marignane;33692;13054;Bouches-du-Rhône;13054;Marignane;90.0;38.0;52.0;0.0
+84;Auvergne-Rhône-Alpes;26;281;Romans-sur-Isère;33464;26281;Drôme;26281;Romans-sur-Isère;341.0;208.0;133.0;0.01
+11;Île-de-France;94;79;Villiers-sur-Marne;33162;94079;Val-de-Marne;;;;;;
+84;Auvergne-Rhône-Alpes;03;185;Montluçon;33147;03185;Allier;03185;Montluçon;1466.0;807.0;659.0;0.04
+27;Bourgogne-Franche-Comté;58;194;Nevers;33085;58194;Nièvre;58194;Nevers;2402.0;1321.0;1081.0;0.07
+32;Hauts-de-France;62;498;Lens;32920;62498;Pas-de-Calais;62498;Lens;4192.0;2273.0;1919.0;0.13
+11;Île-de-France;94;73;Thiais;32918;94073;Val-de-Marne;94073;Thiais;251.0;156.0;95.0;0.01
+75;Nouvelle-Aquitaine;33;449;Saint-Médard-en-Jalles;32910;33449;Gironde;33449;Saint-Médard-en-Jalles;7.0;4.0;3.0;0.0
+75;Nouvelle-Aquitaine;47;1;Agen;32801;47001;Lot-et-Garonne;47001;Agen;3457.0;1308.0;2149.0;0.11
+11;Île-de-France;78;423;Montigny-le-Bretonneux;32465;78423;Yvelines;78423;Montigny-le-Bretonneux;8805.0;4072.0;4733.0;0.27
+11;Île-de-France;94;52;Nogent-sur-Marne;32455;94052;Val-de-Marne;94052;Nogent-sur-Marne;833.0;409.0;424.0;0.03
+84;Auvergne-Rhône-Alpes;73;8;Aix-les-Bains;32406;73008;Savoie;73008;Aix-les-Bains;101.0;50.0;51.0;0.0
+44;Grand Est;88;160;Épinal;32251;88160;Vosges;88160;Épinal;2294.0;1194.0;1100.0;0.07
+93;Provence-Alpes-Côte d'Azur;06;123;Saint-Laurent-du-Var;32172;06123;Alpes-Maritimes;;;;;;
+11;Île-de-France;95;500;Pontoise;31970;95500;Val-d'Oise;95500;Pontoise;5031.0;3213.0;1818.0;0.16
+75;Nouvelle-Aquitaine;33;39;Bègles;31831;33039;Gironde;33039;Bègles;1232.0;524.0;708.0;0.04
+11;Île-de-France;78;490;Plaisir;31811;78490;Yvelines;78490;Plaisir;60.0;53.0;7.0;0.0
+11;Île-de-France;95;306;Herblay-sur-Seine;31779;95306;Val-d'Oise;;;;;;
+84;Auvergne-Rhône-Alpes;38;544;Vienne;31778;38544;Isère;38544;Vienne;1189.0;589.0;600.0;0.04
+93;Provence-Alpes-Côte d'Azur;84;31;Carpentras;31619;84031;Vaucluse;84031;Carpentras;298.0;167.0;131.0;0.01
+75;Nouvelle-Aquitaine;40;192;Mont-de-Marsan;31592;40192;Landes;40192;Mont-de-Marsan;1464.0;682.0;782.0;0.05
+24;Centre-Val de Loire;28;134;Dreux;31543;28134;Eure-et-Loir;28134;Dreux;602.0;210.0;392.0;0.02
+11;Île-de-France;91;657;Vigneux-sur-Seine;31466;91657;Essonne;;;;;;
+84;Auvergne-Rhône-Alpes;69;286;Rillieux-la-Pape;31389;69286;Rhône;69286;Rillieux-la-Pape;228.0;126.0;102.0;0.01
+11;Île-de-France;95;280;Goussainville;31301;95280;Val-d'Oise;95280;Goussainville;138.0;79.0;59.0;0.0
+11;Île-de-France;91;521;Ris-Orangis;31189;91521;Essonne;;;;;;
+11;Île-de-France;94;38;L' Haÿ-les-Roses;31188;94038;Val-de-Marne;;;;;;
+8;Saint-Martin;978;801;Saint-Martin;31160;978801;La Réunion;;;;;;
+11;Île-de-France;77;445;Savigny-le-Temple;31148;77445;Seine-et-Marne;77445;Savigny-le-Temple;84.0;53.0;31.0;0.0
+32;Hauts-de-France;59;122;Cambrai;31134;59122;Nord;59122;Cambrai;2354.0;979.0;1375.0;0.08
+11;Île-de-France;94;16;Cachan;31103;94016;Val-de-Marne;94016;Cachan;6486.0;4459.0;2027.0;0.21
+75;Nouvelle-Aquitaine;86;66;Châtellerault;31003;86066;Vienne;86066;Châtellerault;545.0;377.0;168.0;0.02
+1;Guadeloupe;971;103;Baie-Mahault;30924;971103;Guadeloupe;;;;;;
+11;Île-de-France;91;687;Viry-Châtillon;30838;91687;Essonne;;;;;;
+11;Île-de-France;78;158;Le Chesnay-Rocquencourt;30689;78158;Yvelines;78158;Le Chesnay-Rocquencourt;161.0;73.0;88.0;0.01
+93;Provence-Alpes-Côte d'Azur;06;83;Menton;30604;06083;Alpes-Maritimes;06083;Menton;373.0;97.0;276.0;0.01
+11;Île-de-France;78;146;Chatou;30598;78146;Yvelines;;;;;;
+11;Île-de-France;92;46;Malakoff;30557;92046;Hauts-de-Seine;92046;Malakoff;5879.0;1985.0;3894.0;0.19
+11;Île-de-France;92;35;La Garenne-Colombes;30197;92035;Hauts-de-Seine;92035;La Garenne-Colombes;194.0;124.0;70.0;0.01
+76;Occitanie;31;557;Tournefeuille;30168;31557;Haute-Garonne;31557;Tournefeuille;55.0;32.0;23.0;0.0
+84;Auvergne-Rhône-Alpes;38;53;Bourgoin-Jallieu;30151;38053;Isère;38053;Bourgoin-Jallieu;663.0;257.0;406.0;0.02
+11;Île-de-France;91;201;Draveil;30098;91201;Essonne;91201;Draveil;37.0;24.0;13.0;0.0
+32;Hauts-de-France;62;510;Liévin;30063;62510;Pas-de-Calais;62510;Liévin;1109.0;728.0;381.0;0.04
+11;Île-de-France;95;680;Villiers-le-Bel;30053;95680;Val-d'Oise;95680;Villiers-le-Bel;41.0;23.0;18.0;0.0
+44;Grand Est;54;547;Vandœuvre-lès-Nancy;29942;54547;Meurthe-et-Moselle;54547;Vanduvre-lès-Nancy;15485.0;7148.0;8337.0;0.52
+76;Occitanie;34;3;Agde;29939;34003;Hérault;34003;Agde;7.0;2.0;5.0;0.0
+84;Auvergne-Rhône-Alpes;69;275;Décines-Charpieu;29877;69275;Rhône;69275;Décines-Charpieu;149.0;94.0;55.0;0.0
+11;Île-de-France;92;64;Saint-Cloud;29855;92064;Hauts-de-Seine;92064;Saint-Cloud;388.0;148.0;240.0;0.01
+11;Île-de-France;93;77;Villemomble;29795;93077;Seine-Saint-Denis;93077;Villemomble;172.0;82.0;90.0;0.01
+11;Île-de-France;78;297;Guyancourt;29778;78297;Yvelines;78297;Guyancourt;7405.0;2738.0;4667.0;0.25
+93;Provence-Alpes-Côte d'Azur;84;87;Orange;29706;84087;Vaucluse;84087;Orange;214.0;126.0;88.0;0.01
+11;Île-de-France;94;34;Fresnes;29528;94034;Val-de-Marne;94034;Fresnes;57.0;21.0;36.0;0.0
+28;Normandie;76;575;Saint-Étienne-du-Rouvray;29518;76575;Seine-Maritime;76575;Saint-Étienne-du-Rouvray;6667.0;4732.0;1935.0;0.23
+11;Île-de-France;95;219;Ermont;29489;95219;Val-d'Oise;95219;Ermont;283.0;155.0;128.0;0.01
+11;Île-de-France;93;14;Clichy-sous-Bois;29354;93014;Seine-Saint-Denis;93014;Clichy-sous-Bois;73.0;36.0;37.0;0.0
+93;Provence-Alpes-Côte d'Azur;06;155;Vallauris;29259;06155;Alpes-Maritimes;;;;;;
+75;Nouvelle-Aquitaine;24;322;Périgueux;29055;24322;Dordogne;24322;Périgueux;2343.0;952.0;1391.0;0.08
+28;Normandie;76;681;Sotteville-lès-Rouen;29003;76681;Seine-Maritime;76681;Sotteville-lès-Rouen;740.0;322.0;418.0;0.03
+11;Île-de-France;92;9;Bois-Colombes;28909;92009;Hauts-de-Seine;;;;;;
+11;Île-de-France;92;60;Le Plessis-Robinson;28848;92060;Hauts-de-Seine;92060;Le Plessis-Robinson;3.0;3.0;0.0;0.0
+11;Île-de-France;94;18;Charenton-le-Pont;28830;94018;Val-de-Marne;94018;Charenton-le-Pont;15.0;10.0;5.0;0.0
+32;Hauts-de-France;59;392;Maubeuge;28767;59392;Nord;59392;Maubeuge;1031.0;494.0;537.0;0.04
+11;Île-de-France;93;47;Montfermeil;28703;93047;Seine-Saint-Denis;;;;;;
+11;Île-de-France;92;75;Vanves;28622;92075;Hauts-de-Seine;92075;Vanves;548.0;328.0;220.0;0.02
+52;Pays de la Loire;44;190;Saint-Sébastien-sur-Loire;28596;44190;Loire-Atlantique;44190;Saint-Sébastien-sur-Loire;1505.0;968.0;537.0;0.05
+52;Pays de la Loire;44;114;Orvault;28534;44114;Loire-Atlantique;44114;Orvault;233.0;156.0;77.0;0.01
+28;Normandie;76;217;Dieppe;28496;76217;Seine-Maritime;76217;Dieppe;502.0;205.0;297.0;0.02
+32;Hauts-de-France;02;722;Soissons;28046;02722;Aisne;02722;Soissons;1206.0;620.0;586.0;0.04
+11;Île-de-France;91;691;Yerres;27906;91691;Essonne;91691;Yerres;6.0;4.0;2.0;0.0
+44;Grand Est;67;218;Illkirch-Graffenstaden;27872;67218;Bas-Rhin;67218;Illkirch-Graffenstaden;4420.0;2085.0;2335.0;0.16
+11;Île-de-France;94;71;Sucy-en-Brie;27764;94071;Val-de-Marne;94071;Sucy-en-Brie;93.0;57.0;36.0;0.0
+1;Guadeloupe;971;113;Le Gosier;27757;971113;Guadeloupe;;;;;;
+11;Île-de-France;78;517;Rambouillet;27724;78517;Yvelines;78517;Rambouillet;1169.0;448.0;721.0;0.04
+3;Guyane;973;309;Remire-Montjoly;27723;973309;Guyane;;;;;;
+11;Île-de-France;95;277;Gonesse;27707;95277;Val-d'Oise;95277;Gonesse;414.0;113.0;301.0;0.01
+76;Occitanie;31;69;Blagnac;27604;31069;Haute-Garonne;31069;Blagnac;1718.0;1025.0;693.0;0.06
+11;Île-de-France;95;607;Taverny;27593;95607;Val-d'Oise;95607;Taverny;189.0;114.0;75.0;0.01
+75;Nouvelle-Aquitaine;33;529;La Teste-de-Buch;27566;33529;Gironde;33529;La Teste-de-Buch;57.0;28.0;29.0;0.0
+11;Île-de-France;77;58;Bussy-Saint-Georges;27498;77058;Seine-et-Marne;77058;Bussy-Saint-Georges;293.0;223.0;70.0;0.01
+11;Île-de-France;77;83;Champs-sur-Marne;27451;77083;Seine-et-Marne;77083;Champs-sur-Marne;13848.0;7664.0;6184.0;0.5
+11;Île-de-France;94;44;Limeil-Brévannes;27406;94044;Val-de-Marne;94044;Limeil-Brévannes;509.0;111.0;398.0;0.02
+11;Île-de-France;95;176;Cormeilles-en-Parisis;27292;95176;Val-d'Oise;;;;;;
+75;Nouvelle-Aquitaine;24;37;Bergerac;27110;24037;Dordogne;24037;Bergerac;437.0;166.0;271.0;0.02
+27;Bourgogne-Franche-Comté;89;387;Sens;27106;89387;Yonne;89387;Sens;389.0;164.0;225.0;0.01
+32;Hauts-de-France;59;328;Lambersart;27090;59328;Nord;59328;Lambersart;81.0;46.0;35.0;0.0
+32;Hauts-de-France;59;17;Armentières;26998;59017;Nord;59017;Armentières;1003.0;578.0;425.0;0.04
+75;Nouvelle-Aquitaine;33;192;Gradignan;26952;33192;Gironde;33192;Gradignan;2332.0;1690.0;642.0;0.09
+11;Île-de-France;77;514;Villeparisis;26946;77514;Seine-et-Marne;;;;;;
+11;Île-de-France;95;582;Sannois;26924;95582;Val-d'Oise;;;;;;
+11;Île-de-France;91;223;Étampes;26857;91223;Essonne;91223;Étampes;481.0;174.0;307.0;0.02
+11;Île-de-France;91;286;Grigny;26842;91286;Essonne;91286;Grigny;9.0;4.0;5.0;0.0
+75;Nouvelle-Aquitaine;33;119;Cenon;26834;33119;Gironde;33119;Cenon;66.0;3.0;63.0;0.0
+11;Île-de-France;91;103;Brétigny-sur-Orge;26658;91103;Essonne;91103;Brétigny-sur-Orge;603.0;370.0;233.0;0.02
+76;Occitanie;34;145;Lunel;26623;34145;Hérault;34145;Lunel;81.0;50.0;31.0;0.0
+93;Provence-Alpes-Côte d'Azur;83;62;La Garde;26476;83062;Var;83062;La Garde;7959.0;3925.0;4034.0;0.3
+11;Île-de-France;78;208;Élancourt;26365;78208;Yvelines;78208;Élancourt;1197.0;780.0;417.0;0.05
+52;Pays de la Loire;49;328;Saumur;26241;49328;Maine-et-Loire;49328;Saumur;827.0;276.0;551.0;0.03
+52;Pays de la Loire;44;215;Vertou;26227;44215;Loire-Atlantique;;;;;;
+84;Auvergne-Rhône-Alpes;15;14;Aurillac;26214;15014;Cantal;15014;Aurillac;1354.0;571.0;783.0;0.05
+11;Île-de-France;95;203;Eaubonne;26211;95203;Val-d'Oise;95203;Eaubonne;295.0;31.0;264.0;0.01
+75;Nouvelle-Aquitaine;64;122;Biarritz;26206;64122;Pyrénées-Atlantiques;64122;Biarritz;512.0;214.0;298.0;0.02
+93;Provence-Alpes-Côte d'Azur;13;63;Miramas;26203;13063;Bouches-du-Rhône;13063;Miramas;93.0;55.0;38.0;0.0
+76;Occitanie;31;395;Muret;26079;31395;Haute-Garonne;31395;Muret;285.0;231.0;54.0;0.01
+76;Occitanie;34;57;Castelnau-le-Lez;26058;34057;Hérault;34057;Castelnau-le-Lez;490.0;179.0;311.0;0.02
+11;Île-de-France;92;78;Villeneuve-la-Garenne;26021;92078;Hauts-de-Seine;92078;Villeneuve-la-Garenne;885.0;460.0;425.0;0.03
+11;Île-de-France;91;692;Les Ulis;25886;91692;Essonne;91692;Les Ulis;113.0;99.0;14.0;0.0
+11;Île-de-France;93;57;Les Pavillons-sous-Bois;25804;93057;Seine-Saint-Denis;;;;;;
+52;Pays de la Loire;49;301;Sèvremoine;25797;49301;Maine-et-Loire;;;;;;
+28;Normandie;76;322;Le Grand-Quevilly;25789;76322;Seine-Maritime;76322;Le Grand-Quevilly;328.0;102.0;226.0;0.01
+75;Nouvelle-Aquitaine;33;249;Lormont;25769;33249;Gironde;33249;Lormont;320.0;150.0;170.0;0.01
+32;Hauts-de-France;62;427;Hénin-Beaumont;25688;62427;Pas-de-Calais;62427;Hénin-Beaumont;594.0;373.0;221.0;0.02
+11;Île-de-France;91;114;Brunoy;25643;91114;Essonne;91114;Brunoy;335.0;139.0;196.0;0.01
+93;Provence-Alpes-Côte d'Azur;84;35;Cavaillon;25636;84035;Vaucluse;84035;Cavaillon;103.0;55.0;48.0;0.0
+11;Île-de-France;95;572;Saint-Ouen-l'Aumône;25578;95572;Val-d'Oise;95572;Saint-Ouen-l'Aumône;446.0;325.0;121.0;0.02
+4;La Réunion;974;420;Sainte-Suzanne;25551;974420;La Réunion;;;;;;
+28;Normandie;61;1;Alençon;25490;61001;Orne;61001;Alençon;1200.0;379.0;821.0;0.05
+75;Nouvelle-Aquitaine;17;415;Saintes;25363;17415;Charente-Maritime;17415;Saintes;846.0;378.0;468.0;0.03
+28;Normandie;27;681;Vernon;25290;27681;Eure;27681;Vernon;250.0;141.0;109.0;0.01
+32;Hauts-de-France;62;119;Béthune;25224;62119;Pas-de-Calais;62119;Béthune;2943.0;1965.0;978.0;0.12
+84;Auvergne-Rhône-Alpes;03;310;Vichy;25115;03310;Allier;03310;Vichy;1386.0;414.0;972.0;0.06
+75;Nouvelle-Aquitaine;33;69;Le Bouscat;25081;33069;Gironde;33069;Le Bouscat;2608.0;1504.0;1104.0;0.1
+24;Centre-Val de Loire;18;279;Vierzon;25068;18279;Cher;18279;Vierzon;333.0;141.0;192.0;0.01
+75;Nouvelle-Aquitaine;33;243;Libourne;25036;33243;Gironde;33243;Libourne;580.0;165.0;415.0;0.02
+75;Nouvelle-Aquitaine;33;162;Eysines;24825;33162;Gironde;33162;Eysines;264.0;151.0;113.0;0.01
+3;Guyane;973;304;Kourou;24824;973304;Guyane;;;;;;
+27;Bourgogne-Franche-Comté;25;388;Montbéliard;24672;25388;Doubs;25388;Montbéliard;2739.0;1372.0;1367.0;0.11
+1;Guadeloupe;971;118;Petit-Bourg;24665;971118;Guadeloupe;;;;;;
+11;Île-de-France;94;54;Orly;24658;94054;Val-de-Marne;94054;Orly;546.0;482.0;64.0;0.02
+32;Hauts-de-France;02;408;Laon;24220;02408;Aisne;02408;Laon;1466.0;525.0;941.0;0.06
+76;Occitanie;34;108;Frontignan;24136;34108;Hérault;;;;;;
+11;Île-de-France;94;43;Le Kremlin-Bicêtre;24110;94043;Val-de-Marne;94043;Le Kremlin-Bicêtre;11556.0;6409.0;5147.0;0.48
+52;Pays de la Loire;44;47;Couëron;24103;44047;Loire-Atlantique;;;;;;
+11;Île-de-France;92;32;Fontenay-aux-Roses;24070;92032;Hauts-de-Seine;;;;;;
+11;Île-de-France;91;421;Montgeron;24022;91421;Essonne;91421;Montgeron;217.0;70.0;147.0;0.01
+52;Pays de la Loire;49;23;Beaupréau-en-Mauges;23989;49023;Maine-et-Loire;49023;Beaupréau-en-Mauges;155.0;146.0;9.0;0.01
+76;Occitanie;12;202;Rodez;23981;12202;Aveyron;12202;Rodez;2563.0;1262.0;1301.0;0.11
+1;Guadeloupe;971;128;Sainte-Anne;23973;971128;Guadeloupe;;;;;;
+11;Île-de-France;93;45;Les Lilas;23843;93045;Seine-Saint-Denis;;;;;;
+27;Bourgogne-Franche-Comté;39;198;Dole;23840;39198;Jura;39198;Dole;794.0;337.0;457.0;0.03
+93;Provence-Alpes-Côte d'Azur;83;144;La Valette-du-Var;23719;83144;Var;83144;La Valette-du-Var;918.0;547.0;371.0;0.04
+11;Île-de-France;77;152;Dammarie-les-Lys;23559;77152;Seine-et-Marne;77152;Dammarie-les-Lys;616.0;295.0;321.0;0.03
+24;Centre-Val de Loire;45;232;Olivet;23507;45232;Loiret;45232;Olivet;542.0;144.0;398.0;0.02
+28;Normandie;14;327;Hérouville-Saint-Clair;23470;14327;Calvados;14327;Hérouville-Saint-Clair;893.0;263.0;630.0;0.04
+75;Nouvelle-Aquitaine;17;299;Rochefort;23460;17299;Charente-Maritime;17299;Rochefort;559.0;220.0;339.0;0.02
+11;Île-de-France;77;122;Combs-la-Ville;23350;77122;Seine-et-Marne;77122;Combs-la-Ville;85.0;45.0;40.0;0.0
+53;Bretagne;56;98;Lanester;23263;56098;Morbihan;56098;Lanester;156.0;67.0;89.0;0.01
+11;Île-de-France;77;390;Roissy-en-Brie;23229;77390;Seine-et-Marne;77390;Roissy-en-Brie;177.0;83.0;94.0;0.01
+84;Auvergne-Rhône-Alpes;69;244;Tassin-la-Demi-Lune;23200;69244;Rhône;;;;;;
+24;Centre-Val de Loire;45;284;Saint-Jean-de-Braye;23147;45284;Loiret;45284;Saint-Jean-de-Braye;238.0;186.0;52.0;0.01
+11;Île-de-France;95;197;Deuil-la-Barre;23099;95197;Val-d'Oise;95197;Deuil-la-Barre;129.0;55.0;74.0;0.01
+11;Île-de-France;78;358;Maisons-Laffitte;23093;78358;Yvelines;;;;;;
+1;Guadeloupe;971;117;Le Moule;23014;971117;Guadeloupe;;;;;;
+11;Île-de-France;78;640;Vélizy-Villacoublay;23011;78640;Yvelines;78640;Vélizy-Villacoublay;876.0;722.0;154.0;0.04
+52;Pays de la Loire;85;47;Challans;22943;85047;Vendée;85047;Challans;80.0;44.0;36.0;0.0
+44;Grand Est;52;448;Saint-Dizier;22858;52448;Haute-Marne;52448;Saint-Dizier;407.0;150.0;257.0;0.02
+11;Île-de-France;77;468;Torcy;22810;77468;Seine-et-Marne;77468;Torcy;532.0;120.0;412.0;0.02
+44;Grand Est;68;297;Saint-Louis;22805;68297;Haut-Rhin;68297;Saint-Louis;252.0;153.0;99.0;0.01
+93;Provence-Alpes-Côte d'Azur;04;112;Manosque;22718;04112;Alpes-de-Haute-Provence;04112;Manosque;304.0;168.0;136.0;0.01
+32;Hauts-de-France;59;360;Loos;22567;59360;Nord;59360;Loos;14462.0;4465.0;9997.0;0.64
+11;Île-de-France;91;272;Gif-sur-Yvette;22544;91272;Essonne;91272;Gif-sur-Yvette;7740.0;5762.0;1978.0;0.34
+93;Provence-Alpes-Côte d'Azur;13;71;Les Pennes-Mirabeau;22537;13071;Bouches-du-Rhône;13071;Les Pennes-Mirabeau;19.0;2.0;17.0;0.0
+84;Auvergne-Rhône-Alpes;01;283;Oyonnax;22480;01283;Ain;01283;Oyonnax;72.0;40.0;32.0;0.0
+11;Île-de-France;95;424;Montigny-lès-Cormeilles;22457;95424;Val-d'Oise;;;;;;
+76;Occitanie;32;13;Auch;22428;32013;Gers;32013;Auch;1111.0;532.0;579.0;0.05
+32;Hauts-de-France;80;1;Abbeville;22395;80001;Somme;80001;Abbeville;478.0;154.0;324.0;0.02
+75;Nouvelle-Aquitaine;47;323;Villeneuve-sur-Lot;22350;47323;Lot-et-Garonne;47323;Villeneuve-sur-Lot;292.0;97.0;195.0;0.01
+11;Île-de-France;78;362;Mantes-la-Ville;22332;78362;Yvelines;78362;Mantes-la-Ville;176.0;109.0;67.0;0.01
+11;Île-de-France;92;72;Sèvres;22303;92072;Hauts-de-Seine;92072;Sèvres;1183.0;592.0;591.0;0.05
+11;Île-de-France;77;305;Montereau-Fault-Yonne;22279;77305;Seine-et-Marne;77305;Montereau-Fault-Yonne;250.0;146.0;104.0;0.01
+11;Île-de-France;78;5;Achères;22241;78005;Yvelines;;;;;;
+28;Normandie;76;498;Le Petit-Quevilly;22208;76498;Seine-Maritime;76498;Le Petit-Quevilly;52.0;22.0;30.0;0.0
+11;Île-de-France;94;3;Arcueil;22200;94003;Val-de-Marne;94003;Arcueil;417.0;293.0;124.0;0.02
+44;Grand Est;51;230;Épernay;22174;51230;Marne;51230;Épernay;321.0;100.0;221.0;0.01
+75;Nouvelle-Aquitaine;33;199;Gujan-Mestras;22153;33199;Gironde;;;;;;
+75;Nouvelle-Aquitaine;40;88;Dax;22109;40088;Landes;40088;Dax;946.0;381.0;565.0;0.04
+76;Occitanie;12;145;Millau;22044;12145;Aveyron;12145;Millau;211.0;45.0;166.0;0.01
+84;Auvergne-Rhône-Alpes;38;169;Fontaine;22020;38169;Isère;38169;Fontaine;330.0;159.0;171.0;0.01
+52;Pays de la Loire;49;92;Chemillé-en-Anjou;21999;49092;Maine-et-Loire;49092;Chemillé-en-Anjou;66.0;42.0;24.0;0.0
+11;Île-de-France;91;345;Longjumeau;21996;91345;Essonne;91345;Longjumeau;468.0;97.0;371.0;0.02
+11;Île-de-France;93;49;Neuilly-Plaisance;21941;93049;Seine-Saint-Denis;;;;;;
+32;Hauts-de-France;59;295;Hazebrouck;21912;59295;Nord;59295;Hazebrouck;479.0;303.0;176.0;0.02
+32;Hauts-de-France;60;463;Nogent-sur-Oise;21907;60463;Oise;60463;Nogent-sur-Oise;547.0;397.0;150.0;0.02
+84;Auvergne-Rhône-Alpes;38;563;Voiron;21847;38563;Isère;38563;Voiron;347.0;223.0;124.0;0.02
+24;Centre-Val de Loire;45;147;Fleury-les-Aubrais;21804;45147;Loiret;45147;Fleury-les-Aubrais;22.0;18.0;4.0;0.0
+32;Hauts-de-France;59;368;La Madeleine;21790;59368;Nord;59368;La Madeleine;998.0;197.0;801.0;0.05
+11;Île-de-France;91;570;Saint-Michel-sur-Orge;21776;91570;Essonne;91570;Saint-Michel-sur-Orge;87.0;45.0;42.0;0.0
+11;Île-de-France;95;428;Montmorency;21763;95428;Val-d'Oise;95428;Montmorency;185.0;118.0;67.0;0.01
+44;Grand Est;57;480;Montigny-lès-Metz;21718;57480;Moselle;57480;Montigny-lès-Metz;449.0;153.0;296.0;0.02
+84;Auvergne-Rhône-Alpes;69;202;Sainte-Foy-lès-Lyon;21692;69202;Rhône;69202;Sainte-Foy-lès-Lyon;39.0;29.0;10.0;0.0
+11;Île-de-France;91;434;Morsang-sur-Orge;21667;91434;Essonne;;;;;;
+93;Provence-Alpes-Côte d'Azur;06;79;Mandelieu-la-Napoule;21640;06079;Alpes-Maritimes;06079;Mandelieu-la-Napoule;259.0;109.0;150.0;0.01
+93;Provence-Alpes-Côte d'Azur;13;41;Gardanne;21597;13041;Bouches-du-Rhône;13041;Gardanne;190.0;145.0;45.0;0.01
+2;Martinique;972;222;Le Robert;21553;972222;Martinique;;;;;;
+11;Île-de-France;77;243;Lagny-sur-Marne;21461;77243;Seine-et-Marne;77243;Lagny-sur-Marne;129.0;83.0;46.0;0.01
+93;Provence-Alpes-Côte d'Azur;13;2;Allauch;21443;13002;Bouches-du-Rhône;;;;;;
+32;Hauts-de-France;62;178;Bruay-la-Buissière;21424;62178;Pas-de-Calais;62178;Bruay-la-Buissière;340.0;285.0;55.0;0.02
+84;Auvergne-Rhône-Alpes;69;91;Givors;21379;69091;Rhône;69091;Givors;109.0;72.0;37.0;0.01
+11;Île-de-France;95;555;Saint-Gratien;21336;95555;Val-d'Oise;95555;Saint-Gratien;92.0;65.0;27.0;0.0
+11;Île-de-France;78;545;Saint-Cyr-l'École;21268;78545;Yvelines;78545;Saint-Cyr-l'École;363.0;291.0;72.0;0.02
+11;Île-de-France;77;350;Ozoir-la-Ferrière;21238;77350;Seine-et-Marne;77350;Ozoir-la-Ferrière;40.0;4.0;36.0;0.0
+84;Auvergne-Rhône-Alpes;69;204;Saint-Genis-Laval;21212;69204;Rhône;69204;Saint-Genis-Laval;866.0;247.0;619.0;0.04
+52;Pays de la Loire;85;146;Montaigu-Vendée;21134;85146;Vendée;85146;Montaigu-Vendée;339.0;147.0;192.0;0.02
+11;Île-de-France;94;59;Le Plessis-Trévise;21112;94059;Val-de-Marne;;;;;;
+32;Hauts-de-France;59;410;Mons-en-Barœul;21105;59410;Nord;59410;Mons-en-Barul;240.0;42.0;198.0;0.01
+76;Occitanie;31;424;Plaisance-du-Touch;21079;31424;Haute-Garonne;31424;Plaisance-du-Touch;12.0;12.0;0.0;0.0
+11;Île-de-France;94;67;Saint-Mandé;21071;94067;Val-de-Marne;;;;;;
+11;Île-de-France;92;14;Bourg-la-Reine;21019;92014;Hauts-de-Seine;92014;Bourg-la-Reine;11.0;3.0;8.0;0.0
+11;Île-de-France;94;77;Villeneuve-le-Roi;21000;94077;Val-de-Marne;94077;Villeneuve-le-Roi;62.0;36.0;26.0;0.0
+52;Pays de la Loire;44;26;Carquefou;20921;44026;Loire-Atlantique;44026;Carquefou;2973.0;2314.0;659.0;0.14
+11;Île-de-France;92;71;Sceaux;20884;92071;Hauts-de-Seine;92071;Sceaux;7897.0;2785.0;5112.0;0.38
+53;Bretagne;29;39;Concarneau;20845;29039;Finistère;29039;Concarneau;23.0;10.0;13.0;0.0
+44;Grand Est;52;121;Chaumont;20827;52121;Haute-Marne;52121;Chaumont;651.0;230.0;421.0;0.03
+44;Grand Est;67;267;Lingolsheim;20826;67267;Bas-Rhin;67267;Lingolsheim;217.0;182.0;35.0;0.01
+11;Île-de-France;78;123;Carrières-sous-Poissy;20825;78123;Yvelines;;;;;;
+32;Hauts-de-France;59;155;Coudekerque-Branche;20787;59155;Nord;59155;Coudekerque-Branche;63.0;22.0;41.0;0.0
+32;Hauts-de-France;59;646;Wasquehal;20726;59646;Nord;59646;Wasquehal;66.0;23.0;43.0;0.0
+32;Hauts-de-France;59;279;Halluin;20715;59279;Nord;;;;;;
+52;Pays de la Loire;44;35;La Chapelle-sur-Erdre;20690;44035;Loire-Atlantique;;;;;;
+32;Hauts-de-France;59;172;Denain;20665;59172;Nord;59172;Denain;287.0;149.0;138.0;0.01
+76;Occitanie;31;157;Cugnaux;20662;31157;Haute-Garonne;31157;Cugnaux;153.0;88.0;65.0;0.01
+11;Île-de-France;78;383;Maurepas;20629;78383;Yvelines;78383;Maurepas;32.0;12.0;20.0;0.0
+11;Île-de-France;92;22;Chaville;20594;92022;Hauts-de-Seine;;;;;;
+32;Hauts-de-France;59;163;Croix;20566;59163;Nord;;;;;;
+52;Pays de la Loire;44;20;Bouguenais;20530;44020;Loire-Atlantique;44020;Bouguenais;167.0;160.0;7.0;0.01
+11;Île-de-France;94;42;Joinville-le-Pont;20525;94042;Val-de-Marne;94042;Joinville-le-Pont;84.0;55.0;29.0;0.0
+27;Bourgogne-Franche-Comté;71;153;Le Creusot;20509;71153;Saône-et-Loire;71153;Le Creusot;1503.0;986.0;517.0;0.07
+44;Grand Est;57;227;Forbach;20493;57227;Moselle;57227;Forbach;526.0;178.0;348.0;0.03
+11;Île-de-France;78;126;La Celle-Saint-Cloud;20460;78126;Yvelines;78126;La Celle-Saint-Cloud;161.0;95.0;66.0;0.01
+11;Île-de-France;77;294;Mitry-Mory;20456;77294;Seine-et-Marne;77294;Mitry-Mory;40.0;15.0;25.0;0.0
+11;Île-de-France;91;161;Chilly-Mazarin;20443;91161;Essonne;91161;Chilly-Mazarin;1.0;0.0;1.0;0.0
+27;Bourgogne-Franche-Comté;21;54;Beaune;20352;21054;Côte-d'Or;21054;Beaune;542.0;242.0;300.0;0.03
+53;Bretagne;22;113;Lannion;20315;22113;Côtes-d'Armor;22113;Lannion;1795.0;1289.0;506.0;0.09
+53;Bretagne;35;115;Fougères;20307;35115;Ille-et-Vilaine;35115;Fougères;601.0;228.0;373.0;0.03
+93;Provence-Alpes-Côte d'Azur;84;54;L' Isle-sur-la-Sorgue;20244;84054;Vaucluse;84054;L'Isle-sur-la-Sorgue;131.0;118.0;13.0;0.01
+32;Hauts-de-France;59;271;Grande-Synthe;20239;59271;Nord;59271;Grande-Synthe;277.0;80.0;197.0;0.01
+28;Normandie;76;451;Mont-Saint-Aignan;20165;76451;Seine-Maritime;76451;Mont-Saint-Aignan;21336.0;8628.0;12708.0;1.06
+44;Grand Est;57;631;Sarreguemines;20143;57631;Moselle;57631;Sarreguemines;1146.0;513.0;633.0;0.06
+76;Occitanie;46;42;Cahors;20050;46042;Lot;46042;Cahors;853.0;290.0;563.0;0.04
+75;Nouvelle-Aquitaine;33;75;Bruges;20020;33075;Gironde;33075;Bruges;517.0;464.0;53.0;0.03

@@ -1,0 +1,488 @@
+﻿city;image_url
+Boulogne-Billancourt;https://upload.wikimedia.org/wikipedia/commons/5/5f/View_on_Boulogne-Billancourt_from_Parc_de_Saint-Cloud_140411_1.jpg?uselang=fr
+Montrouge;https://upload.wikimedia.org/wikipedia/commons/8/8f/Blason_ville_fr_Montrouge_%28Hauts-de-Seine%29.svg?uselang=fr
+Bagnolet;https://upload.wikimedia.org/wikipedia/fr/thumb/b/b2/Logo_Bagnolet_-_2024.svg/langfr-960px-Logo_Bagnolet_-_2024.svg.png
+Saint-Chamond;https://upload.wikimedia.org/wikipedia/commons/7/79/Saint_Chamond_Paysage.jpg?uselang=fr
+Romans-sur-Isère;https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Romans_sur_Is%C3%A8re_%28cropped%29.JPG/960px-Romans_sur_Is%C3%A8re_%28cropped%29.JPG
+L' Haÿ-les-Roses;https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/H%C3%B4tel_Ville_-_L%27Ha%C3%BF-les-Roses_%28FR94%29_-_2022-05-20_-_1.jpg/960px-H%C3%B4tel_Ville_-_L%27Ha%C3%BF-les-Roses_%28FR94%29_-_2022-05-20_-_1.jpg
+Saint-Martin;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Coat_of_arms_of_Saint_Martin.svg/langfr-960px-Coat_of_arms_of_Saint_Martin.svg.png
+Bussy-Saint-Georges;https://upload.wikimedia.org/wikipedia/commons/1/10/Panoramiquenouvelleplace2.jpg
+Villeneuve-le-Roi;https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Panorama_Mairie_de_Villeneuve-leRoi.JPG/960px-Panorama_Mairie_de_Villeneuve-leRoi.JPG
+L'Isle-sur-la-Sorgue;https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/L%27Isle-sur-la-Sorgue_%281%29.jpg/960px-L%27Isle-sur-la-Sorgue_%281%29.jpg
+Saint-Denis (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/SaintDenisReunion005.JPG/500px-SaintDenisReunion005.JPG
+Saint-Denis (Seine-Saint-Denis);https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Saint-Denis_Basilique_Saint-Denis_Fassade_1.jpg/500px-Saint-Denis_Basilique_Saint-Denis_Fassade_1.jpg
+Saint-Denis (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/SaintDenisReunion005.JPG/500px-SaintDenisReunion005.JPG
+Saint-Denis (Seine-Saint-Denis);https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Saint-Denis_Basilique_Saint-Denis_Fassade_1.jpg/500px-Saint-Denis_Basilique_Saint-Denis_Fassade_1.jpg
+Montreuil (Seine-Saint-Denis);https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/H%C3%B4tel_ville_Montreuil_Seine_St_Denis_15.jpg/500px-H%C3%B4tel_ville_Montreuil_Seine_St_Denis_15.jpg
+Saint-Paul (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/SaintPaul_Reunion.JPG/500px-SaintPaul_Reunion.JPG
+Argenteuil (Val-d'Oise);https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Basilique_d%27Argenteuil_-_chevet.jpg/500px-Basilique_d%27Argenteuil_-_chevet.jpg
+Saint-Pierre (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Saint-Pierre97410h%C3%A9licoptere.jpg/500px-Saint-Pierre97410h%C3%A9licoptere.jpg
+Valence (Drôme);https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Valence_-_Esplanade_Champ_de_Mars_-_View_WNW_on_Parc_Jouvet.jpg/500px-Valence_-_Esplanade_Champ_de_Mars_-_View_WNW_on_Parc_Jouvet.jpg
+Saint-André (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/H%C3%B4tel-de-ville-de-Saint-Andr%C3%A9.JPG/500px-H%C3%B4tel-de-ville-de-Saint-Andr%C3%A9.JPG
+Saint-Louis (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/R%C3%A9union-Saint-Louis.png/500px-R%C3%A9union-Saint-Louis.png
+Saint-Louis (Haut-Rhin);https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/H%C3%B4tel_de_ville_%28Saint-Louis%29.jpg/500px-H%C3%B4tel_de_ville_%28Saint-Louis%29.jpg
+Massy (Essonne);https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Mairie_de_Massy_%28Essonne%29.jpg/500px-Mairie_de_Massy_%28Essonne%29.jpg
+Laval (Mayenne);https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Ch%C3%A2teau_Vieux_Laval_2.JPG/500px-Ch%C3%A2teau_Vieux_Laval_2.JPG
+Bagneux (Hauts-de-Seine);https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/H%C3%B4tel_ville_Bagneux_Hauts_Seine_2.jpg/500px-H%C3%B4tel_ville_Bagneux_Hauts_Seine_2.jpg
+Villepinte (Seine-Saint-Denis);https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/H%C3%B4tel_ville_Villepinte_Seine_St_Denis_2.jpg/500px-H%C3%B4tel_ville_Villepinte_Seine_St_Denis_2.jpg
+Saint-Joseph (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Saint-Joseph%28Reunion%29_Church.jpg/500px-Saint-Joseph%28Reunion%29_Church.jpg
+Saint-Benoît (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/H%C3%B4tel-de-ville-de-Saint-Beno%C3%AEt.JPG/500px-H%C3%B4tel-de-ville-de-Saint-Beno%C3%AEt.JPG
+Franconville (Val-d'Oise);https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Franconville_-_Hotel_de_ville_-_panoramique.jpg/500px-Franconville_-_Hotel_de_ville_-_panoramique.jpg
+Saint-Raphaël (Var);https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Vue_du_vieux_port_de_Saint-Rapha%C3%ABl_depuis_la_grande_roue.jpg/500px-Vue_du_vieux_port_de_Saint-Rapha%C3%ABl_depuis_la_grande_roue.jpg
+Sainte-Marie (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/H%C3%B4tel-de-ville-de-Sainte-Marie.JPG/500px-H%C3%B4tel-de-ville-de-Sainte-Marie.JPG
+Vitrolles (Bouches-du-Rhône);https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Vitrolles_4.jpg/500px-Vitrolles_4.jpg
+Châtillon (Hauts-de-Seine);https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/%C3%89glise_Saint-Philippe-et-Saint-Jacques_-_Ch%C3%A2tillon_-_Haut-de-Seine_%E2%80%93_France_%E2%80%93_M%C3%A9rim%C3%A9e_PA00088090_%2816%29.jpg/500px-%C3%89glise_Saint-Philippe-et-Saint-Jacques_-_Ch%C3%A2tillon_-_Haut-de-Seine_%E2%80%93_France_%E2%80%93_M%C3%A9rim%C3%A9e_PA00088090_%2816%29.jpg
+Saint-Leu (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/R%C3%A9union-Saint-Leu.png/500px-R%C3%A9union-Saint-Leu.png
+Sainte-Geneviève-des-Bois (Essonne);https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/SteGeDesBois_Hoteldeville.jpg/500px-SteGeDesBois_Hoteldeville.jpg
+Le Port (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/R%C3%A9union-Port.png/500px-R%C3%A9union-Port.png
+Lens (Pas-de-Calais);https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Avion-glissoires7.jpg/500px-Avion-glissoires7.jpg
+Vienne (Isère);https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Vienne_-_Quai_du_Rh%C3%B4ne%2C_%C3%A9glise_Saint-Andr%C3%A9-le-Bas_et_chapelle_Notre-Dame-de-la-Salette%2C_depuis_Saint-Romain-en-Gal.jpeg/500px-Vienne_-_Quai_du_Rh%C3%B4ne%2C_%C3%A9glise_Saint-Andr%C3%A9-le-Bas_et_chapelle_Notre-Dame-de-la-Salette%2C_depuis_Saint-Romain-en-Gal.jpeg
+Goussainville (Val-d'Oise);https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Goussainville_%2895%29%2C_H%C3%B4tel_de_ville%2C_place_de_la_Charmeuse.jpg/500px-Goussainville_%2895%29%2C_H%C3%B4tel_de_ville%2C_place_de_la_Charmeuse.jpg
+Menton (Alpes-Maritimes);https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Menton_vieille_ville.JPG/500px-Menton_vieille_ville.JPG
+Malakoff (Hauts-de-Seine);https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Malakoff_place_du_11_Novembre_1.jpg/500px-Malakoff_place_du_11_Novembre_1.jpg
+Orange (Vaucluse);https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Le_Th%C3%A9%C3%A2tre_Antique_d%27Orange%2C_2007.jpg/500px-Le_Th%C3%A9%C3%A2tre_Antique_d%27Orange%2C_2007.jpg
+Fresnes (Val-de-Marne);https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/H%C3%B4tel_ville_Fresnes_Val_Marne_7.jpg/500px-H%C3%B4tel_ville_Fresnes_Val_Marne_7.jpg
+Dieppe (Seine-Maritime);https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Arcades_de_la_Bourse%2C_Dieppe.jpg/500px-Arcades_de_la_Bourse%2C_Dieppe.jpg
+Bergerac (Dordogne);https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Bergerac_-_View_in_late_afternoon.jpg/500px-Bergerac_-_View_in_late_afternoon.jpg
+Sens (Yonne);https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sens-FR-89-B-03.JPG/500px-Sens-FR-89-B-03.JPG
+Grigny (Essonne);https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Grigny_Hotel-de-Ville.JPG/500px-Grigny_Hotel-de-Ville.JPG
+La Garde (Var);https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/La_Garde_%28Var%29_by_night.jpg/500px-La_Garde_%28Var%29_by_night.jpg
+Muret (Haute-Garonne);https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/All%C3%A9e_Niel_Muret.jpg/500px-All%C3%A9e_Niel_Muret.jpg
+Sainte-Suzanne (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/H%C3%B4tel-de-ville-de-Sainte-Suzanne.JPG/500px-H%C3%B4tel-de-ville-de-Sainte-Suzanne.JPG
+Vernon (Eure);https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/H%C3%B4tel_de_Ville_-_Ville_de_Vernon.jpg/500px-H%C3%B4tel_de_Ville_-_Ville_de_Vernon.jpg
+Sainte-Anne (Guadeloupe);https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Matin_%C3%A0_la_plage_de_la_caravelle_-_07_2006.JPG/500px-Matin_%C3%A0_la_plage_de_la_caravelle_-_07_2006.JPG
+Dole (Jura);https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Remote_views_of_Coll%C3%A9giale_Notre-Dame_de_Dole_02.jpg/500px-Remote_views_of_Coll%C3%A9giale_Notre-Dame_de_Dole_02.jpg
+Olivet (Loiret);https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Olivet_Cotelle_Loiret_3.jpg/500px-Olivet_Cotelle_Loiret_3.jpg
+Rochefort (Charente-Maritime);https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/440_-_Place_Colbert_-_Rochefort.jpg/500px-440_-_Place_Colbert_-_Rochefort.jpg
+Torcy (Seine-et-Marne);https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/%C3%89tang_du_Segrais_at_Sunset%2C_Between_Lognes_and_Torcy%2C_2019-05-28.jpg/500px-%C3%89tang_du_Segrais_at_Sunset%2C_Between_Lognes_and_Torcy%2C_2019-05-28.jpg
+Saint-Louis (La Réunion);https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/R%C3%A9union-Saint-Louis.png/500px-R%C3%A9union-Saint-Louis.png
+Saint-Louis (Haut-Rhin);https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/H%C3%B4tel_de_ville_%28Saint-Louis%29.jpg/500px-H%C3%B4tel_de_ville_%28Saint-Louis%29.jpg
+Loos (Nord);https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/H%C3%B4tel_de_Ville_de_Loos.jpg/500px-H%C3%B4tel_de_Ville_de_Loos.jpg
+Achères (Yvelines);https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Chambourcy_Vue_d%27Ach%C3%A8res.jpg/500px-Chambourcy_Vue_d%27Ach%C3%A8res.jpg
+La Madeleine (Nord);https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/La_madeleine_hotel_de_ville.JPG/500px-La_madeleine_hotel_de_ville.JPG
+Montmorency (Val-d'Oise);https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Montmorency_%28Val-d%E2%80%99Oise%29_H%C3%B4tel_de_Ville_239.jpg/500px-Montmorency_%28Val-d%E2%80%99Oise%29_H%C3%B4tel_de_Ville_239.jpg
+Saint-Gratien (Val-d'Oise);https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Saint-Gratien_-_Vue_generale_01.jpg/500px-Saint-Gratien_-_Vue_generale_01.jpg
+Chaumont (Haute-Marne);https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Chaumont_%28Haute-Marne%29_vieille_ville.jpg/500px-Chaumont_%28Haute-Marne%29_vieille_ville.jpg
+Maurepas (Yvelines);https://upload.wikimedia.org/wikipedia/fr/thumb/7/78/Maurepas_78_Mairie.jpg/500px-Maurepas_78_Mairie.jpg
+Marseille;https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Notre_Dame_de_la_Garde.jpg/500px-Notre_Dame_de_la_Garde.jpg
+Lyon;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Montage-Lyon-2023.jpg/500px-Montage-Lyon-2023.jpg
+Paris;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/500px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg
+Toulouse;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Montage_Toulouse_3.jpg/500px-Montage_Toulouse_3.jpg
+Nice;https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Promenade_des_Anglais_%2822261311858%29.jpg/500px-Promenade_des_Anglais_%2822261311858%29.jpg
+Nantes;https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ch%C3%A2teau_des_Ducs_de_Bretagne_%C3%A0_Nantes_-_Anne.jpg/500px-Ch%C3%A2teau_des_Ducs_de_Bretagne_%C3%A0_Nantes_-_Anne.jpg
+Montpellier;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Place_de_la_Com%C3%A9die_%282377437375%29.jpg/500px-Place_de_la_Com%C3%A9die_%282377437375%29.jpg
+Strasbourg;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Strasbourg_vue_a%C3%A9rienne_vers_la_cath%C3%A9drale_septembre_2015.jpg/500px-Strasbourg_vue_a%C3%A9rienne_vers_la_cath%C3%A9drale_septembre_2015.jpg
+Bordeaux;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bordeaux_Place_de_la_Bourse_de_nuit.jpg/500px-Bordeaux_Place_de_la_Bourse_de_nuit.jpg
+Lille;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Lille_Collage.jpg/500px-Lille_Collage.jpg
+Rennes;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rennes-Place-du-Champ-Jacquet-Statue-Leperdit-Mars-2020.jpg/500px-Rennes-Place-du-Champ-Jacquet-Statue-Leperdit-Mars-2020.jpg
+Toulon;https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Petite_rade_de_Toulon_%28vue_du_Mont_Faron%29.jpg/500px-Petite_rade_de_Toulon_%28vue_du_Mont_Faron%29.jpg
+Reims;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Fontaine_sube_crop_HQ_v2.jpg/500px-Fontaine_sube_crop_HQ_v2.jpg
+Saint-Étienne;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Saint_Etienne_views.png/500px-Saint_Etienne_views.png
+Le Havre;https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Cath%C3%A9drale_Notre-Dame_du_Havre%2C_10_August_2021.jpg/500px-Cath%C3%A9drale_Notre-Dame_du_Havre%2C_10_August_2021.jpg
+Villeurbanne;https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_view_of_Le_Tonkin_district_in_Villeurbanne_in_spring.jpg/500px-A_view_of_Le_Tonkin_district_in_Villeurbanne_in_spring.jpg
+Dijon;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Dijon_-_Palais_des_Ducs_et_des_%C3%89tats_de_Bourgogne_-_01.jpg/500px-Dijon_-_Palais_des_Ducs_et_des_%C3%89tats_de_Bourgogne_-_01.jpg
+Angers;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ch%C3%A2teau_d%27Angers%2C_South_view_20170611_1.jpg/500px-Ch%C3%A2teau_d%27Angers%2C_South_view_20170611_1.jpg
+Grenoble;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cath%C3%A9drale_Notre-Dame_%C3%A0_Grenoble_2014-09-27.jpg/500px-Cath%C3%A9drale_Notre-Dame_%C3%A0_Grenoble_2014-09-27.jpg
+Nîmes;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Maison_Carree_in_Nimes_%2812%29.jpg/500px-Maison_Carree_in_Nimes_%2812%29.jpg
+Aix-en-Provence;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Fontaine_de_la_Rotonde_-_Aix-en-Provence.JPG/500px-Fontaine_de_la_Rotonde_-_Aix-en-Provence.JPG
+Clermont-Ferrand;https://upload.wikimedia.org/wikipedia/commons/c/c9/Ville_de_Clermont-Ferrand.jpg
+Le Mans;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Montage_du_Mans.jpg/500px-Montage_du_Mans.jpg
+Brest;https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Ch%C3%A2teau_et_Tour_Tanguy.jpg/500px-Ch%C3%A2teau_et_Tour_Tanguy.jpg
+Tours;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tours_-_H%C3%B4tel_de_Ville_-_17.jpg/500px-Tours_-_H%C3%B4tel_de_Ville_-_17.jpg
+Amiens;https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Amiens_France_Quai-Belu-03.jpg/500px-Amiens_France_Quai-Belu-03.jpg
+Annecy;https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Annecy%2C_France_%2837635411615%29.jpg/500px-Annecy%2C_France_%2837635411615%29.jpg
+Limoges;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cour_du_Temple_-_Limoges.JPG/500px-Cour_du_Temple_-_Limoges.JPG
+Metz;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Metz_centre_ville.jpg/500px-Metz_centre_ville.jpg
+Perpignan;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Cour_du_Campo_Santo.jpg/500px-Cour_du_Campo_Santo.jpg
+Besançon;https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Besan%C3%A7on%2C_la_rue_de_la_Convention.jpg/500px-Besan%C3%A7on%2C_la_rue_de_la_Convention.jpg
+Rouen;https://upload.wikimedia.org/wikipedia/commons/9/97/Rouen_mosaique.png
+Orléans;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Orl%C3%A9ans_et_la_rue_jeanne_d%27arc_en_2021.jpg/500px-Orl%C3%A9ans_et_la_rue_jeanne_d%27arc_en_2021.jpg
+Caen;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Eglise_St_Pierre_190.JPG/500px-Eglise_St_Pierre_190.JPG
+Mulhouse;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Assemblage_mulhouse.jpg/500px-Assemblage_mulhouse.jpg
+Nancy;https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Place_Stanislas_et_ses_grilles_%C3%A0_Nancy.jpg/500px-Place_Stanislas_et_ses_grilles_%C3%A0_Nancy.jpg
+Tourcoing;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Collage_Tourcoing.png/500px-Collage_Tourcoing.png
+Roubaix;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/H%C3%B4tel_Ville_Roubaix_26.jpg/500px-H%C3%B4tel_Ville_Roubaix_26.jpg
+Nanterre;https://upload.wikimedia.org/wikipedia/fr/thumb/a/ab/Mairie_Nanterre_Immeuble_Pyramide.JPG/500px-Mairie_Nanterre_Immeuble_Pyramide.JPG
+Vitry-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/H%C3%B4tel_Ville_Vitry_Seine_3.jpg/500px-H%C3%B4tel_Ville_Vitry_Seine_3.jpg
+Asnières-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mairie_Asni%C3%A8res.jpg/500px-Mairie_Asni%C3%A8res.jpg
+Créteil;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Vue_a%C3%A9rienne_du_lac_de_Cr%C3%A9teil.jpg/500px-Vue_a%C3%A9rienne_du_lac_de_Cr%C3%A9teil.jpg
+Avignon;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Vue_a%C3%A9rienne_2_JP_Campomar.jpg/500px-Vue_a%C3%A9rienne_2_JP_Campomar.jpg
+Colombes;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/H%C3%B4tel_Ville_-_Colombes_%28FR92%29_-_2024-04-06_-_2.jpg/500px-H%C3%B4tel_Ville_-_Colombes_%28FR92%29_-_2024-04-06_-_2.jpg
+Poitiers;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Poitiers_panorama_01.jpg/500px-Poitiers_panorama_01.jpg
+Aubervilliers;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Place_H%C3%B4tel_Ville_Aubervilliers_1.jpg/500px-Place_H%C3%B4tel_Ville_Aubervilliers_1.jpg
+Aulnay-sous-Bois;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Photo_de_l%27h%C3%B4tel_de_ville_de_la_ville_d%27Aulnay-Sous-Bois.jpg/500px-Photo_de_l%27h%C3%B4tel_de_ville_de_la_ville_d%27Aulnay-Sous-Bois.jpg
+Dunkerque;https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Dunkerque_Belfort.JPG/500px-Dunkerque_Belfort.JPG
+Versailles;https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_073.jpg/500px-Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_073.jpg
+Courbevoie;https://upload.wikimedia.org/wikipedia/fr/thumb/2/29/Logo_Courbevoie.svg/500px-Logo_Courbevoie.svg.png
+Rueil-Malmaison;https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rueil-Malmaison_Place%C3%89glise.jpg/500px-Rueil-Malmaison_Place%C3%89glise.jpg
+Le Tampon;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Eglise_tampon.jpg/500px-Eglise_tampon.jpg
+Béziers;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/B%C3%A9ziers_-_54704365001.jpg/500px-B%C3%A9ziers_-_54704365001.jpg
+Pau;https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Montage_Pau_4.jpg/500px-Montage_Pau_4.jpg
+La Rochelle;https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Entree_vieux_port_La_Rochelle.JPG/500px-Entree_vieux_port_La_Rochelle.JPG
+Cherbourg-en-Cotentin;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Cherbourg.jpg/500px-Cherbourg.jpg
+Champigny-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/H%C3%B4tel_ville_Champigny_Marne_8.jpg/500px-H%C3%B4tel_ville_Champigny_Marne_8.jpg
+Antibes;https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Antibes_in_winter_%2816352944512%29.jpg/500px-Antibes_in_winter_%2816352944512%29.jpg
+Saint-Maur-des-Fossés;https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/H%C3%B4tel_ville_St_Maur_Foss%C3%A9s_11.jpg/500px-H%C3%B4tel_ville_St_Maur_Foss%C3%A9s_11.jpg
+Ajaccio;https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Aiacciu.jpg/500px-Aiacciu.jpg
+Fort-de-France;https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Fort-de-france-harbor.jpg/500px-Fort-de-france-harbor.jpg
+Saint-Nazaire;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Saint-Nazaire.jpg/500px-Saint-Nazaire.jpg
+Cannes;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Cannes_-_port_et_croisette.jpg/500px-Cannes_-_port_et_croisette.jpg
+Noisy-le-Grand;https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mairie_Noisy_Grand_24.jpg/500px-Mairie_Noisy_Grand_24.jpg
+Drancy;https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/H%C3%B4tel_ville_Drancy_3.jpg/500px-H%C3%B4tel_ville_Drancy_3.jpg
+Cergy;https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cergy_Grand_Centre_Parc_Fran%C3%A7ois_Mitterrand%C2%A9L_Pages.jpg/500px-Cergy_Grand_Centre_Parc_Fran%C3%A7ois_Mitterrand%C2%A9L_Pages.jpg
+Levallois-Perret;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/H%C3%B4tel_Ville_-_Levallois-Perret_%28FR92%29_-_2023-07-06_-_6.jpg/500px-H%C3%B4tel_Ville_-_Levallois-Perret_%28FR92%29_-_2023-07-06_-_6.jpg
+Issy-les-Moulineaux;https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Petit_Bras_de_Seine_%40_Issy-les-Moulineaux_%40_Paris_%2830184037683%29.jpg/500px-Petit_Bras_de_Seine_%40_Issy-les-Moulineaux_%40_Paris_%2830184037683%29.jpg
+Calais;https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Calais_hotel_de_ville_face.jpg/500px-Calais_hotel_de_ville_face.jpg
+Pessac;https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Pessac_-_Mairie.jpg/500px-Pessac_-_Mairie.jpg
+Colmar;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Musee_d_Unterlinden_colmar.jpg/500px-Musee_d_Unterlinden_colmar.jpg
+Évry-Courcouronnes;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Courcouronnes%2C_l%27%C3%A9glise.jpg/500px-Courcouronnes%2C_l%27%C3%A9glise.jpg
+Vénissieux;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/V%C3%A9nissieux_-_H%C3%B4tel_de_ville_%28juin_2023%29.jpg/500px-V%C3%A9nissieux_-_H%C3%B4tel_de_ville_%28juin_2023%29.jpg
+Ivry-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Mairie_d%27Ivry_et_centre_ville.jpg/500px-Mairie_d%27Ivry_et_centre_ville.jpg
+Clichy;https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/%C3%89gliseclichyjpg.jpg/500px-%C3%89gliseclichyjpg.jpg
+Quimper;https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Quimper2011.png/500px-Quimper2011.png
+Antony;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Commune_antony_fontaine.jpg/500px-Commune_antony_fontaine.jpg
+Bourges;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cath%C3%A9drale_Saint-%C3%89tienne_7SC2336CFP.jpg/500px-Cath%C3%A9drale_Saint-%C3%89tienne_7SC2336CFP.jpg
+La Seyne-sur-Mer;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Port_de_La_Seyne-sur-Mer.JPG/500px-Port_de_La_Seyne-sur-Mer.JPG
+Montauban;https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Montage_Montauban_ville.png/500px-Montage_Montauban_ville.png
+Villeneuve-d'Ascq;https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Jielbeaumadier_chateau_flers_neige_vda_20101221_1.jpg/500px-Jielbeaumadier_chateau_flers_neige_vda_20101221_1.jpg
+Cayenne;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cayenne_av_G%C3%A9n%C3%A9ral-de-Gaulle.jpg/500px-Cayenne_av_G%C3%A9n%C3%A9ral-de-Gaulle.jpg
+Le Blanc-Mesnil;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/La_Place_de_l%27eau_et_la_fl%C3%A8che_de_l%27H%C3%B4tel_de_ville.jpg/500px-La_Place_de_l%27eau_et_la_fl%C3%A8che_de_l%27H%C3%B4tel_de_ville.jpg
+Troyes;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Maison_Commune_-_H%C3%B4tel_de_Ville%2C_Troyes_20140509_1.jpg/500px-Maison_Commune_-_H%C3%B4tel_de_Ville%2C_Troyes_20140509_1.jpg
+Pantin;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/H%C3%B4tel_Ville_-_Pantin_%28FR93%29_-_2022-07-12_-_1.jpg/500px-H%C3%B4tel_Ville_-_Pantin_%28FR93%29_-_2022-07-12_-_1.jpg
+Villejuif;https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mairie_Villejuif_9.jpg/500px-Mairie_Villejuif_9.jpg
+Chambéry;https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chamb%C3%A9ry_depuis_les_Monts.JPG/500px-Chamb%C3%A9ry_depuis_les_Monts.JPG
+Niort;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/View_of_%C3%89glise_Saint-Andr%C3%A9_and_Les_Vieux_Ponts%2C_Niort.jpg/500px-View_of_%C3%89glise_Saint-Andr%C3%A9_and_Les_Vieux_Ponts%2C_Niort.jpg
+Fréjus;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Fr%C3%A9jus-Plage_-_panoramio.jpg/500px-Fr%C3%A9jus-Plage_-_panoramio.jpg
+Neuilly-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Mairie_de_Neuilly-sur-Seine.JPG/500px-Mairie_de_Neuilly-sur-Seine.JPG
+Sarcelles;https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/2018-0615-Flanades-008.jpg/500px-2018-0615-Flanades-008.jpg
+Clamart;https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mairie_de_clamart.jpg/500px-Mairie_de_clamart.jpg
+Lorient;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Lorient.jpg/500px-Lorient.jpg
+Narbonne;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Narbonne_Cathedrale_Saint_Just_et_Saint_Pasteur.jpg/500px-Narbonne_Cathedrale_Saint_Just_et_Saint_Pasteur.jpg
+Bobigny;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/H%C3%B4tel_de_ville_de_Bobigny_-_Septembre_2024_-_1.jpg/500px-H%C3%B4tel_de_ville_de_Bobigny_-_Septembre_2024_-_1.jpg
+Meaux;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Meaux_140708_01.jpg/500px-Meaux_140708_01.jpg
+Maisons-Alfort;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/H%C3%B4tel_Ville_-_Maisons-Alfort_%28FR94%29_-_2021-03-05_-_2.jpg/500px-H%C3%B4tel_Ville_-_Maisons-Alfort_%28FR94%29_-_2021-03-05_-_2.jpg
+Hyères;https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Hyeres_aeroport_porquerolles.JPG/500px-Hyeres_aeroport_porquerolles.JPG
+Vannes;https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Vannes_montage.png/500px-Vannes_montage.png
+Beauvais;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Beauvais_Cathedral_Exterior_1%2C_Picardy%2C_France_-_Diliff.jpg/500px-Beauvais_Cathedral_Exterior_1%2C_Picardy%2C_France_-_Diliff.jpg
+La Roche-sur-Yon;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Place_Napol%C3%A9on_de_La_Roche-sur-Yon_depuis_l%27%C3%A9glise.jpg/500px-Place_Napol%C3%A9on_de_La_Roche-sur-Yon_depuis_l%27%C3%A9glise.jpg
+Chelles;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/H%C3%B4tel_ville_Chelles_Seine_Marne_19.jpg/500px-H%C3%B4tel_ville_Chelles_Seine_Marne_19.jpg
+Corbeil-Essonnes;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/H%C3%B4tel_Ville_-_Corbeil-Essonnes_%28FR91%29_-_2023-10-21_-_4.jpg/500px-H%C3%B4tel_Ville_-_Corbeil-Essonnes_%28FR91%29_-_2023-10-21_-_4.jpg
+Saint-Laurent-du-Maroni;https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Saint-Laurent-du-Maroni_%2815789323958%29.jpg/500px-Saint-Laurent-du-Maroni_%2815789323958%29.jpg
+Cholet;https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Cholet_-_Jardin_du_Mail_%281%29.jpg/500px-Cholet_-_Jardin_du_Mail_%281%29.jpg
+Bayonne;https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Bayonne-Centre_historique-20130811.jpg/500px-Bayonne-Centre_historique-20130811.jpg
+Fontenay-sous-Bois;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/%C3%89glise_Saint_Germain_Auxerrois_-_Fontenay-sous-Bois_%28FR94%29_-_2021-02-11_-_2.jpg/500px-%C3%89glise_Saint_Germain_Auxerrois_-_Fontenay-sous-Bois_%28FR94%29_-_2021-02-11_-_2.jpg
+Saint-Ouen-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/H%C3%B4tel_ville_St_Ouen_Seine_2.jpg/500px-H%C3%B4tel_ville_St_Ouen_Seine_2.jpg
+Cagnes-sur-Mer;https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Le_Haut-de-Cagnes_01.jpg/500px-Le_Haut-de-Cagnes_01.jpg
+Vaulx-en-Velin;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vaulx-en-Velin_mairie.JPG/500px-Vaulx-en-Velin_mairie.JPG
+Épinay-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/H%C3%B4tel_ville_%C3%89pinay_Seine_3.jpg/500px-H%C3%B4tel_ville_%C3%89pinay_Seine_3.jpg
+Saint-Quentin;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Saint-Quentin_Basilique_22.jpg/500px-Saint-Quentin_Basilique_22.jpg
+Sartrouville;https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hotel_de_Ville_de_Sartrouville.jpg/500px-Hotel_de_Ville_de_Sartrouville.jpg
+Sevran;https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/H%C3%B4tel_Ville_Sevran_3.jpg/500px-H%C3%B4tel_Ville_Sevran_3.jpg
+Arles;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1_arles_france_2016.jpg/500px-1_arles_france_2016.jpg
+Albi;https://upload.wikimedia.org/wikipedia/fr/thumb/3/3e/Logo_Ville_Albi.svg/500px-Logo_Ville_Albi.svg.png
+Les Abymes;https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Place_principale_aux_Abymes.JPG/500px-Place_principale_aux_Abymes.JPG
+Gennevilliers;https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Gennevilliers.jpg/500px-Gennevilliers.jpg
+Saint-Herblain;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Saint-Herblain_mairie.jpg/500px-Saint-Herblain_mairie.jpg
+Grasse;https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Vue_de_Grasse.jpg/500px-Vue_de_Grasse.jpg
+Bondy;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/H%C3%B4tel_Ville_Bondy_2.jpg/500px-H%C3%B4tel_Ville_Bondy_2.jpg
+Les Sables-d'Olonne;https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Les_Sables-d%27Olonne_%282010%29.JPG/500px-Les_Sables-d%27Olonne_%282010%29.JPG
+Évreux;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Evreux_-_2016-06-15_-_IMG_1262.jpg/500px-Evreux_-_2016-06-15_-_IMG_1262.jpg
+Saint-Priest;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Ch%C3%A2teau_de_Saint-Priest.jpg/500px-Ch%C3%A2teau_de_Saint-Priest.jpg
+Suresnes;https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Paris_vu_de_Suresnes_4.jpg/500px-Paris_vu_de_Suresnes_4.jpg
+Martigues;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Martigues_-_Miroir_aux_Oiseaux.jpg/500px-Martigues_-_Miroir_aux_Oiseaux.jpg
+Vincennes;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Donjon_du_Ch%C3%A2teau_de_Vincennes.jpg/500px-Donjon_du_Ch%C3%A2teau_de_Vincennes.jpg
+Aubagne;https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Montage_Aubagne.jpg/500px-Montage_Aubagne.jpg
+Saint-Malo;https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/IMG_2935_StMalo.JPG/500px-IMG_2935_StMalo.JPG
+Livry-Gargan;https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%B4tel_Ville_Livry_Gargan_2.jpg/500px-H%C3%B4tel_Ville_Livry_Gargan_2.jpg
+Blois;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Blois_Loire_Panorama_-_July_2011.jpg/500px-Blois_Loire_Panorama_-_July_2011.jpg
+Rosny-sous-Bois;https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ancienne_Mairie_-_Rosny-sous-Bois_%28FR93%29_-_2018-05-05_-_1.jpg/500px-Ancienne_Mairie_-_Rosny-sous-Bois_%28FR93%29_-_2018-05-05_-_1.jpg
+La Courneuve;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Mairie_la_Courneuve.JPG/500px-Mairie_la_Courneuve.JPG
+Brive-la-Gaillarde;https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Brive-la-Gaillarde_-_Vue_du_ch%C3%A2teau_d%27eau_-_2.jpg/500px-Brive-la-Gaillarde_-_Vue_du_ch%C3%A2teau_d%27eau_-_2.jpg
+Bastia;https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Port_of_Bastia%2C_Corsica%2C_France_%2852723300062%29.jpg/500px-Port_of_Bastia%2C_Corsica%2C_France_%2852723300062%29.jpg
+Talence;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/L%27%C3%A9glise_de_Talence_dans_son_environnement.JPG/500px-L%27%C3%A9glise_de_Talence_dans_son_environnement.JPG
+Meudon;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Meudon_observatoire_2016_%283%29.jpg/500px-Meudon_observatoire_2016_%283%29.jpg
+Alès;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Centre_al%C3%A8s.JPG/500px-Centre_al%C3%A8s.JPG
+Carcassonne;https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/1_carcassonne_aerial_2016.jpg/500px-1_carcassonne_aerial_2016.jpg
+Melun;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Melun_-_coll%C3%A9giale_%282023%29.jpg/500px-Melun_-_coll%C3%A9giale_%282023%29.jpg
+Choisy-le-Roi;https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mairie_Choisy-le-Roi.JPG/500px-Mairie_Choisy-le-Roi.JPG
+Saint-Germain-en-Laye;https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ch%C3%A2teau_de_Saint-Germain-en-Laye01.jpg/500px-Ch%C3%A2teau_de_Saint-Germain-en-Laye01.jpg
+Belfort;https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/2014-09-02_16-42-16_cat-st-christ-citadelle-belfort.jpg/500px-2014-09-02_16-42-16_cat-st-christ-citadelle-belfort.jpg
+Charleville-Mézières;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Charleville-M%C3%A9zi%C3%A8res%2C_Place_Ducale_--_2017_--_4864.jpg/500px-Charleville-M%C3%A9zi%C3%A8res%2C_Place_Ducale_--_2017_--_4864.jpg
+Alfortville;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Barges_paris_P1050238.JPG/500px-Barges_paris_P1050238.JPG
+Noisy-le-Sec;https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/H%C3%B4tel_Ville_Noisy_Sec_9.jpg/500px-H%C3%B4tel_Ville_Noisy_Sec_9.jpg
+Sète;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/La_Grace_%28ship%2C_2010%29%2C_S%C3%A8te%2C_H%C3%A9rault_01.jpg/500px-La_Grace_%28ship%2C_2010%29%2C_S%C3%A8te%2C_H%C3%A9rault_01.jpg
+Chalon-sur-Saône;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Chalon-sur-Sa%C3%B4ne_-_Quai_Gambetta_-_2.jpg/500px-Chalon-sur-Sa%C3%B4ne_-_Quai_Gambetta_-_2.jpg
+Tarbes;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Place_de_Verdun%2C_Tarbes%2C_Hautes-Pyr%C3%A9n%C3%A9es%2C_France.jpg/500px-Place_de_Verdun%2C_Tarbes%2C_Hautes-Pyr%C3%A9n%C3%A9es%2C_France.jpg
+Saint-Brieuc;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Saint-Brieuc-mairie.JPG/500px-Saint-Brieuc-mairie.JPG
+Istres;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Istres_-_Centre_ancien.jpg/500px-Istres_-_Centre_ancien.jpg
+Salon-de-Provence;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Salon_de_Provence.JPG/500px-Salon_de_Provence.JPG
+Puteaux;https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Esplanade_du_G%C3%A9n%C3%A9ral_de_Gaulle_-_Puteaux.jpg/500px-Esplanade_du_G%C3%A9n%C3%A9ral_de_Gaulle_-_Puteaux.jpg
+Caluire-et-Cuire;https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Hotel.de.ville.Caluire.et.Cuire.001.JPG/500px-Hotel.de.ville.Caluire.et.Cuire.001.JPG
+Rezé;https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Rez%C3%A9_centre.jpg/500px-Rez%C3%A9_centre.jpg
+Mantes-la-Jolie;https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Mantes-la-Jolie_%2878%29%2C_coll%C3%A9giale_Notre-Dame%2C_vue_g%C3%A9n%C3%A9rale_depuis_le_nord_7.jpg/500px-Mantes-la-Jolie_%2878%29%2C_coll%C3%A9giale_Notre-Dame%2C_vue_g%C3%A9n%C3%A9rale_depuis_le_nord_7.jpg
+Valenciennes;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Valenciennes_hotel_de_ville_cote.jpg/500px-Valenciennes_hotel_de_ville_cote.jpg
+Anglet;https://upload.wikimedia.org/wikipedia/fr/thumb/2/21/Mairie_anglet.JPG/500px-Mairie_anglet.JPG
+Bron;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Bron_batiment.jpg/500px-Bron_batiment.jpg
+Châlons-en-Champagne;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Ch%C3%A2lons-HDV%282025%29.jpg/500px-Ch%C3%A2lons-HDV%282025%29.jpg
+Châteauroux;https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Place_%2B_mairie.jpg/500px-Place_%2B_mairie.jpg
+Arras;https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Photo_montage_of_Arras.png/500px-Photo_montage_of_Arras.png
+Thionville;https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Thionville_-_H%C3%B4tel_de_ville_%284%29.JPG/500px-Thionville_-_H%C3%B4tel_de_ville_%284%29.JPG
+Villenave-d'Ornon;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Villenave-d%27Ornon_Mairie.jpg/500px-Villenave-d%27Ornon_Mairie.jpg
+Castres;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%28Castres%29_Maisons_sur_l%27Ago%C3%BBt_vues_du_pont_Neuf_vers_le_pont_Henri_Sizaire.jpg/500px-%28Castres%29_Maisons_sur_l%27Ago%C3%BBt_vues_du_pont_Neuf_vers_le_pont_Henri_Sizaire.jpg
+Bourg-en-Bresse;https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/H%C3%B4tel_Ville_Bourg_Bresse_2.jpg/500px-H%C3%B4tel_Ville_Bourg_Bresse_2.jpg
+Gagny;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/H%C3%B4tel_Ville_Gagny_5.jpg/500px-H%C3%B4tel_Ville_Gagny_5.jpg
+Le Cannet;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/La_place_Bellevue_du_Cannet.JPG/500px-La_place_Bellevue_du_Cannet.JPG
+Angoulême;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Angouleme.jpg/500px-Angouleme.jpg
+Garges-lès-Gonesse;https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/T5-_Garges_Sarcelles_-_Arri%C3%A8re-Gare_R.jpg/500px-T5-_Garges_Sarcelles_-_Arri%C3%A8re-Gare_R.jpg
+Stains;https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/H%C3%B4tel_ville_Stains_2.jpg/500px-H%C3%B4tel_ville_Stains_2.jpg
+Gap;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Gap_vue_d%27en_haut_%28cropped%29.jpg/500px-Gap_vue_d%27en_haut_%28cropped%29.jpg
+Poissy;https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Poissy_-_Bras_de_l%27%C3%AEle_Migneaux02.jpg/500px-Poissy_-_Bras_de_l%27%C3%AEle_Migneaux02.jpg
+Colomiers;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Colomiers_-_Ancienne_mairie.jpg/500px-Colomiers_-_Ancienne_mairie.jpg
+Wattrelos;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Eglise_Saint-Maclou_de_Wattrelos.JPG/500px-Eglise_Saint-Maclou_de_Wattrelos.JPG
+Draguignan;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Couvent_et_Chapelle_des_Minimes_-_Draguignan_%282%29.jpg/500px-Couvent_et_Chapelle_des_Minimes_-_Draguignan_%282%29.jpg
+Compiègne;https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/H%C3%B4tel_de_ville_de_Compi%C3%A8gne.jpg/500px-H%C3%B4tel_de_ville_de_Compi%C3%A8gne.jpg
+Montélimar;https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Coll%C3%A9giale_Sainte_Croix_Mont%C3%A9limar_-_vue_sud.jpg/500px-Coll%C3%A9giale_Sainte_Croix_Mont%C3%A9limar_-_vue_sud.jpg
+Boulogne-sur-Mer;https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Boulogne_vue_generale_phare_beffroi_mer.jpg/500px-Boulogne_vue_generale_phare_beffroi_mer.jpg
+Douai;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/La_Fontaine_de_la_Place_d%27Armes_de_Douai.jpg/500px-La_Fontaine_de_la_Place_d%27Armes_de_Douai.jpg
+Marcq-en-Barœul;https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/H%C3%B4tel_Ville_-_Marcq-en-Bar%C5%93ul_%28FR59%29_-_2024-02-24_-_10.jpg/500px-H%C3%B4tel_Ville_-_Marcq-en-Bar%C5%93ul_%28FR59%29_-_2024-02-24_-_10.jpg
+Neuilly-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/H%C3%B4tel_Ville_-_Neuilly-sur-Marne_%28FR93%29_-_2025-09-05_-_2.jpg/500px-H%C3%B4tel_Ville_-_Neuilly-sur-Marne_%28FR93%29_-_2025-09-05_-_2.jpg
+Le Lamentin;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Aeroport_Aime_Cesaire.jpg/500px-Aeroport_Aime_Cesaire.jpg
+Pontault-Combault;https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Hotel_de_ville_de_Pontault-Combault.jpg/500px-Hotel_de_ville_de_Pontault-Combault.jpg
+La Ciotat;https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/1_LaCiotat.jpg/500px-1_LaCiotat.jpg
+Joué-lès-Tours;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Hotel_de_ville_Jou%C3%A9-l%C3%A8s-Tours.jpg/500px-Hotel_de_ville_Jou%C3%A9-l%C3%A8s-Tours.jpg
+Tremblay-en-France;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/H%C3%B4tel_ville_Tremblay_France_2.jpg/500px-H%C3%B4tel_ville_Tremblay_France_2.jpg
+Chartres;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Chartres_-_Vue_ville_et_cath%C3%A9trale.jpg/500px-Chartres_-_Vue_ville_et_cath%C3%A9trale.jpg
+Oullins-Pierre-Bénite;https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/H%C3%B4tel_de_Ville_d%27Oullins.JPG/500px-H%C3%B4tel_de_Ville_d%27Oullins.JPG
+Thonon-les-Bains;https://upload.wikimedia.org/wikipedia/commons/6/64/Thonon_par_le_ciel.jpg
+Saint-Martin-d'Hères;https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Mairie-ville-de-smh.JPG/500px-Mairie-ville-de-smh.JPG
+Annemasse;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Annemasse_%28France%29.jpg/500px-Annemasse_%28France%29.jpg
+Savigny-sur-Orge;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Savigny-sur-Orge_061.jpg/500px-Savigny-sur-Orge_061.jpg
+Échirolles;https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Hotel_ville_echirolles_2007.jpg/500px-Hotel_ville_echirolles_2007.jpg
+Palaiseau;https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/H%C3%B4teldeVillePalaiseau2024.jpg/500px-H%C3%B4teldeVillePalaiseau2024.jpg
+Romainville;https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/H%C3%B4tel_Ville_-_Romainville_%28FR93%29_-_2021-04-25_-_1.jpg/500px-H%C3%B4tel_Ville_-_Romainville_%28FR93%29_-_2021-04-25_-_1.jpg
+Six-Fours-les-Plages;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Panorama_de_Six-Fours-les-Plages.jpg/500px-Panorama_de_Six-Fours-les-Plages.jpg
+Conflans-Sainte-Honorine;https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Conflans-ste-honorine-mairie.jpg/500px-Conflans-ste-honorine-mairie.jpg
+Meyzieu;https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Hotel_de_ville_Meyzieu.JPG/500px-Hotel_de_ville_Meyzieu.JPG
+Athis-Mons;https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/H%C3%B4tel_Ville_-_Athis-Mons_%28FR91%29_-_2024-04-14_-_2.jpg/500px-H%C3%B4tel_Ville_-_Athis-Mons_%28FR91%29_-_2024-04-14_-_2.jpg
+La Possession;https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/R%C3%A9union-Possession.png/500px-R%C3%A9union-Possession.png
+Matoury;https://upload.wikimedia.org/wikipedia/commons/4/49/Mairiematoury.JPG
+Bezons;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Mairie_Bezons_2017.jpg/500px-Mairie_Bezons_2017.jpg
+Haguenau;https://upload.wikimedia.org/wikipedia/commons/6/60/Assemblage_haguenau.jpg
+Creil;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bras_Sud_Oise_Creil_4.jpg/500px-Bras_Sud_Oise_Creil_4.jpg
+Villeneuve-Saint-Georges;https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Mairie_de_Villeneuve-Saint-Georges_%28Val-de-Marne%29.jpg/500px-Mairie_de_Villeneuve-Saint-Georges_%28Val-de-Marne%29.jpg
+Villefranche-sur-Saône;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Rue_Nationale_-_Villefranche-sur-Sa%C3%B4ne_%28FR69%29_-_2021-07-16_-_1.jpg/500px-Rue_Nationale_-_Villefranche-sur-Sa%C3%B4ne_%28FR69%29_-_2021-07-16_-_1.jpg
+Châtenay-Malabry;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/H%C3%B4tel_Ville_-_Ch%C3%A2tenay-Malabry_%28FR92%29_-_2023-03-19_-_1.jpg/500px-H%C3%B4tel_Ville_-_Ch%C3%A2tenay-Malabry_%28FR92%29_-_2023-03-19_-_1.jpg
+Roanne;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Hotel_de_Ville_-_Roanne.jpg/500px-Hotel_de_Ville_-_Roanne.jpg
+Le Perreux-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Mairie_Perreux_Marne_31.jpg/500px-Mairie_Perreux_Marne_31.jpg
+Mâcon;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Quais_M%C3%A2con_16.jpg/500px-Quais_M%C3%A2con_16.jpg
+Auxerre;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Auxerre_-_Yonne_-_1.jpg/500px-Auxerre_-_Yonne_-_1.jpg
+Schiltigheim;https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Schiltigheim_rPrincipale_57_%281%29.jpg/500px-Schiltigheim_rPrincipale_57_%281%29.jpg
+Trappes;https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Trappes_Mairie.JPG/500px-Trappes_Mairie.JPG
+Les Mureaux;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Les_Mureaux_-_Musiciens.jpg/500px-Les_Mureaux_-_Musiciens.jpg
+Houilles;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Houilles_Mairie_2016.jpg/500px-Houilles_Mairie_2016.jpg
+Marignane;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chapelle_Notre_Dame_de_Piti%C3%A9_-_Marignane_%2813%29.JPG/500px-Chapelle_Notre_Dame_de_Piti%C3%A9_-_Marignane_%2813%29.JPG
+Villiers-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Place_R%C3%A9moiville.jpg/500px-Place_R%C3%A9moiville.jpg
+Montluçon;https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ch%C3%A2teau_des_ducs_de_Bourbon_%C3%A0_Montlu%C3%A7on_en_juillet_2014_-_04.jpg/500px-Ch%C3%A2teau_des_ducs_de_Bourbon_%C3%A0_Montlu%C3%A7on_en_juillet_2014_-_04.jpg
+Nevers;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nevers-Loirebr%C3%A9ck--w.jpg/500px-Nevers-Loirebr%C3%A9ck--w.jpg
+Thiais;https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/94-Thiais-%C3%A9glise-St-Leu.jpg/500px-94-Thiais-%C3%A9glise-St-Leu.jpg
+Saint-Médard-en-Jalles;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/SMJ-Mairie.jpg/500px-SMJ-Mairie.jpg
+Agen;https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Agen_-_Rue_des_Corni%C3%A8res_-_1.jpg/500px-Agen_-_Rue_des_Corni%C3%A8res_-_1.jpg
+Montigny-le-Bretonneux;https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Domaine_du_Manet%2C_Montigny-le-Bretonneux.jpg/500px-Domaine_du_Manet%2C_Montigny-le-Bretonneux.jpg
+Nogent-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Mairie_Nogent_Marne_15.jpg/500px-Mairie_Nogent_Marne_15.jpg
+Aix-les-Bains;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Aix-les-Bains_depuis_Revard_%28mars_2021%29.jpg/500px-Aix-les-Bains_depuis_Revard_%28mars_2021%29.jpg
+Épinal;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Epinal_Centre_Nuit.jpg/500px-Epinal_Centre_Nuit.jpg
+Saint-Laurent-du-Var;https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Saint_Laurent_du_Var_Hotel_de_Ville.JPG/500px-Saint_Laurent_du_Var_Hotel_de_Ville.JPG
+Pontoise;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pontoise_%2895%29%2C_cath%C3%A9drale_Saint-Maclou%2C_vue_depuis_le_jardin_des_Cinq_Sens_%28promontoire_du_ch%C3%A2teau%29.jpg/500px-Pontoise_%2895%29%2C_cath%C3%A9drale_Saint-Maclou%2C_vue_depuis_le_jardin_des_Cinq_Sens_%28promontoire_du_ch%C3%A2teau%29.jpg
+Bègles;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Port_Garonne%2C_Ville_de_B%C3%A8gles.jpg/500px-Port_Garonne%2C_Ville_de_B%C3%A8gles.jpg
+Plaisir;https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Mother-Child_face_to_face.jpg/500px-Mother-Child_face_to_face.jpg
+Herblay-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/HerblaySeineEglise.JPG/500px-HerblaySeineEglise.JPG
+Carpentras;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Vue_sur_le_Beffroi_et_le_clocher_de_l%27%C3%A9glise_de_l%27Observance.jpg/500px-Vue_sur_le_Beffroi_et_le_clocher_de_l%27%C3%A9glise_de_l%27Observance.jpg
+Mont-de-Marsan;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Confluent_Mont_de_Marsan.JPG/500px-Confluent_Mont_de_Marsan.JPG
+Dreux;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Place_Mesirard_Dreux.jpg/500px-Place_Mesirard_Dreux.jpg
+Vigneux-sur-Seine;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/%C3%89cole_Municipale_d%E2%80%99Arts_Plastiques_de_Vigneux-sur-Seine.JPG/500px-%C3%89cole_Municipale_d%E2%80%99Arts_Plastiques_de_Vigneux-sur-Seine.JPG
+Rillieux-la-Pape;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/H%C3%B4tel_de_ville_Rillieux-la-Pape_3-2016.jpg/500px-H%C3%B4tel_de_ville_Rillieux-la-Pape_3-2016.jpg
+Ris-Orangis;https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/MAIRIE_RIS-ORANGIS.jpg/500px-MAIRIE_RIS-ORANGIS.jpg
+Savigny-le-Temple;https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Photo_059.jpg/500px-Photo_059.jpg
+Cambrai;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/H%C3%B4tel_de_ville_de_Cambrai_%2897619%29.jpg/500px-H%C3%B4tel_de_ville_de_Cambrai_%2897619%29.jpg
+Cachan;https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/France_Mairie_de_Cachan.1.JPG/500px-France_Mairie_de_Cachan.1.JPG
+Châtellerault;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Vuesud1.jpg/500px-Vuesud1.jpg
+Baie-Mahault;https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mairie_de_Baie-Mahault.JPG/500px-Mairie_de_Baie-Mahault.JPG
+Viry-Châtillon;https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Viry-Chatillon_IMG_5430.jpg/500px-Viry-Chatillon_IMG_5430.jpg
+Le Chesnay-Rocquencourt;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Le_Chesnay_Mairie.JPG/500px-Le_Chesnay_Mairie.JPG
+Chatou;https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Chatou_Town_hall_001.JPG/500px-Chatou_Town_hall_001.JPG
+La Garenne-Colombes;https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Place_de_la_libert%C3%A9_-_La_Garenne_Colombes.jpg/500px-Place_de_la_libert%C3%A9_-_La_Garenne_Colombes.jpg
+Tournefeuille;https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Eglise_St_Pierre_Tournefeuille.JPG/500px-Eglise_St_Pierre_Tournefeuille.JPG
+Bourgoin-Jallieu;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Les_Halles_de_Bourgoin-Jallieu_en_f%C3%A9vrier_2019.jpg/500px-Les_Halles_de_Bourgoin-Jallieu_en_f%C3%A9vrier_2019.jpg
+Draveil;https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mairie_-_Draveil_%28FR91%29_-_2023-10-21_-_5.jpg/500px-Mairie_-_Draveil_%28FR91%29_-_2023-10-21_-_5.jpg
+Liévin;https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Li%C3%A9vin_-_Fosse_n%C2%B0_1_-_1_bis_-_1_ter_des_mines_de_Li%C3%A9vin%2C_puits_n%C2%B0_1_bis_%28H%29.JPG/500px-Li%C3%A9vin_-_Fosse_n%C2%B0_1_-_1_bis_-_1_ter_des_mines_de_Li%C3%A9vin%2C_puits_n%C2%B0_1_bis_%28H%29.JPG
+Villiers-le-Bel;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Mairie_-_Villiers-le-Bel_%28FR95%29_-_2023-11-19_-_5.jpg/500px-Mairie_-_Villiers-le-Bel_%28FR95%29_-_2023-11-19_-_5.jpg
+Vandœuvre-lès-Nancy;https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ch%C3%A2teau_du_Charmois-WP_20160929_013.jpg/500px-Ch%C3%A2teau_du_Charmois-WP_20160929_013.jpg
+Agde;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Agde_joutes_%C3%A9t%C3%A9_2007_434.jpg/500px-Agde_joutes_%C3%A9t%C3%A9_2007_434.jpg
+Décines-Charpieu;https://upload.wikimedia.org/wikipedia/commons/2/29/Decines-Charpieu_Mairie.JPG
+Saint-Cloud;https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Saint-Cloud_%40_Quai_du_Quatre-Septembre.jpg/500px-Saint-Cloud_%40_Quai_du_Quatre-Septembre.jpg
+Villemomble;https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ch%C3%A2teau_seigneurial_de_Villemomble_en_2012%2C_apr%C3%A8s_r%C3%A9novation.jpg/500px-Ch%C3%A2teau_seigneurial_de_Villemomble_en_2012%2C_apr%C3%A8s_r%C3%A9novation.jpg
+Guyancourt;https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/HotelDeVille.jpg/500px-HotelDeVille.jpg
+Mérignac;https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/H%C3%B4tel_de_ville_de_M%C3%A9rignac_%28Gironde%29.JPG/500px-H%C3%B4tel_de_ville_de_M%C3%A9rignac_%28Gironde%29.JPG
+Saint-Étienne-du-Rouvray;https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/%C3%89glise_de_Saint-%C3%89tienne-du-Rouvray_2.jpg/500px-%C3%89glise_de_Saint-%C3%89tienne-du-Rouvray_2.jpg
+Ermont;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Ermont_-_Hotel-de-Ville_01.jpg/500px-Ermont_-_Hotel-de-Ville_01.jpg
+Clichy-sous-Bois;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/H%C3%B4tel_Ville_Clichy_Bois_9.jpg/500px-H%C3%B4tel_Ville_Clichy_Bois_9.jpg
+Vallauris;https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Picasso_Vallauris.JPG/500px-Picasso_Vallauris.JPG
+Périgueux;https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Perigueux_Infobox_Montage_%281%29.png/500px-Perigueux_Infobox_Montage_%281%29.png
+Sotteville-lès-Rouen;https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Sotteville-l%C3%A8s-Rouen_-_Saint-Vincent-de-Paul.JPG/500px-Sotteville-l%C3%A8s-Rouen_-_Saint-Vincent-de-Paul.JPG
+Bois-Colombes;https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Mairie_de_Bois-Colombes.JPG/500px-Mairie_de_Bois-Colombes.JPG
+Le Plessis-Robinson;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/04-PlessPano01-2.jpg/500px-04-PlessPano01-2.jpg
+Charenton-le-Pont;https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Charenton-le-pont_place_dussault.JPG/500px-Charenton-le-pont_place_dussault.JPG
+Maubeuge;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Porte_de_Mons_Maubeuge.jpg/500px-Porte_de_Mons_Maubeuge.jpg
+Montfermeil;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/H%C3%B4tel_Ville_-_Montfermeil_%28FR93%29_-_2022-10-23_-_3.jpg/500px-H%C3%B4tel_Ville_-_Montfermeil_%28FR93%29_-_2022-10-23_-_3.jpg
+Vanves;https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Fa%C3%A7ade_Mairie_de_Vanves.jpg/500px-Fa%C3%A7ade_Mairie_de_Vanves.jpg
+Saint-Sébastien-sur-Loire;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Vue_a%C3%A9rienne_de_Saint-S%C3%A9bastien-sur-Loire.jpg/500px-Vue_a%C3%A9rienne_de_Saint-S%C3%A9bastien-sur-Loire.jpg
+Orvault;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Saint-L%C3%A9ger_d%27Orvault_2018.jpg/500px-Saint-L%C3%A9ger_d%27Orvault_2018.jpg
+Soissons;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Aisne%2C_Soissons%2C_jachthaven.JPG/500px-Aisne%2C_Soissons%2C_jachthaven.JPG
+Yerres;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Mairie_-_Yerres_%28FR91%29_-_2024-10-20_-_6.jpg/500px-Mairie_-_Yerres_%28FR91%29_-_2024-10-20_-_6.jpg
+Illkirch-Graffenstaden;https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mairie_d%27Illkirch-Graffenstaden.jpg/500px-Mairie_d%27Illkirch-Graffenstaden.jpg
+Sucy-en-Brie;https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/H%C3%B4tel_Ville_Sucy_Brie_4.jpg/500px-H%C3%B4tel_Ville_Sucy_Brie_4.jpg
+Le Gosier;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Plage_de_la_Datcha%2C_Le_Gosier.JPG/500px-Plage_de_la_Datcha%2C_Le_Gosier.JPG
+Rambouillet;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Mairie_de_Rambouillet.JPG/500px-Mairie_de_Rambouillet.JPG
+Remire-Montjoly;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Plages_de_R%C3%A9mire-Montjoly_-_Guyane.JPG/500px-Plages_de_R%C3%A9mire-Montjoly_-_Guyane.JPG
+Gonesse;https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Gonesse_%2895%29%2C_H%C3%B4tel_de_ville%2C_rue_de_Paris%2C_fa%C3%A7ade_sud_%281%29.jpg/500px-Gonesse_%2895%29%2C_H%C3%B4tel_de_ville%2C_rue_de_Paris%2C_fa%C3%A7ade_sud_%281%29.jpg
+Blagnac;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Blagnac_-_Avenue_des_Pins_-_20101231_%281%29.jpg/500px-Blagnac_-_Avenue_des_Pins_-_20101231_%281%29.jpg
+Taverny;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Taverny_-_vue_a%C3%A9rienne_20190824.jpg/500px-Taverny_-_vue_a%C3%A9rienne_20190824.jpg
+La Teste-de-Buch;https://upload.wikimedia.org/wikipedia/commons/a/a6/Arcachon_SPOT_1036.jpg
+Champs-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Champs-sur-Marne_-_Church_-_2.jpg/500px-Champs-sur-Marne_-_Church_-_2.jpg
+Limeil-Brévannes;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/H%C3%B4tel_de_Ville_de_Limeil-Br%C3%A9vannes.jpg/500px-H%C3%B4tel_de_Ville_de_Limeil-Br%C3%A9vannes.jpg
+Cormeilles-en-Parisis;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Cormeilles-en-parisis-4.jpg/500px-Cormeilles-en-parisis-4.jpg
+Lambersart;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Lambersart_12_avenue_du_colisee.jpg/500px-Lambersart_12_avenue_du_colisee.jpg
+Armentières;https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Beffroi_Armenti%C3%A8res_%28Nord%29.jpg/500px-Beffroi_Armenti%C3%A8res_%28Nord%29.jpg
+Gradignan;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Gradignan-ermitage01.JPG/500px-Gradignan-ermitage01.JPG
+Villeparisis;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/H%C3%B4tel_Ville_-_Villeparisis_%28FR77%29_-_2023-10-29_-_5.jpg/500px-H%C3%B4tel_Ville_-_Villeparisis_%28FR77%29_-_2023-10-29_-_5.jpg
+Sannois;https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sannois_-_H%C3%B4tel_de_ville.jpg/500px-Sannois_-_H%C3%B4tel_de_ville.jpg
+Étampes;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/France_Essonne_Etampes_Hotel_de_Ville_02.jpg/500px-France_Essonne_Etampes_Hotel_de_Ville_02.jpg
+Cenon;https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Pamsitedelhoteldeville-recadre.jpg/500px-Pamsitedelhoteldeville-recadre.jpg
+Brétigny-sur-Orge;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Br%C3%A9tigny-sur-Orge_All%C3%A9e_de_LaFontaine.jpg/500px-Br%C3%A9tigny-sur-Orge_All%C3%A9e_de_LaFontaine.jpg
+Lunel;https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Lunel_-_Cours_Gabriel_P%C3%A9ri.jpg/500px-Lunel_-_Cours_Gabriel_P%C3%A9ri.jpg
+Élancourt;https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Elancourt_Mairie.JPG/500px-Elancourt_Mairie.JPG
+Saumur;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Saumur_et_sa_Loire_-_Aur%C3%A9lien_FANNI.jpg/500px-Saumur_et_sa_Loire_-_Aur%C3%A9lien_FANNI.jpg
+Vertou;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Vertou_ch%C3%A2teauPortillon.jpg/500px-Vertou_ch%C3%A2teauPortillon.jpg
+Aurillac;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Aurillac-Hotel-de-ville-dpt-Cantal-DSC3-233.jpg/500px-Aurillac-Hotel-de-ville-dpt-Cantal-DSC3-233.jpg
+Eaubonne;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Eaubonne_-_Avenue_de_l_Europe.jpg/500px-Eaubonne_-_Avenue_de_l_Europe.jpg
+Biarritz;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Biarritz_vue_g%C3%A9n%C3%A9rale.jpg/500px-Biarritz_vue_g%C3%A9n%C3%A9rale.jpg
+Miramas;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Chapelle_Saint_Julien.jpg/500px-Chapelle_Saint_Julien.jpg
+Castelnau-le-Lez;https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Castelnau_le_Lez.jpg/500px-Castelnau_le_Lez.jpg
+Villeneuve-la-Garenne;https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Mairie_de_Villeneuve-la-Garenne_%282%29.JPG/500px-Mairie_de_Villeneuve-la-Garenne_%282%29.JPG
+Les Ulis;https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mairie_des_Ulis.jpg/500px-Mairie_des_Ulis.jpg
+Les Pavillons-sous-Bois;https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Pavillons_Garde_-_Les_Pavillons-sous-Bois_%28FR93%29_-_2026-04-17_-_15.jpg/500px-Pavillons_Garde_-_Les_Pavillons-sous-Bois_%28FR93%29_-_2026-04-17_-_15.jpg
+Sèvremoine;https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Menhir_in_Saint-Macaire-en-Mauges.jpg/500px-Menhir_in_Saint-Macaire-en-Mauges.jpg
+Le Grand-Quevilly;https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Grand_Quevilly_-_H%C3%B4tel_de_Ville.jpeg/500px-Grand_Quevilly_-_H%C3%B4tel_de_Ville.jpeg
+Lormont;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lormont_mairie.jpg/500px-Lormont_mairie.jpg
+Hénin-Beaumont;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mairie_Henin_Beaumont.jpg/500px-Mairie_Henin_Beaumont.jpg
+Brunoy;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/MairieBrunoy.jpg/500px-MairieBrunoy.jpg
+Cavaillon;https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Panorama_du_centre_ville_de_la_ville_de_Cavaillon.jpg/500px-Panorama_du_centre_ville_de_la_ville_de_Cavaillon.jpg
+Saint-Ouen-l'Aumône;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Saint-Ouen-l%27Aum%C3%B4ne_mairie.JPG/500px-Saint-Ouen-l%27Aum%C3%B4ne_mairie.JPG
+Alençon;https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Alen%C3%A7on%2C_compilation_d%27images%2C_mai_2025.jpg/500px-Alen%C3%A7on%2C_compilation_d%27images%2C_mai_2025.jpg
+Saintes;https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/File-Panorama_Saintes-b.JPG/500px-File-Panorama_Saintes-b.JPG
+Béthune;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bethune_gd_place_1_bis.jpg/500px-Bethune_gd_place_1_bis.jpg
+Vichy;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Vichy_aujourd_hui.jpg/500px-Vichy_aujourd_hui.jpg
+Le Bouscat;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mairie_Bouscat.jpg/500px-Mairie_Bouscat.jpg
+Vierzon;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ctre_ville_f172.jpg/500px-Ctre_ville_f172.jpg
+Libourne;https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Libourne_Pont_de_Pierre.jpg/500px-Libourne_Pont_de_Pierre.jpg
+Eysines;https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Mairie_Eysines_33.JPG/500px-Mairie_Eysines_33.JPG
+Kourou;https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Centre_Spatial_Guyanais_%2846886212831%29.jpg/500px-Centre_Spatial_Guyanais_%2846886212831%29.jpg
+Montbéliard;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/2011-09-16_12-52-14-chateau-montbeliard.jpg/500px-2011-09-16_12-52-14-chateau-montbeliard.jpg
+Petit-Bourg;https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mairie_de_Petit-Bourg.JPG/500px-Mairie_de_Petit-Bourg.JPG
+Orly;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/H%C3%B4tel_ville_Orly_2.jpg/500px-H%C3%B4tel_ville_Orly_2.jpg
+Laon;https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Cath%C3%A9drale_Notre-Dame_de_Laon_at_night-5675.jpg/500px-Cath%C3%A9drale_Notre-Dame_de_Laon_at_night-5675.jpg
+Frontignan;https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Frontignan_mairie_vue_depuis_clocher.JPG/500px-Frontignan_mairie_vue_depuis_clocher.JPG
+Le Kremlin-Bicêtre;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Mairie_Kremlin_Bic%C3%AAtre_20.jpg/500px-Mairie_Kremlin_Bic%C3%AAtre_20.jpg
+Couëron;https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cou%C3%ABron_Vue_g%C3%A9n%C3%A9rale.jpg/500px-Cou%C3%ABron_Vue_g%C3%A9n%C3%A9rale.jpg
+Fontenay-aux-Roses;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mairie_-_Fontenay-aux-Roses_%28FR92%29_-_2021-01-03_-_2.jpg/500px-Mairie_-_Fontenay-aux-Roses_%28FR92%29_-_2021-01-03_-_2.jpg
+Montgeron;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/H%C3%B4tel_de_Ville_de_Montgeron.jpg/500px-H%C3%B4tel_de_Ville_de_Montgeron.jpg
+Beaupréau-en-Mauges;https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Andrez%C3%A9_%28Maine-et-Loire%29_%2820013278219%29.jpg/500px-Andrez%C3%A9_%28Maine-et-Loire%29_%2820013278219%29.jpg
+Rodez;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Rodez_view.jpg/500px-Rodez_view.jpg
+Les Lilas;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/H%C3%B4tel_Ville_-_Les_Lilas_%28FR93%29_-_2021-05-01_-_2.jpg/500px-H%C3%B4tel_Ville_-_Les_Lilas_%28FR93%29_-_2021-05-01_-_2.jpg
+La Valette-du-Var;https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/La_Valette-du-Var%2C_France_-_panoramio.jpg/500px-La_Valette-du-Var%2C_France_-_panoramio.jpg
+Dammarie-les-Lys;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Dammarie-les-Lys_mairie.jpg/500px-Dammarie-les-Lys_mairie.jpg
+Hérouville-Saint-Clair;https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/La_place_fontaine_vue_passerelle_H%C3%A9rouville.jpg/500px-La_place_fontaine_vue_passerelle_H%C3%A9rouville.jpg
+Combs-la-Ville;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/H%C3%B4tel_Ville_-_Combs-la-Ville_%28FR77%29_-_2024-10-20_-_7.jpg/500px-H%C3%B4tel_Ville_-_Combs-la-Ville_%28FR77%29_-_2024-10-20_-_7.jpg
+Lanester;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Panorama_cimeti%C3%A8re_de_bateaux_de_Lanester.jpg/500px-Panorama_cimeti%C3%A8re_de_bateaux_de_Lanester.jpg
+Roissy-en-Brie;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/H%C3%B4tel_de_Ville_Roissy-en-Brie.jpg/500px-H%C3%B4tel_de_Ville_Roissy-en-Brie.jpg
+Tassin-la-Demi-Lune;https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Horloge_monumentale_de_Tassin-la-Demi-Lune.jpg/500px-Horloge_monumentale_de_Tassin-la-Demi-Lune.jpg
+Saint-Jean-de-Braye;https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Saint-Jean-de-Braye_canal_d%27Orl%C3%A9ans_1.jpg/500px-Saint-Jean-de-Braye_canal_d%27Orl%C3%A9ans_1.jpg
+Deuil-la-Barre;https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/H%C3%B4tel_Ville_-_Deuil-la-Barre_%28FR95%29_-_2024-10-13_-_3.jpg/500px-H%C3%B4tel_Ville_-_Deuil-la-Barre_%28FR95%29_-_2024-10-13_-_3.jpg
+Maisons-Laffitte;https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ch%C3%A2teau_de_Maisons-Laffitte_001.jpg/500px-Ch%C3%A2teau_de_Maisons-Laffitte_001.jpg
+Le Moule;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/%C3%89glise_Saint-Jean-Baptiste_au_Moule_3.JPG/500px-%C3%89glise_Saint-Jean-Baptiste_au_Moule_3.JPG
+Vélizy-Villacoublay;https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/V%C3%A9lizy-Villacoublay_Mairie.JPG/500px-V%C3%A9lizy-Villacoublay_Mairie.JPG
+Challans;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/%C3%89glise_Notre-Dame-de-l%27Assomption_de_Challans_%2802%29.jpg/500px-%C3%89glise_Notre-Dame-de-l%27Assomption_de_Challans_%2802%29.jpg
+Saint-Dizier;https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Saint-Dizier_-_H%C3%B4tel_de_ville_20131009-01.JPG/500px-Saint-Dizier_-_H%C3%B4tel_de_ville_20131009-01.JPG
+Manosque;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Manosque.JPG/500px-Manosque.JPG
+Gif-sur-Yvette;https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Gif_Hotel-de-Ville.JPG/500px-Gif_Hotel-de-Ville.JPG
+Les Pennes-Mirabeau;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Moullin_de_Palli%C3%A8res%2C_Les_Pennes-Mirabeau.jpg/500px-Moullin_de_Palli%C3%A8res%2C_Les_Pennes-Mirabeau.jpg
+Oyonnax;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mairie_d%27Oyonnax.jpg/500px-Mairie_d%27Oyonnax.jpg
+Montigny-lès-Cormeilles;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Montigny-Les-Cormeilles.jpg/500px-Montigny-Les-Cormeilles.jpg
+Auch;https://upload.wikimedia.org/wikipedia/commons/1/1b/Auch1.jpg
+Abbeville;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Abbeville_vue_depuis_la_coll%C3%A9giale_Saint-Vulfran.jpg/500px-Abbeville_vue_depuis_la_coll%C3%A9giale_Saint-Vulfran.jpg
+Villeneuve-sur-Lot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Villeneuve-sur-Lot.JPG/500px-Villeneuve-sur-Lot.JPG
+Mantes-la-Ville;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Mantes-la-Ville_mairie01.jpg/500px-Mantes-la-Ville_mairie01.jpg
+Sèvres;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/H%C3%B4tel_Ville_-_S%C3%A8vres_%28FR92%29_-_2021-02-21_-_2.jpg/500px-H%C3%B4tel_Ville_-_S%C3%A8vres_%28FR92%29_-_2021-02-21_-_2.jpg
+Montereau-Fault-Yonne;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Montereau-Fault-Yonne_H%C3%B4tel_de_Ville_690.jpg/500px-Montereau-Fault-Yonne_H%C3%B4tel_de_Ville_690.jpg
+Le Petit-Quevilly;https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Chapelle_Saint-Julien_Petit-Quevilly.JPG/500px-Chapelle_Saint-Julien_Petit-Quevilly.JPG
+Arcueil;https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Aqueduc_de_nuit.JPG/500px-Aqueduc_de_nuit.JPG
+Épernay;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Hautvillers%2C_view_to_%C3%89pernay.jpg/500px-Hautvillers%2C_view_to_%C3%89pernay.jpg
+Gujan-Mestras;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/FR-33-Gujan-Mestras1.JPG/500px-FR-33-Gujan-Mestras1.JPG
+Dax;https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Dax%2C_Fontaine_Chaude.jpg/500px-Dax%2C_Fontaine_Chaude.jpg
+Millau;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Panorama_de_la_vall%C3%A9e_de_Millau.jpg/500px-Panorama_de_la_vall%C3%A9e_de_Millau.jpg
+Fontaine;https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Place_du_Th%C3%A9%C3%A2tre_Fran%C3%A7ais_par_Maurice_De_Meyer.jpg/500px-Place_du_Th%C3%A9%C3%A2tre_Fran%C3%A7ais_par_Maurice_De_Meyer.jpg
+Chemillé-en-Anjou;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/W0421-Chanzeaux_62610.JPG/500px-W0421-Chanzeaux_62610.JPG
+Longjumeau;https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Parc_Nativelle_de_Longjumeau_2.jpg/500px-Parc_Nativelle_de_Longjumeau_2.jpg
+Neuilly-Plaisance;https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mairie_-_Neuilly-Plaisance_%28FR93%29_-_2024-05-17_-_4.jpg/500px-Mairie_-_Neuilly-Plaisance_%28FR93%29_-_2024-05-17_-_4.jpg
+Hazebrouck;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Hazebrouck_Hotel_de_Ville_R01.jpg/500px-Hazebrouck_Hotel_de_Ville_R01.jpg
+Nogent-sur-Oise;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Nogent-sur-Oise_%2860%29%2C_h%C3%B4tel_de_Ville.jpg/500px-Nogent-sur-Oise_%2860%29%2C_h%C3%B4tel_de_Ville.jpg
+Voiron;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Le_centre_de_Voiron_depuis_le_pont_du_chemin_de_fer.jpg/500px-Le_centre_de_Voiron_depuis_le_pont_du_chemin_de_fer.jpg
+Fleury-les-Aubrais;https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Fleury_les_Aubrais_009.jpg/500px-Fleury_les_Aubrais_009.jpg
+Saint-Michel-sur-Orge;https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mairie_St_Michel.JPG/500px-Mairie_St_Michel.JPG
+Montigny-lès-Metz;https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Chateau_de_Courcelles_de_Montigny-l%C3%A8s-Metz_%282020%29.jpg/500px-Chateau_de_Courcelles_de_Montigny-l%C3%A8s-Metz_%282020%29.jpg
+Sainte-Foy-lès-Lyon;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/HDV-Ste-Foy.jpg/500px-HDV-Ste-Foy.jpg
+Morsang-sur-Orge;https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mairie_-_Morsang-sur-Orge_%28FR91%29_-_2024-05-18_-_7.jpg/500px-Mairie_-_Morsang-sur-Orge_%28FR91%29_-_2024-05-18_-_7.jpg
+Mandelieu-la-Napoule;https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Mandelieu-La_Napoule_vue_a%C3%A9rienne.jpg/500px-Mandelieu-La_Napoule_vue_a%C3%A9rienne.jpg
+Gardanne;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ville_de_Gardanne.jpg/500px-Ville_de_Gardanne.jpg
+Le Robert;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Carte_aerienne_du_robert_ShockymapServer.jpg/500px-Carte_aerienne_du_robert_ShockymapServer.jpg
+Lagny-sur-Marne;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/L136_-_Lagny-sur-Marne_-_Abbatiale_et_Hotel_de_ville.JPG/500px-L136_-_Lagny-sur-Marne_-_Abbatiale_et_Hotel_de_ville.JPG
+Allauch;https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Allauch-Flickr.jpg/500px-Allauch-Flickr.jpg
+Bruay-la-Buissière;https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/HDVBLB.jpg/500px-HDVBLB.jpg
+Givors;https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Givors_et_leRh%C3%B4ne.JPG/500px-Givors_et_leRh%C3%B4ne.JPG
+Saint-Cyr-l'École;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Hotel_de_ville_St-Cyr-l%27Ecole.jpg/500px-Hotel_de_ville_St-Cyr-l%27Ecole.jpg
+Ozoir-la-Ferrière;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mairie_Ozoir_Ferri%C3%A8re_5.jpg/500px-Mairie_Ozoir_Ferri%C3%A8re_5.jpg
+Saint-Genis-Laval;https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/%C3%89glise_St-Genest.jpg/500px-%C3%89glise_St-Genest.jpg
+Montaigu-Vendée;https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/W0207-StHilaireLoulay_Lande_58956.JPG/500px-W0207-StHilaireLoulay_Lande_58956.JPG
+Le Plessis-Trévise;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/H%C3%B4tel_Ville_Plessis_Tr%C3%A9vise_4.jpg/500px-H%C3%B4tel_Ville_Plessis_Tr%C3%A9vise_4.jpg
+Mons-en-Barœul;https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Eglise_Saint-Pierre_%C3%A0_Mons-en-Baroeul.JPG/500px-Eglise_Saint-Pierre_%C3%A0_Mons-en-Baroeul.JPG
+Plaisance-du-Touch;https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Plaisance-du-Touch_%28Haute-Garonne%2C_Fr%29_%C3%A9glise%2C_fa%C3%A7ade_et_clocher.JPG/500px-Plaisance-du-Touch_%28Haute-Garonne%2C_Fr%29_%C3%A9glise%2C_fa%C3%A7ade_et_clocher.JPG
+Saint-Mandé;https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/H%C3%B4tel_ville_St_Mand%C3%A9_13.jpg/500px-H%C3%B4tel_ville_St_Mand%C3%A9_13.jpg
+Bourg-la-Reine;https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Mairie_-_Bourg-la-Reine_%28FR92%29_-_2023-08-01_-_1.jpg/500px-Mairie_-_Bourg-la-Reine_%28FR92%29_-_2023-08-01_-_1.jpg
+Carquefou;https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Carquefou.jpg/500px-Carquefou.jpg
+Sceaux;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Le_mus%C3%A9e_du_Domaine_d%C3%A9partemental_de_Sceaux_en_Ile-de-France_-_Flickr_-_dalbera.jpg/500px-Le_mus%C3%A9e_du_Domaine_d%C3%A9partemental_de_Sceaux_en_Ile-de-France_-_Flickr_-_dalbera.jpg
+Concarneau;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Concarneau_-_la_ville_close_%C3%A0_mar%C3%A9e_basse.jpg/500px-Concarneau_-_la_ville_close_%C3%A0_mar%C3%A9e_basse.jpg
+Lingolsheim;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Lingolsheim10.jpg/500px-Lingolsheim10.jpg
+Carrières-sous-Poissy;https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/%C3%89glise_Saint-Joseph_de_Carri%C3%A8re-sous-Poissy._Ext%C3%A9rieur.jpg/500px-%C3%89glise_Saint-Joseph_de_Carri%C3%A8re-sous-Poissy._Ext%C3%A9rieur.jpg
+Coudekerque-Branche;https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/H%C3%B4tel_de_ville_de_Coudekerque-Branche.jpg/500px-H%C3%B4tel_de_ville_de_Coudekerque-Branche.jpg
+Wasquehal;https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mairie_de_Wasquehal%282%29.jpg/500px-Mairie_de_Wasquehal%282%29.jpg
+Halluin;https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Ville_d%27Halluin_%2859250%29.jpg/500px-Ville_d%27Halluin_%2859250%29.jpg
+La Chapelle-sur-Erdre;https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Mairie_-_La_Chapelle-sur-Erdre.jpg/500px-Mairie_-_La_Chapelle-sur-Erdre.jpg
+Denain;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Denain_Mairie.JPG/500px-Denain_Mairie.JPG
+Cugnaux;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Cugnaux_1.JPG/500px-Cugnaux_1.JPG
+Chaville;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/H%C3%B4tel_Ville_-_Chaville_%28FR92%29_-_2023-02-18_-_7.jpg/500px-H%C3%B4tel_Ville_-_Chaville_%28FR92%29_-_2023-02-18_-_7.jpg
+Croix;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Cross2.svg/500px-Cross2.svg.png
+Bouguenais;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Drone_%C3%A9glise_%287%29.jpg/500px-Drone_%C3%A9glise_%287%29.jpg
+Joinville-le-Pont;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Pont_de_Joinville.jpg/500px-Pont_de_Joinville.jpg
+Le Creusot;https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Le_Creusot_-_Marteau_Pilon_5.jpg/500px-Le_Creusot_-_Marteau_Pilon_5.jpg
+Forbach;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Chapelle_Sainte_Croix_Forbach.jpg/500px-Chapelle_Sainte_Croix_Forbach.jpg
+La Celle-Saint-Cloud;https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/La_Celle_Saint-Cloud_parvis_Mairie_d%C3%A9c_2025.jpg/500px-La_Celle_Saint-Cloud_parvis_Mairie_d%C3%A9c_2025.jpg
+Mitry-Mory;https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mitry-Mory_mairie.jpg/500px-Mitry-Mory_mairie.jpg
+Chilly-Mazarin;https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Hotel_de_ville_de_Chilly-Mazarin.jpg/500px-Hotel_de_ville_de_Chilly-Mazarin.jpg
+Beaune;https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Beaune_-_H%C3%B4tel-Dieu_-_Cour_-_02.jpg/500px-Beaune_-_H%C3%B4tel-Dieu_-_Cour_-_02.jpg
+Lannion;https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/VueDeLannionEtBrelevenez.jpg/500px-VueDeLannionEtBrelevenez.jpg
+Fougères;https://upload.wikimedia.org/wikipedia/commons/b/bb/Foug%C3%A8res.jpg
+Grande-Synthe;https://upload.wikimedia.org/wikipedia/commons/9/94/Grande_Synthe_Mairie_actuelle.jpg
+Mont-Saint-Aignan;https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Ancienne_%C3%A9glise_Saint-Jacques-du-Mont-aux-Malades_%28Mont-Saint-Aignan%29_01.jpg/500px-Ancienne_%C3%A9glise_Saint-Jacques-du-Mont-aux-Malades_%28Mont-Saint-Aignan%29_01.jpg
+Sarreguemines;https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Casino_et_Pavillon_2_%28c%29_Office_de_Tourisme_Sarreguemines.jpg/500px-Casino_et_Pavillon_2_%28c%29_Office_de_Tourisme_Sarreguemines.jpg
+Cahors;https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pont_Valentre_20.jpg/500px-Pont_Valentre_20.jpg
+Bruges;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bruegge_View_from_Rozenhoedkaai.jpg/500px-Bruegge_View_from_Rozenhoedkaai.jpg

@@ -1,164 +1,143 @@
 """
-Sources des données
-SAE Outils Décisionnels
+Sources des donnees
+SAE Outils Decisionnels
 """
 
 import streamlit as st
 
-st.set_page_config(page_title="Sources", page_icon="")
+st.set_page_config(page_title="Sources", layout="wide")
 
-st.title("Sources des données")
-
-st.markdown("""
-Toutes les données utilisées dans cette application proviennent de 
-**sources officielles et ouvertes** (Open Data). L'objectif est de garantir 
-la fiabilité et la transparence des informations présentées.
-""")
-
+st.title("Sources des donnees")
 st.markdown("---")
 
-# INSEE
-with st.expander("INSEE - Institut national de la statistique", expanded=True):
-    st.markdown("""
-    **Site web :** [insee.fr](https://www.insee.fr)
-    
-    **Données utilisées :**
-    - Population légale des communes
-    - Superficie (en km²)
-    - Densité de population (habitants/km²)
-    - Code région et département
-    
-    **Format :** CSV téléchargé depuis le site officiel
-    
-    **Fréquence de mise à jour :** Annuelle (populations légales)
-    
-    **URL directe :**
-    [Populations légales des communes](https://www.insee.fr/fr/statistiques/1893198)
-    """)
-
-# Open-Meteo
-with st.expander("Open-Meteo API - Données météorologiques", expanded=True):
-    st.markdown("""
-    **Site web :** [open-meteo.com](https://open-meteo.com)
-    
-    **API :** [api.open-meteo.com](https://api.open-meteo.com/v1/forecast)
-    
-    **Données utilisées :**
-    - Températures minimales et maximales
-    - Précipitations
-    - Ensoleillement
-    - Vent
-    - Code météo WMO (description du temps)
-    
-    **Format :** JSON via API REST
-    
-    **Avantages :**
-    - Entièrement gratuit
-    - Aucune clé API requise
-    - 10 000 requêtes/jour
-    - Données en temps réel
-    
-    **Exemple de requête :**
-    ```
-    https://api.open-meteo.com/v1/forecast?latitude=48.85&longitude=2.35&current_weather=true
-    ```
-    """)
-
-# data.gouv.fr
-with st.expander("data.gouv.fr - Plateforme open data française", expanded=True):
-    st.markdown("""
-    **Site web :** [data.gouv.fr](https://www.data.gouv.fr)
-    
-    **Données utilisées :**
-    - Taux de chômage par zone d'emploi
-    - Nombre d'emplois
-    - Secteurs économiques majoritaires
-    - Part de propriétaires/locataires
-    
-    **Format :** CSV / Excel téléchargeables
-    
-    **Note :** Les données communales de chômage ne sont pas toujours disponibles. 
-    Nous utilisons les données par **zone d'emploi** comme approximation.
-    """)
-
-# ANIL/CLL
-with st.expander("ANIL - Observatoire des loyers", expanded=True):
-    st.markdown("""
-    **Site web :** [anil.org](https://www.anil.org)
-    
-    **Données utilisées :**
-    - Loyer moyen €/m² par commune
-    - Part de propriétaires
-    - Part de locataires
-    - Type de logement dominant
-    
-    **Format :** Données agrégées par l'Observatoire des Loyers de l'Agglomération Parisienne (OLAP)
-    
-    **Note :** Ces données concernent principalement l'Ile-de-France et les grandes métropoles.
-    """)
-
-st.markdown("---")
-
-st.markdown("### Qualité des données")
-
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("#### Fiabilité")
-    st.markdown("""
-    - Sources officielles uniquement
-    - Données vérifiées et validées
-    - Mise à jour régulière
-    """)
+    with st.expander("INSEE + DARES", expanded=True):
+        st.markdown("""
+        **Fichiers CSV locaux** (dossier `data/`) :
+
+        - `liste_communes_20k_2023_v2.csv` — Population 2023, INSEE Recensement
+          [insee.fr/statistiques/8680726](https://www.insee.fr/fr/statistiques/8680726?sommaire=8681011)
+
+        - `alternance_communes_20k_2023.csv` — Apprentissages / Alternance, DARES
+          [poem.travail-emploi.gouv.fr](https://poem.travail-emploi.gouv.fr/open-data/alternance-1#new_cap_second_stk)
+
+        - `communes_20k_salaires_final.csv` — Salaires nets mensuels moyens 2023, INSEE Base Tous salaries
+          [insee.fr/statistiques/2021266](https://www.insee.fr/fr/statistiques/2021266)
+          - Couverture : **454 communes**
+          - Champs : `Salaire_2023` (net mensuel moyen EQTP, euros), `Salaire_evol` (evolution 2023 vs 2022)
+
+        - `url_cities_final.csv` — Thumbnails Wikipedia (API MediaWiki pre-cached)
+
+        Licence : **Licence Ouverte**
+        """)
+
+    with st.expander("Open-Meteo API", expanded=True):
+        st.markdown("""
+        **open-meteo.com** — Donnees meteorologiques et qualite de l'air
+
+        - Previsions 7 jours : temperatures, precipitations, code temps (WMO)
+        - **Ensoleillement annuel** : Archive API (ERA5 reanalysis), moyenne 2020-2024
+          - Fichier : `ensoleillement.csv`
+          - Couverture : **410 communes**
+          - Unite : heures de soleil par an → affiche en **% de l'annee** (heures / 8760h)
+          - Note : valeurs ERA5 plus elevees que les observations au sol
+            (Campbell-Stokes) ; l'ordre relatif entre villes est fiable
+        - **Qualite de l'air** : Air Quality API (Copernicus CAMS), moyenne 2023-2024
+          - Fichier : `aqi.csv`
+          - Couverture : **422 communes**
+          - Indice : **European AQI** (0-20 Bon / 20-40 Moyen / 40-60 Mediocre / 60-80 Mauvais / >80 Tres mauvais)
+          - Note : l'archive Air Quality debute en juillet 2022, la moyenne couvre 2 ans complets (2023-2024)
+
+        Aucune cle API requise &mdash; Gratuit
+
+        Licence : **CC BY 4.0** (Archive API) / **CC0** (Forecast API)
+        """)
+
+    with st.expander("data.gouv.fr", expanded=True):
+        st.markdown("""
+        **data.gouv.fr** — Plateforme open data francaise
+
+        - `communes_20k_avec_chomage_final.csv` — Taux de chomage departemental 2024
+          [insee.fr/statistiques/2045861](https://www.insee.fr/fr/statistiques/2045861)
+          - Couverture : **483 communes**
+          - Champs : `dep_tx_chomage_24` (taux de chomage departemental, %)
+          - Note : le taux est departemental (pas communal), attribue a chaque commune selon son departement
+
+        - `communes_20k_avec_score_securite_2025_final.csv` — Score de securite 2025
+          - Couverture : **483 communes**
+          - Champs : `score_securite_25` (score 0-100)
+
+        - `communes_20k_avec_lieux_culturel_2025_final.csv` — Lieux culturels 2025
+          - Couverture : **483 communes**
+          - Champs : `nb_lieux_culturels`, `nb_lieux_culturel_par_1000_habitants`
+
+        - `restaurants_bars_filtre_communes.csv` — Restaurants et bars 2025
+          - Couverture : **455 communes** (28 sans donnees)
+          - Champs : `restaurants`, `bars`, `restaurants_pour_1000`, `bars_pour_1000`
+
+        - `communes_20k_avec_secteurs_activites_2025_final.csv` — Secteurs d'activites 2025
+          - Couverture : **483 communes**
+          - 17 secteurs d'activite (emplois par secteur)
+          - Affichage : camembert top 4 + Autres
+
+        Licence : **Licence Ouverte 2.0**
+        """)
 
 with col2:
-    st.markdown("#### Limitations")
-    st.markdown("""
-    - Moyennes générales (pas de granularité par quartier)
-    - Délais de mise à jour variables
-    - Données parfois manquantes pour petites communes
-    """)
+    with st.expander("Carte des loyers 2025 (ANIL / data.gouv.fr)", expanded=True):
+        st.markdown("""
+        **Carte des loyers 2025** — Indicateurs de loyers d'annonce par commune
 
-with col3:
-    st.markdown("#### Recommandations")
-    st.markdown("""
-    - Croiser plusieurs sources
-    - Vérifier sur sites officiels avant décisions importantes
-    - Considérer le contexte local
-    """)
+        Source : ANIL (Agence nationale pour l'information sur le logement) / data.gouv.fr
 
-st.markdown("---")
+        Fichier : `pred-app12-mef-dhup.csv` (appartements T1-T2, 37 m²)
 
-st.markdown("### Méthodologie")
+        Couverture : **455 communes** de notre liste ont des donnees de loyer disponibles
 
-st.markdown("""
-**Collecte des données :**
+        Champs utilisés : `loypredm2` (loyer prédit €/m², charges comprises)
 
-1. **Données statiques** (population, superficie) : Import depuis CSV INSEE
-2. **Données dynamiques** (météo) : Requêtes API en temps réel
-3. **Données semi-dynamiques** (emploi, logement) : Import périodique depuis sources officielles
+        [data.gouv.fr/datasets/carte-des-loyers-2025](https://www.data.gouv.fr/datasets/carte-des-loyers-indicateurs-de-loyers-dannonce-par-commune-en-2025)
 
-**Calculs dérivés :**
+        **Note methodologique** :
+        - Le fichier officiel fournit un loyer moyen par commune (€/m²)
+        - `loyer_studio_centre` et `loyer_studio_peri` sont estimés à partir
+          de la moyenne communale avec un coefficient centre/périphérie
+        - `loyer_coloc` est estimé à ~55 % du loyer centre
+          (données de colocation non disponibles dans la source officielle)
+        - Paris, Lyon et Marseille : moyenne pondérée des arrondissements
 
-- Densité = Population / Superficie
-- Différences en pourcentage pour comparaisons
-- Normalisation des échelles pour graphiques
-""")
+        Licence : **Licence Ouverte 2.0**
+        """)
 
-st.markdown("---")
+    with st.expander("Methodologie des scores KPI", expanded=True):
+        st.markdown("""  
+        **Score global par ville** — moyenne equiponderee des indicateurs suivants :
 
-st.markdown("### Licences")
+        Chaque indicateur est normalise en score 0-100 (min-max sur les 483 communes).
+        Les indicateurs "inverse" (valeur basse = meilleur score) : loyer, AQI, chomage.
 
-st.success("""
-**Toutes les données sont utilisées dans le respect des licences open data :**
+        - **% Etudiants** : proportion d'etudiants dans la population (Ministere de l'Enseignement Superieur)
+        - **Salaire** : net mensuel moyen EQTP 2023 (INSEE Base Tous salaries)
+        - **Loyer** *(inverse)* : loyer moyen €/m² (Carte des loyers 2025)
+        - **Ensoleillement** : % de l'annee (Open-Meteo ERA5)
+        - **Qualite de l'air** *(inverse)* : indice AQI europeen (Open-Meteo Air Quality / Copernicus CAMS)
+        - **Chomage** *(inverse)* : taux departemental 2024 (INSEE / data.gouv.fr)
+        - **Securite** : score 0-100, 2025 (data.gouv.fr)
 
-- **INSEE :** Licence Ouverte (utilisation libre, même commerciale)
-- **Open-Meteo :** Creative Commons Zero (CC0) - Domaine public
-- **data.gouv.fr :** Licence Ouverte 2.0
-
-L'application elle-même est un projet académique, libre de consultation et de modification.
-""")
+        Score global = moyenne des scores disponibles pour chaque ville.
+        """)
 
 st.markdown("---")
-
-st.markdown("*Projet académique - SAE Outils Décisionnels*", unsafe_allow_html=True)
+st.caption("Toutes les donnees sont issues de sources officielles ou open data. "
+           "Loyer : 455 communes (Carte des loyers 2025). "
+           "Salaire : 454 communes (INSEE Base Tous salaries 2023). "
+           "Ensoleillement : 410 communes (Open-Meteo ERA5). "
+           "Qualite de l'air : 422 communes (Open-Meteo Air Quality). "
+           "Chomage : 483 communes (INSEE 2024). "
+           "Securite : 483 communes (data.gouv.fr 2025). "
+           "Lieux culturels : 483 communes (data.gouv.fr 2025). "
+           "Restaurants & bars : 455 communes (data.gouv.fr 2025). "
+           "Secteurs d'activite : 483 communes (data.gouv.fr 2025). "
+           "Scores KPI : normalisation min-max, 7 indicateurs, equipondere.")
