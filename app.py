@@ -718,6 +718,56 @@ def build_pie_data(secteurs_dict, top_n=4):
         values.append(autres)
     return labels, values
 
+@st.cache_data(ttl=86400)
+def get_climat_annuel(lat, lon):
+    """Recupere les moyennes mensuelles (temperature, precipitation) via Open-Meteo Historical API.
+    Utilise ERA5 reanalysis sur les 5 dernieres annees (daily), puis agregation par mois.
+    Retourne dict {mois: {tmax, tmin, precip}} ou None.
+    """
+    try:
+        url = (f"https://archive-api.open-meteo.com/v1/archive"
+               f"?latitude={lat}&longitude={lon}"
+               f"&start_date=2020-01-01&end_date=2024-12-31"
+               f"&daily=temperature_2m_max,temperature_2m_min,precipitation_sum"
+               f"&timezone=Europe/Paris")
+        r = requests.get(url, timeout=30)
+        if r.status_code != 200:
+            return None
+        data = r.json()
+        daily = data.get("daily", {})
+        time_arr = daily.get("time", [])
+        tmax_arr = daily.get("temperature_2m_max", [])
+        tmin_arr = daily.get("temperature_2m_min", [])
+        precip_arr = daily.get("precipitation_sum", [])
+        if not time_arr:
+            return None
+        # Grouper par mois (1-12) sur les 5 ans
+        mois_data = {m: {"tmax": [], "tmin": [], "precip": []} for m in range(1, 13)}
+        for i, t in enumerate(time_arr):
+            m = int(t.split("-")[1])
+            if i < len(tmax_arr) and tmax_arr[i] is not None:
+                mois_data[m]["tmax"].append(tmax_arr[i])
+            if i < len(tmin_arr) and tmin_arr[i] is not None:
+                mois_data[m]["tmin"].append(tmin_arr[i])
+            if i < len(precip_arr) and precip_arr[i] is not None:
+                mois_data[m]["precip"].append(precip_arr[i])
+        # Moyennes (temperature) et totaux (precipitations)
+        result = {}
+        noms_mois = ["Jan", "Fev", "Mar", "Avr", "Mai", "Jun",
+                     "Jul", "Aou", "Sep", "Oct", "Nov", "Dec"]
+        for m in range(1, 13):
+            d = mois_data[m]
+            result[m] = {
+                "nom": noms_mois[m - 1],
+                "tmax": round(sum(d["tmax"]) / len(d["tmax"]), 1) if d["tmax"] else None,
+                "tmin": round(sum(d["tmin"]) / len(d["tmin"]), 1) if d["tmin"] else None,
+                "precip": round(sum(d["precip"]) / 5, 1) if d["precip"] else None,
+            }
+        return result
+    except Exception:
+        pass
+    return None
+
 @st.cache_data(ttl=3600)
 def get_previsions_7_jours(lat, lon):
     try:
@@ -1628,6 +1678,88 @@ def main():
     # TAB 4: METEO
     # ========================================================================
     with tabs[3]:
+        # ------------------------------------------------------------------
+        # Climat a l'annee (moyennes mensuelles sur 5 ans)
+        # ------------------------------------------------------------------
+        st.markdown('<p class="sec-label">Climat a l\'annee</p>', unsafe_allow_html=True)
+        climat1 = get_climat_annuel(lat1, lon1)
+        climat2 = get_climat_annuel(lat2, lon2)
+
+        if climat1 or climat2:
+            noms_mois = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin",
+                         "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"]
+            # Filtre mois
+            mois_selected = st.selectbox("Mois", options=list(range(1, 13)),
+                                         format_func=lambda m: noms_mois[m - 1], index=0)
+
+            # Cards : T max / T moy / T min
+            cc1, cc2 = st.columns(2)
+            if climat1:
+                d1m = climat1[mois_selected]
+                tmax1 = d1m["tmax"]
+                tmin1 = d1m["tmin"]
+                tmoy1 = round((tmax1 + tmin1) / 2, 1) if tmax1 is not None and tmin1 is not None else None
+                precip1 = d1m["precip"]
+                with cc1:
+                    st.markdown(ind_card_combo(
+                        '<i class="fas fa-temperature-high"></i>', f"T max — {sel1}",
+                        f"{tmax1}C" if tmax1 is not None else "N/A", f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        '<i class="fas fa-temperature-low"></i>', f"T min — {sel1}",
+                        f"{tmin1}C" if tmin1 is not None else "N/A", f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        variant=""
+                    ), unsafe_allow_html=True)
+                    st.markdown(ind_card(
+                        f"Temperature moy. — {sel1}",
+                        f"{tmoy1}C" if tmoy1 is not None else "N/A",
+                        f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        icon='<i class="fas fa-thermometer-half"></i>',
+                        variant=""
+                    ), unsafe_allow_html=True)
+                    st.markdown(ind_card(
+                        f"Pluviometrie — {sel1}",
+                        f"{precip1} mm" if precip1 is not None else "N/A",
+                        f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        icon='<i class="fas fa-cloud-rain"></i>',
+                        variant=""
+                    ), unsafe_allow_html=True)
+            if climat2:
+                d2m = climat2[mois_selected]
+                tmax2 = d2m["tmax"]
+                tmin2 = d2m["tmin"]
+                tmoy2 = round((tmax2 + tmin2) / 2, 1) if tmax2 is not None and tmin2 is not None else None
+                precip2 = d2m["precip"]
+                with cc2:
+                    st.markdown(ind_card_combo(
+                        '<i class="fas fa-temperature-high"></i>', f"T max — {sel2}",
+                        f"{tmax2}C" if tmax2 is not None else "N/A", f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        '<i class="fas fa-temperature-low"></i>', f"T min — {sel2}",
+                        f"{tmin2}C" if tmin2 is not None else "N/A", f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        variant="v2"
+                    ), unsafe_allow_html=True)
+                    st.markdown(ind_card(
+                        f"Temperature moy. — {sel2}",
+                        f"{tmoy2}C" if tmoy2 is not None else "N/A",
+                        f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        icon='<i class="fas fa-thermometer-half"></i>',
+                        variant="v2"
+                    ), unsafe_allow_html=True)
+                    st.markdown(ind_card(
+                        f"Pluviometrie — {sel2}",
+                        f"{precip2} mm" if precip2 is not None else "N/A",
+                        f"Moy. {noms_mois[mois_selected-1]} 2020-2024",
+                        icon='<i class="fas fa-cloud-rain"></i>',
+                        variant="v2"
+                    ), unsafe_allow_html=True)
+            st.caption("Source climat : Open-Meteo Archive API (ERA5, moy. 2020-2024)")
+        else:
+            st.info("Climat annuel non disponible.")
+
+        st.markdown("---")
+
+        # ------------------------------------------------------------------
+        # Previsions 7 jours
+        # ------------------------------------------------------------------
+        st.markdown('<p class="sec-label">Previsions 7 jours</p>', unsafe_allow_html=True)
         meteo1 = get_previsions_7_jours(lat1, lon1)
         meteo2 = get_previsions_7_jours(lat2, lon2)
 
