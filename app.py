@@ -620,7 +620,7 @@ def load_alternance_data():
 def load_secteurs_data():
     """Charge les donnees de Secteurs d'activités depuis communes_20k_avec_secteurs_activites_2025_final.csv.
 
-    Retourne un dict {nom_ville: {secteur: nb_emplois}} avec le nombre d'emplois par secteur.
+    Retourne un dict {nom_ville: {secteur: nb_emplois}} avec le nombre d'entreprises par secteur.
 
     Source : INSEE / data.gouv.fr, Secteurs d'activités 2025.
     """
@@ -1315,7 +1315,7 @@ def main():
                         textinfo='label+percent',
                         textposition='outside',
                         textfont=dict(size=10, color='#2c3e50'),
-                        hovertemplate='<b>%{label}</b><br>%{value:,} emplois<br>%{percent}<extra></extra>',
+                        hovertemplate='<b>%{label}</b><br>%{value:,} entreprises<br>%{percent}<extra></extra>',
                         pull=[0.03]*len(labels1),
                     )])
                     fig1.update_layout(
@@ -1335,7 +1335,7 @@ def main():
                         textinfo='label+percent',
                         textposition='outside',
                         textfont=dict(size=10, color='#2c3e50'),
-                        hovertemplate='<b>%{label}</b><br>%{value:,} emplois<br>%{percent}<extra></extra>',
+                        hovertemplate='<b>%{label}</b><br>%{value:,} entreprises<br>%{percent}<extra></extra>',
                         pull=[0.03]*len(labels2),
                     )])
                     fig2.update_layout(
