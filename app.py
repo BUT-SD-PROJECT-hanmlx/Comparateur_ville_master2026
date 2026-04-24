@@ -1560,7 +1560,7 @@ def main():
         # ------------------------------------------------------------------
         # Climat a l'annee (moyennes mensuelles sur 5 ans)
         # ------------------------------------------------------------------
-        st.markdown('<p class="sec-label">Climat a l\'annee</p>', unsafe_allow_html=True)
+        st.markdown('<p class="sec-label">Climat mensuel</p>', unsafe_allow_html=True)
         climat1 = get_climat_annuel(lat1, lon1)
         climat2 = get_climat_annuel(lat2, lon2)
 
