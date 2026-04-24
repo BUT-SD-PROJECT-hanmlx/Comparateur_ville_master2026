@@ -3,6 +3,8 @@
 Application Streamlit pour comparer deux villes françaises sur différents aspects :
 coût de la vie, logement, emploi, climat, activités, etc.
 
+- L'application est disponible en ligne au lien suivant : https://comparateurvillemaster2026-gu3hk9nzykwaa6zmqitymh.streamlit.app/
+
 ## Structure du projet
 
 ```
