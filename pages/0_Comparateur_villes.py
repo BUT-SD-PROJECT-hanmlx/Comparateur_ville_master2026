@@ -16,12 +16,12 @@ st.set_page_config(
     page_title="Comparateur de Villes Françaises",
     page_icon="",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # Logo in sidebar
 st.sidebar.image(
-    str(Path(__file__).parent / "src" / "UniversiteParis_IUTParis-RdS.png"),
+    str(Path(__file__).parent.parent / "src" / "UniversiteParis_IUTParis-RdS.png"),
     width=220
 )
 
@@ -234,7 +234,7 @@ st.markdown("""
 # DONNEES
 # ============================================================================
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "data"
 
 def _parse_population(raw):
     """Parse INSEE population string (may have spaces as thousand sep)."""
@@ -551,7 +551,7 @@ def load_culture_data():
 
 @st.cache_data
 def load_restaurants_data():
-    """Charge les donnees restaurants/bars depuis restaurants_bars_filtre_communes.csv.
+    """Charge les donnees restaurants/bars depuis communes_20k_avec_bar_restaurants_final.csv.
 
     Retourne un dict {nom_ville: {nb_restaurants, nb_bars, rest_par_1000, bars_par_1000}} avec:
     - nb_restaurants: nombre total de restaurants
@@ -561,10 +561,10 @@ def load_restaurants_data():
 
     Source : data.gouv.fr, restaurants et bars 2025.
     """
-    path = DATA_DIR / "restaurants_bars_filtre_communes.csv"
+    path = DATA_DIR / "communes_20k_avec_bar_restaurants_final.csv"
     if not path.exists():
         return {}
-    df = pd.read_csv(path, encoding="utf-8-sig")
+    df = pd.read_csv(path, sep=";", encoding="utf-8-sig")
     df.columns = [c.strip() for c in df.columns]
     result = {}
     for _, row in df.iterrows():

@@ -4,6 +4,20 @@ SAE Outils Decisionnels
 """
 
 import streamlit as st
+from pathlib import Path
+
+st.set_page_config(
+    page_title="Comparateur de Villes Françaises",
+    page_icon="",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# Logo in sidebar
+st.sidebar.image(
+    str(Path(__file__).parent.parent / "src" / "UniversiteParis_IUTParis-RdS.png"),
+    width=220
+)
 
 st.set_page_config(page_title="Sources", layout="wide")
 
