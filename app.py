@@ -263,18 +263,6 @@ def load_villes_data():
     return df.reset_index(drop=True)
 
 @st.cache_data
-def load_alternance_data():
-    """Charge les donnees alternance depuis alternance_communes_20k_2023.csv."""
-    path = DATA_DIR / "alternance_communes_20k_2023.csv"
-    df = pd.read_csv(path, sep=";", encoding="utf-8-sig")
-    df.columns = [c.strip() for c in df.columns]
-    df = df.rename(columns={"Nom de la commune": "ville"})
-    df["alternance_2026"] = pd.to_numeric(
-        df.get("Dep_NbAlternance_2026-Janv", 0), errors="coerce"
-    ).fillna(0).astype(int)
-    return df[["ville", "alternance_2026"]].drop_duplicates(subset="ville")
-
-@st.cache_data
 def load_etudiants_data():
     """Charge les donnees etudiants depuis communes_20k_2023_nb_etudiants_24.csv.
     
@@ -597,12 +585,44 @@ def load_restaurants_data():
     return result
 
 @st.cache_data
+def load_alternance_data():
+    """Charge les donnees d'alternance depuis communes_20k_2023_nb_alternance_26.csv.
+
+    Retourne un dict {nom_ville: {nb_alternance, nb_etudiants, alternance_par_10etudiants}} avec:
+    - Dep_nbAlternance_2026-Janv: nombre de contrats d'alternance en 2026
+    - Dep_nb_etudiants_total: nombre d'etudiants en 2026
+    - Dep_alternance_par_10etudiants_2026: nombre de contrats d'alternance en 2026 pour 10 d'etudiants
+
+    Source : poem.travail-emploi.gouv.fr.
+    """
+    path = DATA_DIR / "communes_20k_2023_nb_alternance_26.csv"
+    if not path.exists():
+        return {}
+    df = pd.read_csv(path, sep=";", encoding="utf-8-sig")
+    df.columns = [c.strip() for c in df.columns]
+    result = {}
+    for _, row in df.iterrows():
+        ville = str(row.get("Nom de la commune", "")).strip()
+        if not ville:
+            continue
+        alternance = row.get("Dep_nbAlternance_2026-Janv")
+        etudiants = row.get("Dep_nb_etudiants_total")
+        alternancep10 = row.get("Dep_alternance_par_10etudiants_2026")
+        if pd.notna(alternance):
+            result[ville] = {
+                "nb_alternance": int(float(str(alternance).replace(",", "."))),
+                "nb_etudiants": int(float(str(etudiants).replace(",", "."))) if pd.notna(etudiants) else None,
+                "alternance_par_10etudiants": round(float(str(alternancep10).replace(",", ".")), 2) if pd.notna(alternancep10) else None,
+            }
+    return result
+
+@st.cache_data
 def load_secteurs_data():
-    """Charge les donnees de secteurs d'activites depuis communes_20k_avec_secteurs_activites_2025_final.csv.
+    """Charge les donnees de Secteurs d'activités depuis communes_20k_avec_secteurs_activites_2025_final.csv.
 
-    Retourne un dict {nom_ville: {secteur: nb_emplois}} avec le nombre d'emplois par secteur.
+    Retourne un dict {nom_ville: {secteur: nb_emplois}} avec le nombre d'entreprises par secteur.
 
-    Source : INSEE / data.gouv.fr, secteurs d'activites 2025.
+    Source : INSEE / data.gouv.fr, Secteurs d'activités 2025.
     """
     path = DATA_DIR / "communes_20k_avec_secteurs_activites_2025_final.csv"
     if not path.exists():
@@ -669,7 +689,7 @@ def aqi_label(aqi):
     else:
         return "Ext. mauvais"
 
-# Raccourcis pour les noms de secteurs d'activites (trop longs pour le camembert)
+# Raccourcis pour les noms de Secteurs d'activités (trop longs pour le camembert)
 _SECTEUR_SHORT = {
     "Agriculture, sylviculture et pêche": "Agriculture",
     "Fabrication de denrées alimentaires, de boissons et de produits à base de tabac": "Agroalimentaire",
@@ -1061,13 +1081,15 @@ def main():
         d2["loyer_studio_peri"] = l2["loyer_studio_peri"]
         d2["loyer_coloc"] = l2["loyer_coloc"]
     # Alternance data
-    alternance_df = load_alternance_data()
-    alt1 = alternance_df[alternance_df['ville'] == sel1]
-    alt2 = alternance_df[alternance_df['ville'] == sel2]
-    if len(alt1) > 0:
-        d1["offres_stage_alternance"] = int(alt1.iloc[0]["alternance_2026"])
-    if len(alt2) > 0:
-        d2["offres_stage_alternance"] = int(alt2.iloc[0]["alternance_2026"])
+    alternance_data = load_alternance_data()
+    alt1 = alternance_data.get(sel1)
+    alt2 = alternance_data.get(sel2)
+    if alt1:
+        d1["offres_stage_alternance"] = alt1["nb_alternance"]
+        d1["alternance_par_10etudiants"] = alt1["alternance_par_10etudiants"]  
+    if alt2:
+        d2["offres_stage_alternance"] = alt2["nb_alternance"]
+        d2["alternance_par_10etudiants"] = alt2["alternance_par_10etudiants"]
     # Salaires data from INSEE (Base Tous salaries 2023)
     salaires = load_salaires_data()
     s1 = salaires.get(sel1)
@@ -1142,7 +1164,7 @@ def main():
         d2["nb_bars"] = r2["nb_bars"]
         d2["rest_par_1000"] = r2["rest_par_1000"]
         d2["bars_par_1000"] = r2["bars_par_1000"]
-    # Secteurs d'activites
+    # Secteurs d'activités
     secteurs = load_secteurs_data()
     if secteurs.get(sel1):
         d1["secteurs"] = secteurs[sel1]
@@ -1153,7 +1175,7 @@ def main():
     # TABS
     # ========================================================================
     st.markdown("")
-    tabs = st.tabs(["Vision globale", "Qualite de vie", "Scores", "Meteo"])
+    tabs = st.tabs(["Vision globale", "Qualité de vie", "Météo", "Scores"])
 
     # ========================================================================
     # TAB 1: VISION GLOBALE
@@ -1215,53 +1237,70 @@ def main():
         sal2_str = f"{sal2_val} €" if sal2_val else "N/A"
         sal1_evol = d1.get("salaire_evol")
         sal2_evol = d2.get("salaire_evol")
+        # Alternance
+        alt1_val = d1.get("alternance_par_10etudiants")
+        alt2_val = d2.get("alternance_par_10etudiants")
+        alt1_str = f"{alt1_val}" if alt1_val is not None else "N/A"
+        alt2_str = f"{alt2_val}" if alt2_val is not None else "N/A"
+        alt1_sub = "Alternance pour 10 etudiants" if alt1_val is not None else "Source a venir"
+        alt2_sub = "Alternance pour 10 etudiants" if alt2_val is not None else "Source a venir"
         # Chomage
         ch1_val = d1.get("taux_chomage")
         ch2_val = d2.get("taux_chomage")
         ch1_str = f"{ch1_val}%" if ch1_val is not None else "N/A"
-        ch1_sub = "Taux departemental 2024" if ch1_val is not None else "Source a venir"
+        ch1_sub = "Taux départemental 2024" if ch1_val is not None else "Source a venir"
         ch2_str = f"{ch2_val}%" if ch2_val is not None else "N/A"
-        ch2_sub = "Taux departemental 2024" if ch2_val is not None else "Source a venir"
+        ch2_sub = "Taux départemental 2024" if ch2_val is not None else "Source a venir"
         # Row 1: Salaire + Chomage (combo)
+        # Row 1: Salaire + Evolution salaire (combo)
+        evol1_str = f"{sal1_evol*100:+.1f}%" if sal1_evol is not None else "N/A"
+        evol2_str = f"{sal2_evol*100:+.1f}%" if sal2_evol is not None else "N/A"
+        evol1_sub = "2023 vs 2022" if sal1_evol is not None else "Source a venir"
+        evol2_sub = "2023 vs 2022" if sal2_evol is not None else "Source a venir"
+        r2c3, r2c4 = st.columns(2)
         r2c1, r2c2 = st.columns(2)
         with r2c1:
             st.markdown(ind_card_combo(
                 '<i class="fas fa-euro-sign"></i>', f"Salaire 2023 — {sel1}",
                 sal1_str, "Net mensuel moyen EQTP",
-                '<i class="fas fa-chart-line"></i>', f"Taux de chomage — {sel1}",
-                ch1_str, ch1_sub,
+                '<i class="fas fa-chart-line"></i>', f"Evolution salaire",
+                evol1_str, evol1_sub,
                 variant=""
             ), unsafe_allow_html=True)
         with r2c2:
             st.markdown(ind_card_combo(
                 '<i class="fas fa-euro-sign"></i>', f"Salaire 2023 — {sel2}",
                 sal2_str, "Net mensuel moyen EQTP",
-                '<i class="fas fa-chart-line"></i>', f"Taux de chomage — {sel2}",
-                ch2_str, ch2_sub,
+                '<i class="fas fa-chart-line"></i>', f"Evolution salaire",
+                evol2_str, evol2_sub,
                 variant="v2"
             ), unsafe_allow_html=True)
-        # Row 2: Evolution salaire (independante)
-        evol1_str = f"{sal1_evol*100:+.1f}%" if sal1_evol is not None else "N/A"
-        evol2_str = f"{sal2_evol*100:+.1f}%" if sal2_evol is not None else "N/A"
-        evol1_sub = "2023 vs 2022" if sal1_evol is not None else "Source a venir"
-        evol2_sub = "2023 vs 2022" if sal2_evol is not None else "Source a venir"
+        # Row 2: Alternance + Chomage (combo)
         r2c3, r2c4 = st.columns(2)
         with r2c3:
-            st.markdown(ind_card(
-                f"Evolution salaire — {sel1}",
-                evol1_str, evol1_sub,
-                icon='<i class="fas fa-arrow-trend-up"></i>',
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-chart-line"></i>', f"Taux de chomage — {sel1}",
+                ch1_str, ch1_sub,
+                '<i class="fas fa-handshake"></i>', f"Alternance — {sel1}",
+                alt1_str, alt1_sub,
                 variant=""
             ), unsafe_allow_html=True)
         with r2c4:
-            st.markdown(ind_card(
-                f"Evolution salaire — {sel2}",
-                evol2_str, evol2_sub,
-                icon='<i class="fas fa-arrow-trend-up"></i>',
-                variant="v2"
+            # st.markdown(ind_card(
+            #     f"Evolution salaire — {sel2}",
+            #     evol2_str, evol2_sub,
+            #     icon='<i class="fas fa-arrow-trend-up"></i>',
+            #     variant="v2"
+            # ), unsafe_allow_html=True)
+            st.markdown(ind_card_combo(
+                '<i class="fas fa-euro-sign"></i>', f"Taux de chomage — {sel2}",
+                ch2_str, ch2_sub,
+                '<i class="fas fa-handshake"></i>', f"Alternance — {sel2}",
+                alt2_str, alt2_sub,
+                variant=""
             ), unsafe_allow_html=True)
 
-        # Row 3: Secteurs d'activites (camembert top 4 + Autres)
+        # Row 3: Secteurs d'activités (camembert top 4 + Autres)
         sec1_data = d1.get("secteurs")
         sec2_data = d2.get("secteurs")
         if sec1_data or sec2_data:
@@ -1276,7 +1315,7 @@ def main():
                         textinfo='label+percent',
                         textposition='outside',
                         textfont=dict(size=10, color='#2c3e50'),
-                        hovertemplate='<b>%{label}</b><br>%{value:,} emplois<br>%{percent}<extra></extra>',
+                        hovertemplate='<b>%{label}</b><br>%{value:,} entreprises<br>%{percent}<extra></extra>',
                         pull=[0.03]*len(labels1),
                     )])
                     fig1.update_layout(
@@ -1296,7 +1335,7 @@ def main():
                         textinfo='label+percent',
                         textposition='outside',
                         textfont=dict(size=10, color='#2c3e50'),
-                        hovertemplate='<b>%{label}</b><br>%{value:,} emplois<br>%{percent}<extra></extra>',
+                        hovertemplate='<b>%{label}</b><br>%{value:,} entreprises<br>%{percent}<extra></extra>',
                         pull=[0.03]*len(labels2),
                     )])
                     fig2.update_layout(
@@ -1320,7 +1359,7 @@ def main():
                 lo = (d['loyer_studio_centre'] + d['loyer_studio_peri']) / 2
                 return (
                     f"{fmt_num(int(lo))} €/mois",
-                    f"centre {fmt_num(d['loyer_studio_centre'])}€ / peri {fmt_num(d['loyer_studio_peri'])}€"
+                    f"Centre {fmt_num(d['loyer_studio_centre'])}€ / Péri {fmt_num(d['loyer_studio_peri'])}€"
                 )
             return "N/A", ""
         lo1_str, lo1_sub = get_loyer_info(d1)
@@ -1385,29 +1424,6 @@ def main():
                 variant="v2"
             ), unsafe_allow_html=True)
 
-        # Section: Securite
-        st.markdown('<p class="sec-label">Securite</p>', unsafe_allow_html=True)
-        qv2c1, qv2c2 = st.columns(2)
-        sec1_val = d1.get("score_securite")
-        sec2_val = d2.get("score_securite")
-        sec1_str = f"{sec1_val}/100" if sec1_val is not None else "N/A"
-        sec1_sub = "Score 2025" if sec1_val is not None else "Source a venir"
-        sec2_str = f"{sec2_val}/100" if sec2_val is not None else "N/A"
-        sec2_sub = "Score 2025" if sec2_val is not None else "Source a venir"
-        with qv2c1:
-            st.markdown(ind_card(
-                f"Securite — {sel1}",
-                sec1_str, sec1_sub,
-                icon='<i class="fas fa-shield-halved"></i>',
-                variant=""
-            ), unsafe_allow_html=True)
-        with qv2c2:
-            st.markdown(ind_card(
-                f"Securite — {sel2}",
-                sec2_str, sec2_sub,
-                icon='<i class="fas fa-shield-halved"></i>',
-                variant="v2"
-            ), unsafe_allow_html=True)
 
         # Section: Lieux culturels
         st.markdown('<p class="sec-label">Lieux culturels</p>', unsafe_allow_html=True)
@@ -1418,14 +1434,14 @@ def main():
         with cc1:
             st.markdown(ind_card(
                 f"Nb lieux — {sel1}",
-                nb1_str, "Lieux culturels recenses",
+                nb1_str, "Lieux culturels recensés",
                 icon='<i class="fas fa-landmark"></i>',
                 variant=""
             ), unsafe_allow_html=True)
         with cc2:
             st.markdown(ind_card(
                 f"Nb lieux — {sel2}",
-                nb2_str, "Lieux culturels recenses",
+                nb2_str, "Lieux culturels recensés",
                 icon='<i class="fas fa-landmark"></i>',
                 variant="v2"
             ), unsafe_allow_html=True)
@@ -1467,17 +1483,17 @@ def main():
         with rc1:
             st.markdown(ind_card_combo(
                 '<i class="fas fa-utensils"></i>', f"Restaurants — {sel1}",
-                rest1_str, "Etablissements recenses",
+                rest1_str, "Etablissements recensés",
                 '<i class="fas fa-wine-glass"></i>', f"Bars — {sel1}",
-                bars1_str, "Etablissements recenses",
+                bars1_str, "Etablissements recensés",
                 variant=""
             ), unsafe_allow_html=True)
         with rc2:
             st.markdown(ind_card_combo(
                 '<i class="fas fa-utensils"></i>', f"Restaurants — {sel2}",
-                rest2_str, "Etablissements recenses",
+                rest2_str, "Etablissements recensés",
                 '<i class="fas fa-wine-glass"></i>', f"Bars — {sel2}",
-                bars2_str, "Etablissements recenses",
+                bars2_str, "Etablissements recensés",
                 variant="v2"
             ), unsafe_allow_html=True)
         # Row 2: Densite restaurants & bars (/1000 hab)
@@ -1511,173 +1527,36 @@ def main():
                 variant="v2"
             ), unsafe_allow_html=True)
 
+        # Section: Securite
+        st.markdown('<p class="sec-label">Securite</p>', unsafe_allow_html=True)
+        qv2c1, qv2c2 = st.columns(2)
+        sec1_val = d1.get("score_securite")
+        sec2_val = d2.get("score_securite")
+        sec1_str = f"{sec1_val}/100" if sec1_val is not None else "N/A"
+        sec1_sub = "Score 2025" if sec1_val is not None else "Source a venir"
+        sec2_str = f"{sec2_val}/100" if sec2_val is not None else "N/A"
+        sec2_sub = "Score 2025" if sec2_val is not None else "Source a venir"
+        with qv2c1:
+            st.markdown(ind_card(
+                f"Securite — {sel1}",
+                sec1_str, sec1_sub,
+                icon='<i class="fas fa-shield-halved"></i>',
+                variant=""
+            ), unsafe_allow_html=True)
+        with qv2c2:
+            st.markdown(ind_card(
+                f"Securite — {sel2}",
+                sec2_str, sec2_sub,
+                icon='<i class="fas fa-shield-halved"></i>',
+                variant="v2"
+            ), unsafe_allow_html=True)
+
+    
     # ========================================================================
-    # TAB 3: SCORES
+    # TAB 3: METEO
     # ========================================================================
+
     with tabs[2]:
-        # Calcul des scores KPI pour les deux villes selectionnees
-        # Donnees necessaires : charger toutes les villes pour normalisation min-max
-        all_etudiants = load_etudiants_data()
-        all_salaires = load_salaires_data()
-        all_loyers = load_loyers_data()
-        all_ens = load_ensoleillement_data()
-        all_aqi = load_aqi_data()
-        all_chomage = load_chomage_data()
-        all_securite = load_securite_data()
-
-        # Collecter les valeurs pour chaque indicateur (toutes villes)
-        def _vals(source_dict, key=None):
-            """Extraire les valeurs numeriques d'un dict de donnees."""
-            vals = []
-            for v in source_dict.values():
-                if key:
-                    x = v.get(key) if isinstance(v, dict) else None
-                else:
-                    x = v
-                if x is not None:
-                    vals.append(x)
-            return vals
-
-        pct_vals = _vals(all_etudiants, "pct_etudiants")
-        sal_vals = _vals(all_salaires, "salaire_2023")
-        loy_vals = [v["loypredm2"] for v in all_loyers.values() if v.get("loypredm2")]
-        ens_vals = list(all_ens.values())
-        aqi_vals = list(all_aqi.values())
-        chom_vals = list(all_chomage.values())
-        sec_vals = list(all_securite.values())
-
-        def _norm(val, vmin, vmax, inverse=False):
-            """Normalisation min-max vers [0, 100]. Si inverse, les basses valeurs = meilleur score."""
-            if vmax == vmin or val is None or vmin is None:
-                return None
-            n = (val - vmin) / (vmax - vmin) * 100
-            return 100 - n if inverse else n
-
-        def _score_ville(sel):
-            """Calculer le score KPI d'une ville."""
-            d = d1 if sel == sel1 else d2
-            scores = {}
-            # % Etudiants (plus haut = mieux)
-            v = d.get("pct_etudiants")
-            if v is not None and pct_vals:
-                scores["% Etudiants"] = _norm(v, min(pct_vals), max(pct_vals))
-            # Salaire (plus haut = mieux)
-            v = d.get("salaire_2023")
-            if v is not None and sal_vals:
-                scores["Salaire"] = _norm(v, min(sal_vals), max(sal_vals))
-            # Loyer (plus bas = mieux → inverse)
-            loy = all_loyers.get(sel)
-            if loy and loy.get("loypredm2") and loy_vals:
-                scores["Loyer"] = _norm(loy["loypredm2"], min(loy_vals), max(loy_vals), inverse=True)
-            # Ensoleillement (plus haut = mieux)
-            v = all_ens.get(sel)
-            if v is not None and ens_vals:
-                scores["Ensoleillement"] = _norm(v, min(ens_vals), max(ens_vals))
-            # AQI (plus bas = mieux → inverse)
-            v = d.get("aqi_moyen")
-            if v is not None and aqi_vals:
-                scores["Qualite air"] = _norm(v, min(aqi_vals), max(aqi_vals), inverse=True)
-            # Chomage (plus bas = mieux → inverse)
-            v = d.get("taux_chomage")
-            if v is not None and chom_vals:
-                scores["Chomage"] = _norm(v, min(chom_vals), max(chom_vals), inverse=True)
-            # Securite (plus haut = mieux)
-            v = d.get("score_securite")
-            if v is not None and sec_vals:
-                scores["Securite"] = _norm(v, min(sec_vals), max(sec_vals))
-            return scores
-
-        sc1 = _score_ville(sel1)
-        sc2 = _score_ville(sel2)
-
-        # Score global (moyenne des scores disponibles)
-        avg1 = sum(sc1.values()) / len(sc1) if sc1 else None
-        avg2 = sum(sc2.values()) / len(sc2) if sc2 else None
-
-        # Radar chart (7 axes)
-        # Utiliser l'ordre fixe des indicateurs pour que le radar soit coherent
-        indic_order = ["% Etudiants", "Salaire", "Loyer", "Ensoleillement", "Qualite air", "Chomage", "Securite"]
-        r_labels = [i for i in indic_order if i in sc1 or i in sc2]
-        r_vals1 = [sc1.get(k, 0) or 0 for k in r_labels]
-        r_vals2 = [sc2.get(k, 0) or 0 for k in r_labels]
-
-        fig_radar = go.Figure()
-        fig_radar.add_trace(go.Scatterpolar(
-            r=r_vals1 + [r_vals1[0]] if r_vals1 else [],
-            theta=r_labels + [r_labels[0]] if r_labels else [],
-            fill='toself',
-            fillcolor='rgba(93,122,140,0.18)',
-            line=dict(color='#5d7a8c', width=2.5),
-            name=f"{sel1} ({avg1:.0f})" if avg1 is not None else sel1,
-        ))
-        fig_radar.add_trace(go.Scatterpolar(
-            r=r_vals2 + [r_vals2[0]] if r_vals2 else [],
-            theta=r_labels + [r_labels[0]] if r_labels else [],
-            fill='toself',
-            fillcolor='rgba(166,124,91,0.18)',
-            line=dict(color='#a67c5b', width=2.5),
-            name=f"{sel2} ({avg2:.0f})" if avg2 is not None else sel2,
-        ))
-        fig_radar.update_layout(
-            polar=dict(
-                radialaxis=dict(
-                    visible=True, range=[0, 100],
-                    tickfont=dict(size=9, color='#999'),
-                    gridcolor='#e0dbd3',
-                    linecolor='#e0dbd3',
-                ),
-                angularaxis=dict(
-                    tickfont=dict(size=11, color='#2c3e50'),
-                    gridcolor='#e0dbd3',
-                    linecolor='#e0dbd3',
-                ),
-                bgcolor='rgba(0,0,0,0)',
-            ),
-            showlegend=True,
-            legend=dict(
-                orientation='h', y=-0.15, x=0.5, xanchor='center',
-                font=dict(size=12, color='#2c3e50'),
-            ),
-            height=420,
-            margin=dict(t=30, b=30, l=30, r=30),
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='#2c3e50',
-        )
-        st.plotly_chart(fig_radar, use_container_width=True)
-
-        # Score global sous le radar
-        if avg1 is not None or avg2 is not None:
-            col_avg1, col_avg2 = st.columns(2)
-            with col_avg1:
-                if avg1 is not None:
-                    st.markdown(
-                        f'<div style="text-align:center;">'
-                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#5d7a8c;font-weight:600;">Score global — {sel1}</span><br>'
-                        f'<span style="font-size:2.4rem;font-weight:800;color:#5d7a8c;">{avg1:.0f}</span>'
-                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
-                        f'</div>',
-                        unsafe_allow_html=True
-                    )
-            with col_avg2:
-                if avg2 is not None:
-                    st.markdown(
-                        f'<div style="text-align:center;">'
-                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#a67c5b;font-weight:600;">Score global — {sel2}</span><br>'
-                        f'<span style="font-size:2.4rem;font-weight:800;color:#a67c5b;">{avg2:.0f}</span>'
-                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
-                        f'</div>',
-                        unsafe_allow_html=True
-                    )
-
-        st.caption("Methode : normalisation min-max (0-100) sur les 483 communes. "
-                   "Loyer, AQI et chomage sont inverses (valeur basse = meilleur score). "
-                   "Score global = moyenne equiponderee des indicateurs disponibles.")
-
-
-    # ========================================================================
-    # TAB 4: METEO
-    # ========================================================================
-    with tabs[3]:
         # ------------------------------------------------------------------
         # Climat a l'annee (moyennes mensuelles sur 5 ans)
         # ------------------------------------------------------------------
@@ -1842,6 +1721,170 @@ def main():
             st.info("Meteo non disponible. Verifiez votre connexion.")
 
     st.markdown('<p class="footer">Comparateur de Villes Francaises | SAE Outils Decisionnels | Matteo Cai, William Lefebre, Terryl Hassen</p>', unsafe_allow_html=True)
+
+
+    # ========================================================================
+    # TAB 4: SCORES
+    # ========================================================================
+    with tabs[3]:
+        # Calcul des scores KPI pour les deux villes selectionnees
+        # Donnees necessaires : charger toutes les villes pour normalisation min-max
+        all_etudiants = load_etudiants_data()
+        all_salaires = load_salaires_data()
+        all_loyers = load_loyers_data()
+        all_ens = load_ensoleillement_data()
+        all_aqi = load_aqi_data()
+        all_chomage = load_chomage_data()
+        all_securite = load_securite_data()
+
+        # Collecter les valeurs pour chaque indicateur (toutes villes)
+        def _vals(source_dict, key=None):
+            """Extraire les valeurs numeriques d'un dict de donnees."""
+            vals = []
+            for v in source_dict.values():
+                if key:
+                    x = v.get(key) if isinstance(v, dict) else None
+                else:
+                    x = v
+                if x is not None:
+                    vals.append(x)
+            return vals
+
+        pct_vals = _vals(all_etudiants, "pct_etudiants")
+        sal_vals = _vals(all_salaires, "salaire_2023")
+        loy_vals = [v["loypredm2"] for v in all_loyers.values() if v.get("loypredm2")]
+        ens_vals = list(all_ens.values())
+        aqi_vals = list(all_aqi.values())
+        chom_vals = list(all_chomage.values())
+        sec_vals = list(all_securite.values())
+
+        def _norm(val, vmin, vmax, inverse=False):
+            """Normalisation min-max vers [0, 100]. Si inverse, les basses valeurs = meilleur score."""
+            if vmax == vmin or val is None or vmin is None:
+                return None
+            n = (val - vmin) / (vmax - vmin) * 100
+            return 100 - n if inverse else n
+
+        def _score_ville(sel):
+            """Calculer le score KPI d'une ville."""
+            d = d1 if sel == sel1 else d2
+            scores = {}
+            # % Etudiants (plus haut = mieux)
+            v = d.get("pct_etudiants")
+            if v is not None and pct_vals:
+                scores["% Etudiants"] = _norm(v, min(pct_vals), max(pct_vals))
+            # Salaire (plus haut = mieux)
+            v = d.get("salaire_2023")
+            if v is not None and sal_vals:
+                scores["Salaire"] = _norm(v, min(sal_vals), max(sal_vals))
+            # Loyer (plus bas = mieux → inverse)
+            loy = all_loyers.get(sel)
+            if loy and loy.get("loypredm2") and loy_vals:
+                scores["Loyer"] = _norm(loy["loypredm2"], min(loy_vals), max(loy_vals), inverse=True)
+            # Ensoleillement (plus haut = mieux)
+            v = all_ens.get(sel)
+            if v is not None and ens_vals:
+                scores["Ensoleillement"] = _norm(v, min(ens_vals), max(ens_vals))
+            # AQI (plus bas = mieux → inverse)
+            v = d.get("aqi_moyen")
+            if v is not None and aqi_vals:
+                scores["Qualite air"] = _norm(v, min(aqi_vals), max(aqi_vals), inverse=True)
+            # Chomage (plus bas = mieux → inverse)
+            v = d.get("taux_chomage")
+            if v is not None and chom_vals:
+                scores["Chomage"] = _norm(v, min(chom_vals), max(chom_vals), inverse=True)
+            # Securite (plus haut = mieux)
+            v = d.get("score_securite")
+            if v is not None and sec_vals:
+                scores["Securite"] = _norm(v, min(sec_vals), max(sec_vals))
+            return scores
+
+        sc1 = _score_ville(sel1)
+        sc2 = _score_ville(sel2)
+
+        # Score global (moyenne des scores disponibles)
+        avg1 = sum(sc1.values()) / len(sc1) if sc1 else None
+        avg2 = sum(sc2.values()) / len(sc2) if sc2 else None
+
+        # Radar chart (7 axes)
+        # Utiliser l'ordre fixe des indicateurs pour que le radar soit coherent
+        indic_order = ["% Etudiants", "Salaire", "Loyer", "Ensoleillement", "Qualite air", "Chomage", "Securite"]
+        r_labels = [i for i in indic_order if i in sc1 or i in sc2]
+        r_vals1 = [sc1.get(k, 0) or 0 for k in r_labels]
+        r_vals2 = [sc2.get(k, 0) or 0 for k in r_labels]
+
+        fig_radar = go.Figure()
+        fig_radar.add_trace(go.Scatterpolar(
+            r=r_vals1 + [r_vals1[0]] if r_vals1 else [],
+            theta=r_labels + [r_labels[0]] if r_labels else [],
+            fill='toself',
+            fillcolor='rgba(93,122,140,0.18)',
+            line=dict(color='#5d7a8c', width=2.5),
+            name=f"{sel1} ({avg1:.0f})" if avg1 is not None else sel1,
+        ))
+        fig_radar.add_trace(go.Scatterpolar(
+            r=r_vals2 + [r_vals2[0]] if r_vals2 else [],
+            theta=r_labels + [r_labels[0]] if r_labels else [],
+            fill='toself',
+            fillcolor='rgba(166,124,91,0.18)',
+            line=dict(color='#a67c5b', width=2.5),
+            name=f"{sel2} ({avg2:.0f})" if avg2 is not None else sel2,
+        ))
+        fig_radar.update_layout(
+            polar=dict(
+                radialaxis=dict(
+                    visible=True, range=[0, 100],
+                    tickfont=dict(size=9, color='#999'),
+                    gridcolor='#e0dbd3',
+                    linecolor='#e0dbd3',
+                ),
+                angularaxis=dict(
+                    tickfont=dict(size=11, color='#2c3e50'),
+                    gridcolor='#e0dbd3',
+                    linecolor='#e0dbd3',
+                ),
+                bgcolor='rgba(0,0,0,0)',
+            ),
+            showlegend=True,
+            legend=dict(
+                orientation='h', y=-0.15, x=0.5, xanchor='center',
+                font=dict(size=12, color='#2c3e50'),
+            ),
+            height=420,
+            margin=dict(t=30, b=30, l=30, r=30),
+            paper_bgcolor='rgba(0,0,0,0)',
+            font_color='#2c3e50',
+        )
+        st.plotly_chart(fig_radar, use_container_width=True)
+
+        # Score global sous le radar
+        if avg1 is not None or avg2 is not None:
+            col_avg1, col_avg2 = st.columns(2)
+            with col_avg1:
+                if avg1 is not None:
+                    st.markdown(
+                        f'<div style="text-align:center;">'
+                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#5d7a8c;font-weight:600;">Score global — {sel1}</span><br>'
+                        f'<span style="font-size:2.4rem;font-weight:800;color:#5d7a8c;">{avg1:.0f}</span>'
+                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
+                        f'</div>',
+                        unsafe_allow_html=True
+                    )
+            with col_avg2:
+                if avg2 is not None:
+                    st.markdown(
+                        f'<div style="text-align:center;">'
+                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#a67c5b;font-weight:600;">Score global — {sel2}</span><br>'
+                        f'<span style="font-size:2.4rem;font-weight:800;color:#a67c5b;">{avg2:.0f}</span>'
+                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
+                        f'</div>',
+                        unsafe_allow_html=True
+                    )
+
+        st.caption("Methode : normalisation min-max (0-100) sur les 483 communes. "
+                   "Loyer, AQI et chomage sont inverses (valeur basse = meilleur score). "
+                   "Score global = moyenne equiponderee des indicateurs disponibles.")
+
 
 if __name__ == "__main__":
     main()
