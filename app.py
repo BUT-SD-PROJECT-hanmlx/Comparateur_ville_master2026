@@ -1175,7 +1175,7 @@ def main():
     # TABS
     # ========================================================================
     st.markdown("")
-    tabs = st.tabs(["Vision globale", "Qualité de vie", "Scores", "Météo"])
+    tabs = st.tabs(["Vision globale", "Qualité de vie", "Météo", "Scores"])
 
     # ========================================================================
     # TAB 1: VISION GLOBALE
@@ -1551,173 +1551,12 @@ def main():
                 variant="v2"
             ), unsafe_allow_html=True)
 
+    
     # ========================================================================
-    # TAB 3: SCORES
+    # TAB 3: METEO
     # ========================================================================
+
     with tabs[2]:
-        # Calcul des scores KPI pour les deux villes selectionnees
-        # Donnees necessaires : charger toutes les villes pour normalisation min-max
-        all_etudiants = load_etudiants_data()
-        all_salaires = load_salaires_data()
-        all_loyers = load_loyers_data()
-        all_ens = load_ensoleillement_data()
-        all_aqi = load_aqi_data()
-        all_chomage = load_chomage_data()
-        all_securite = load_securite_data()
-
-        # Collecter les valeurs pour chaque indicateur (toutes villes)
-        def _vals(source_dict, key=None):
-            """Extraire les valeurs numeriques d'un dict de donnees."""
-            vals = []
-            for v in source_dict.values():
-                if key:
-                    x = v.get(key) if isinstance(v, dict) else None
-                else:
-                    x = v
-                if x is not None:
-                    vals.append(x)
-            return vals
-
-        pct_vals = _vals(all_etudiants, "pct_etudiants")
-        sal_vals = _vals(all_salaires, "salaire_2023")
-        loy_vals = [v["loypredm2"] for v in all_loyers.values() if v.get("loypredm2")]
-        ens_vals = list(all_ens.values())
-        aqi_vals = list(all_aqi.values())
-        chom_vals = list(all_chomage.values())
-        sec_vals = list(all_securite.values())
-
-        def _norm(val, vmin, vmax, inverse=False):
-            """Normalisation min-max vers [0, 100]. Si inverse, les basses valeurs = meilleur score."""
-            if vmax == vmin or val is None or vmin is None:
-                return None
-            n = (val - vmin) / (vmax - vmin) * 100
-            return 100 - n if inverse else n
-
-        def _score_ville(sel):
-            """Calculer le score KPI d'une ville."""
-            d = d1 if sel == sel1 else d2
-            scores = {}
-            # % Etudiants (plus haut = mieux)
-            v = d.get("pct_etudiants")
-            if v is not None and pct_vals:
-                scores["% Etudiants"] = _norm(v, min(pct_vals), max(pct_vals))
-            # Salaire (plus haut = mieux)
-            v = d.get("salaire_2023")
-            if v is not None and sal_vals:
-                scores["Salaire"] = _norm(v, min(sal_vals), max(sal_vals))
-            # Loyer (plus bas = mieux → inverse)
-            loy = all_loyers.get(sel)
-            if loy and loy.get("loypredm2") and loy_vals:
-                scores["Loyer"] = _norm(loy["loypredm2"], min(loy_vals), max(loy_vals), inverse=True)
-            # Ensoleillement (plus haut = mieux)
-            v = all_ens.get(sel)
-            if v is not None and ens_vals:
-                scores["Ensoleillement"] = _norm(v, min(ens_vals), max(ens_vals))
-            # AQI (plus bas = mieux → inverse)
-            v = d.get("aqi_moyen")
-            if v is not None and aqi_vals:
-                scores["Qualite air"] = _norm(v, min(aqi_vals), max(aqi_vals), inverse=True)
-            # Chomage (plus bas = mieux → inverse)
-            v = d.get("taux_chomage")
-            if v is not None and chom_vals:
-                scores["Chomage"] = _norm(v, min(chom_vals), max(chom_vals), inverse=True)
-            # Securite (plus haut = mieux)
-            v = d.get("score_securite")
-            if v is not None and sec_vals:
-                scores["Securite"] = _norm(v, min(sec_vals), max(sec_vals))
-            return scores
-
-        sc1 = _score_ville(sel1)
-        sc2 = _score_ville(sel2)
-
-        # Score global (moyenne des scores disponibles)
-        avg1 = sum(sc1.values()) / len(sc1) if sc1 else None
-        avg2 = sum(sc2.values()) / len(sc2) if sc2 else None
-
-        # Radar chart (7 axes)
-        # Utiliser l'ordre fixe des indicateurs pour que le radar soit coherent
-        indic_order = ["% Etudiants", "Salaire", "Loyer", "Ensoleillement", "Qualite air", "Chomage", "Securite"]
-        r_labels = [i for i in indic_order if i in sc1 or i in sc2]
-        r_vals1 = [sc1.get(k, 0) or 0 for k in r_labels]
-        r_vals2 = [sc2.get(k, 0) or 0 for k in r_labels]
-
-        fig_radar = go.Figure()
-        fig_radar.add_trace(go.Scatterpolar(
-            r=r_vals1 + [r_vals1[0]] if r_vals1 else [],
-            theta=r_labels + [r_labels[0]] if r_labels else [],
-            fill='toself',
-            fillcolor='rgba(93,122,140,0.18)',
-            line=dict(color='#5d7a8c', width=2.5),
-            name=f"{sel1} ({avg1:.0f})" if avg1 is not None else sel1,
-        ))
-        fig_radar.add_trace(go.Scatterpolar(
-            r=r_vals2 + [r_vals2[0]] if r_vals2 else [],
-            theta=r_labels + [r_labels[0]] if r_labels else [],
-            fill='toself',
-            fillcolor='rgba(166,124,91,0.18)',
-            line=dict(color='#a67c5b', width=2.5),
-            name=f"{sel2} ({avg2:.0f})" if avg2 is not None else sel2,
-        ))
-        fig_radar.update_layout(
-            polar=dict(
-                radialaxis=dict(
-                    visible=True, range=[0, 100],
-                    tickfont=dict(size=9, color='#999'),
-                    gridcolor='#e0dbd3',
-                    linecolor='#e0dbd3',
-                ),
-                angularaxis=dict(
-                    tickfont=dict(size=11, color='#2c3e50'),
-                    gridcolor='#e0dbd3',
-                    linecolor='#e0dbd3',
-                ),
-                bgcolor='rgba(0,0,0,0)',
-            ),
-            showlegend=True,
-            legend=dict(
-                orientation='h', y=-0.15, x=0.5, xanchor='center',
-                font=dict(size=12, color='#2c3e50'),
-            ),
-            height=420,
-            margin=dict(t=30, b=30, l=30, r=30),
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='#2c3e50',
-        )
-        st.plotly_chart(fig_radar, use_container_width=True)
-
-        # Score global sous le radar
-        if avg1 is not None or avg2 is not None:
-            col_avg1, col_avg2 = st.columns(2)
-            with col_avg1:
-                if avg1 is not None:
-                    st.markdown(
-                        f'<div style="text-align:center;">'
-                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#5d7a8c;font-weight:600;">Score global — {sel1}</span><br>'
-                        f'<span style="font-size:2.4rem;font-weight:800;color:#5d7a8c;">{avg1:.0f}</span>'
-                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
-                        f'</div>',
-                        unsafe_allow_html=True
-                    )
-            with col_avg2:
-                if avg2 is not None:
-                    st.markdown(
-                        f'<div style="text-align:center;">'
-                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#a67c5b;font-weight:600;">Score global — {sel2}</span><br>'
-                        f'<span style="font-size:2.4rem;font-weight:800;color:#a67c5b;">{avg2:.0f}</span>'
-                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
-                        f'</div>',
-                        unsafe_allow_html=True
-                    )
-
-        st.caption("Methode : normalisation min-max (0-100) sur les 483 communes. "
-                   "Loyer, AQI et chomage sont inverses (valeur basse = meilleur score). "
-                   "Score global = moyenne equiponderee des indicateurs disponibles.")
-
-
-    # ========================================================================
-    # TAB 4: METEO
-    # ========================================================================
-    with tabs[3]:
         # ------------------------------------------------------------------
         # Climat a l'annee (moyennes mensuelles sur 5 ans)
         # ------------------------------------------------------------------
@@ -1882,6 +1721,170 @@ def main():
             st.info("Meteo non disponible. Verifiez votre connexion.")
 
     st.markdown('<p class="footer">Comparateur de Villes Francaises | SAE Outils Decisionnels | Matteo Cai, William Lefebre, Terryl Hassen</p>', unsafe_allow_html=True)
+
+
+    # ========================================================================
+    # TAB 4: SCORES
+    # ========================================================================
+    with tabs[3]:
+        # Calcul des scores KPI pour les deux villes selectionnees
+        # Donnees necessaires : charger toutes les villes pour normalisation min-max
+        all_etudiants = load_etudiants_data()
+        all_salaires = load_salaires_data()
+        all_loyers = load_loyers_data()
+        all_ens = load_ensoleillement_data()
+        all_aqi = load_aqi_data()
+        all_chomage = load_chomage_data()
+        all_securite = load_securite_data()
+
+        # Collecter les valeurs pour chaque indicateur (toutes villes)
+        def _vals(source_dict, key=None):
+            """Extraire les valeurs numeriques d'un dict de donnees."""
+            vals = []
+            for v in source_dict.values():
+                if key:
+                    x = v.get(key) if isinstance(v, dict) else None
+                else:
+                    x = v
+                if x is not None:
+                    vals.append(x)
+            return vals
+
+        pct_vals = _vals(all_etudiants, "pct_etudiants")
+        sal_vals = _vals(all_salaires, "salaire_2023")
+        loy_vals = [v["loypredm2"] for v in all_loyers.values() if v.get("loypredm2")]
+        ens_vals = list(all_ens.values())
+        aqi_vals = list(all_aqi.values())
+        chom_vals = list(all_chomage.values())
+        sec_vals = list(all_securite.values())
+
+        def _norm(val, vmin, vmax, inverse=False):
+            """Normalisation min-max vers [0, 100]. Si inverse, les basses valeurs = meilleur score."""
+            if vmax == vmin or val is None or vmin is None:
+                return None
+            n = (val - vmin) / (vmax - vmin) * 100
+            return 100 - n if inverse else n
+
+        def _score_ville(sel):
+            """Calculer le score KPI d'une ville."""
+            d = d1 if sel == sel1 else d2
+            scores = {}
+            # % Etudiants (plus haut = mieux)
+            v = d.get("pct_etudiants")
+            if v is not None and pct_vals:
+                scores["% Etudiants"] = _norm(v, min(pct_vals), max(pct_vals))
+            # Salaire (plus haut = mieux)
+            v = d.get("salaire_2023")
+            if v is not None and sal_vals:
+                scores["Salaire"] = _norm(v, min(sal_vals), max(sal_vals))
+            # Loyer (plus bas = mieux → inverse)
+            loy = all_loyers.get(sel)
+            if loy and loy.get("loypredm2") and loy_vals:
+                scores["Loyer"] = _norm(loy["loypredm2"], min(loy_vals), max(loy_vals), inverse=True)
+            # Ensoleillement (plus haut = mieux)
+            v = all_ens.get(sel)
+            if v is not None and ens_vals:
+                scores["Ensoleillement"] = _norm(v, min(ens_vals), max(ens_vals))
+            # AQI (plus bas = mieux → inverse)
+            v = d.get("aqi_moyen")
+            if v is not None and aqi_vals:
+                scores["Qualite air"] = _norm(v, min(aqi_vals), max(aqi_vals), inverse=True)
+            # Chomage (plus bas = mieux → inverse)
+            v = d.get("taux_chomage")
+            if v is not None and chom_vals:
+                scores["Chomage"] = _norm(v, min(chom_vals), max(chom_vals), inverse=True)
+            # Securite (plus haut = mieux)
+            v = d.get("score_securite")
+            if v is not None and sec_vals:
+                scores["Securite"] = _norm(v, min(sec_vals), max(sec_vals))
+            return scores
+
+        sc1 = _score_ville(sel1)
+        sc2 = _score_ville(sel2)
+
+        # Score global (moyenne des scores disponibles)
+        avg1 = sum(sc1.values()) / len(sc1) if sc1 else None
+        avg2 = sum(sc2.values()) / len(sc2) if sc2 else None
+
+        # Radar chart (7 axes)
+        # Utiliser l'ordre fixe des indicateurs pour que le radar soit coherent
+        indic_order = ["% Etudiants", "Salaire", "Loyer", "Ensoleillement", "Qualite air", "Chomage", "Securite"]
+        r_labels = [i for i in indic_order if i in sc1 or i in sc2]
+        r_vals1 = [sc1.get(k, 0) or 0 for k in r_labels]
+        r_vals2 = [sc2.get(k, 0) or 0 for k in r_labels]
+
+        fig_radar = go.Figure()
+        fig_radar.add_trace(go.Scatterpolar(
+            r=r_vals1 + [r_vals1[0]] if r_vals1 else [],
+            theta=r_labels + [r_labels[0]] if r_labels else [],
+            fill='toself',
+            fillcolor='rgba(93,122,140,0.18)',
+            line=dict(color='#5d7a8c', width=2.5),
+            name=f"{sel1} ({avg1:.0f})" if avg1 is not None else sel1,
+        ))
+        fig_radar.add_trace(go.Scatterpolar(
+            r=r_vals2 + [r_vals2[0]] if r_vals2 else [],
+            theta=r_labels + [r_labels[0]] if r_labels else [],
+            fill='toself',
+            fillcolor='rgba(166,124,91,0.18)',
+            line=dict(color='#a67c5b', width=2.5),
+            name=f"{sel2} ({avg2:.0f})" if avg2 is not None else sel2,
+        ))
+        fig_radar.update_layout(
+            polar=dict(
+                radialaxis=dict(
+                    visible=True, range=[0, 100],
+                    tickfont=dict(size=9, color='#999'),
+                    gridcolor='#e0dbd3',
+                    linecolor='#e0dbd3',
+                ),
+                angularaxis=dict(
+                    tickfont=dict(size=11, color='#2c3e50'),
+                    gridcolor='#e0dbd3',
+                    linecolor='#e0dbd3',
+                ),
+                bgcolor='rgba(0,0,0,0)',
+            ),
+            showlegend=True,
+            legend=dict(
+                orientation='h', y=-0.15, x=0.5, xanchor='center',
+                font=dict(size=12, color='#2c3e50'),
+            ),
+            height=420,
+            margin=dict(t=30, b=30, l=30, r=30),
+            paper_bgcolor='rgba(0,0,0,0)',
+            font_color='#2c3e50',
+        )
+        st.plotly_chart(fig_radar, use_container_width=True)
+
+        # Score global sous le radar
+        if avg1 is not None or avg2 is not None:
+            col_avg1, col_avg2 = st.columns(2)
+            with col_avg1:
+                if avg1 is not None:
+                    st.markdown(
+                        f'<div style="text-align:center;">'
+                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#5d7a8c;font-weight:600;">Score global — {sel1}</span><br>'
+                        f'<span style="font-size:2.4rem;font-weight:800;color:#5d7a8c;">{avg1:.0f}</span>'
+                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
+                        f'</div>',
+                        unsafe_allow_html=True
+                    )
+            with col_avg2:
+                if avg2 is not None:
+                    st.markdown(
+                        f'<div style="text-align:center;">'
+                        f'<span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:#a67c5b;font-weight:600;">Score global — {sel2}</span><br>'
+                        f'<span style="font-size:2.4rem;font-weight:800;color:#a67c5b;">{avg2:.0f}</span>'
+                        f'<span style="font-size:0.9rem;color:#999;"> / 100</span>'
+                        f'</div>',
+                        unsafe_allow_html=True
+                    )
+
+        st.caption("Methode : normalisation min-max (0-100) sur les 483 communes. "
+                   "Loyer, AQI et chomage sont inverses (valeur basse = meilleur score). "
+                   "Score global = moyenne equiponderee des indicateurs disponibles.")
+
 
 if __name__ == "__main__":
     main()
