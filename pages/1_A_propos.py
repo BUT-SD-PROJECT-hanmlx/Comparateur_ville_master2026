@@ -27,10 +27,13 @@ L'application permet de comparer deux villes sur plusieurs dimensions :
 - **Logement** : loyer moyen
 - **Securité** : score de securité
 - **Culture & Loisirs** : lieux culturels, restaurants, bars
-- **Météo** : previsions a 7 jours
+- **Météo** : previsions à 7 jours
 
-Chaque indicateur est issu de sources officielles (INSEE, data.gouv.fr, Open-Meteo) et présente de maniere synthétique. Un **score global** (normalisation min-max, 7 indicateurs equiponderes) permet une lecture rapide des points forts et faibles de chaque ville.
-""")
+Chaque indicateur est issu de sources officielles (INSEE, data.gouv.fr, Open-Meteo) et présente de manière synthétique. 
+
+Un **score de sécurité** (combinaison pondérée des actes recensés : violences 40 %, vols violents 30 %, cambriolages 20 %, stupéfiants 10 %) permet une comparaison indicative du niveau de sécurité entre communes. <br>
+Un **score global** (normalisation min-max, 7 indicateurs equiponderes) permet une lecture rapide des points forts et faibles de chaque ville.
+""", unsafe_allow_html=True)
 
 st.markdown("---")
 
