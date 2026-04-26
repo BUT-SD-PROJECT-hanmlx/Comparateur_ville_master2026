@@ -1306,19 +1306,23 @@ def main():
         if sec1_data or sec2_data:
             AUTRES_KEY = "Autres activités de services"
             def _aggregate_secteurs(sd):
-                """Top 4 (sans Autres secteurs)."""
+                """Top 4 + Autres secteurs."""
                 if not sd:
                     return {}
                 sorted_items = sorted(sd.items(), key=lambda x: x[1], reverse=True)
                 result = {}
+                autres = 0
                 for name, val in sorted_items:
                     if name == AUTRES_KEY:
+                        autres += val
                         continue
                     short = _SECTEUR_SHORT.get(name, name[:22])
                     if len(result) < 4:
                         result[short] = val
                     else:
-                        break
+                        autres += val
+                if autres > 0:
+                    result["Autres secteurs"] = autres
                 return result
 
             def _make_bar(sd, ville, color):
