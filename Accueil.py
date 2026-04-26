@@ -10,7 +10,6 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Comparateur de Villes Françaises",
-    page_icon="🏠",
     layout="centered"
 )
 
@@ -113,6 +112,6 @@ Cet outil t'aide à choisir la meilleure ville pour ton master en comparant les 
 
 # Bouton centré
 if st.button("Accéder au comparateur"):
-    st.switch_page("pages/0_Comparateur_villes.py")
+    st.switch_page("pages/0_⚖️_Comparateur_villes.py")
 
 st.markdown('</div>', unsafe_allow_html=True)

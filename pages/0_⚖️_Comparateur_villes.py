@@ -1,7 +1,7 @@
 """
 Comparateur de Villes Françaises
 =================================
-Auteurs : Matteo Cai, William Lefebre, Terryl Hassen
+Auteurs : Matteo Cai, William Lefebvre, Terryl Hassen
 Cours : SAE Outils Decisionnels
 """
 
@@ -14,7 +14,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Comparateur de Villes Françaises",
-    page_icon="📊",
+    page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -1208,9 +1208,9 @@ def main():
         age1_val = d1.get("age_moyen")
         age2_val = d2.get("age_moyen")
         age1_str = f"{age1_val} ans" if age1_val is not None else "N/A"
-        age1_sub = "Age moyen 2025" if age1_val is not None else "Source a venir"
+        age1_sub = "Age moyen 2025" if age1_val is not None else "Source à venir"
         age2_str = f"{age2_val} ans" if age2_val is not None else "N/A"
-        age2_sub = "Age moyen 2025" if age2_val is not None else "Source a venir"
+        age2_sub = "Age moyen 2025" if age2_val is not None else "Source à venir"
         r1c3, r1c4 = st.columns(2)
         with r1c3:
             st.markdown(ind_card(
@@ -1242,21 +1242,21 @@ def main():
         alt2_val = d2.get("alternance_par_10etudiants")
         alt1_str = f"{alt1_val}" if alt1_val is not None else "N/A"
         alt2_str = f"{alt2_val}" if alt2_val is not None else "N/A"
-        alt1_sub = "Alternance /10 étudiants - taux départemental" if alt1_val is not None else "Source a venir"
-        alt2_sub = "Alternance /10 étudiants - taux départemental" if alt2_val is not None else "Source a venir"
+        alt1_sub = "Alternance /10 étudiants - taux départemental" if alt1_val is not None else "Source à venir"
+        alt2_sub = "Alternance /10 étudiants - taux départemental" if alt2_val is not None else "Source à venir"
         # Chomage
         ch1_val = d1.get("taux_chomage")
         ch2_val = d2.get("taux_chomage")
         ch1_str = f"{ch1_val}%" if ch1_val is not None else "N/A"
-        ch1_sub = "Taux départemental 2024" if ch1_val is not None else "Source a venir"
+        ch1_sub = "Taux départemental 2024" if ch1_val is not None else "Source à venir"
         ch2_str = f"{ch2_val}%" if ch2_val is not None else "N/A"
-        ch2_sub = "Taux départemental 2024" if ch2_val is not None else "Source a venir"
+        ch2_sub = "Taux départemental 2024" if ch2_val is not None else "Source à venir"
         # Row 1: Salaire + Chomage (combo)
         # Row 1: Salaire + Evolution salaire (combo)
         evol1_str = f"{sal1_evol*100:+.1f}%" if sal1_evol is not None else "N/A"
         evol2_str = f"{sal2_evol*100:+.1f}%" if sal2_evol is not None else "N/A"
-        evol1_sub = "2023 vs 2022" if sal1_evol is not None else "Source a venir"
-        evol2_sub = "2023 vs 2022" if sal2_evol is not None else "Source a venir"
+        evol1_sub = "2023 vs 2022" if sal1_evol is not None else "Source à venir"
+        evol2_sub = "2023 vs 2022" if sal2_evol is not None else "Source à venir"
         r2c3, r2c4 = st.columns(2)
         r2c1, r2c2 = st.columns(2)
         with r2c1:
@@ -1279,7 +1279,7 @@ def main():
         r2c3, r2c4 = st.columns(2)
         with r2c3:
             st.markdown(ind_card_combo(
-                '<i class="fas fa-chart-line"></i>', f"Taux de chomage — {sel1}",
+                '<i class="fas fa-chart-line"></i>', f"Taux de chômage — {sel1}",
                 ch1_str, ch1_sub,
                 '<i class="fas fa-handshake"></i>', f"Alternance — {sel1}",
                 alt1_str, alt1_sub,
@@ -1293,7 +1293,7 @@ def main():
             #     variant="v2"
             # ), unsafe_allow_html=True)
             st.markdown(ind_card_combo(
-                '<i class="fas fa-euro-sign"></i>', f"Taux de chomage — {sel2}",
+                '<i class="fas fa-euro-sign"></i>', f"Taux de chômage — {sel2}",
                 ch2_str, ch2_sub,
                 '<i class="fas fa-handshake"></i>', f"Alternance — {sel2}",
                 alt2_str, alt2_sub,
@@ -1432,9 +1432,9 @@ def main():
         aqi1_val = d1.get("aqi_moyen")
         aqi2_val = d2.get("aqi_moyen")
         aqi1_str = str(aqi1_val) if aqi1_val is not None else "N/A"
-        aqi1_sub = aqi_label(aqi1_val) + " (moy. 2023-2024)" if aqi1_val is not None else "Source a venir"
+        aqi1_sub = aqi_label(aqi1_val) + " (moy. 2023-2024)" if aqi1_val is not None else "Source à venir"
         aqi2_str = str(aqi2_val) if aqi2_val is not None else "N/A"
-        aqi2_sub = aqi_label(aqi2_val) + " (moy. 2023-2024)" if aqi2_val is not None else "Source a venir"
+        aqi2_sub = aqi_label(aqi2_val) + " (moy. 2023-2024)" if aqi2_val is not None else "Source à venir"
         with qv1c1:
             st.markdown(ind_card_combo(
                 '<i class="fas fa-sun"></i>', f"Ensoleillement — {sel1}",
@@ -1477,9 +1477,9 @@ def main():
         den1 = d1.get("densite_culturelle")
         den2 = d2.get("densite_culturelle")
         den1_str = f"{den1}" if den1 is not None else "N/A"
-        den1_sub = "Lieux / 1 000 hab." if den1 is not None else "Source a venir"
+        den1_sub = "Lieux / 1 000 hab." if den1 is not None else "Source à venir"
         den2_str = f"{den2}" if den2 is not None else "N/A"
-        den2_sub = "Lieux / 1 000 hab." if den2 is not None else "Source a venir"
+        den2_sub = "Lieux / 1 000 hab." if den2 is not None else "Source à venir"
         cc3, cc4 = st.columns(2)
         with cc3:
             st.markdown(ind_card(
@@ -1533,10 +1533,10 @@ def main():
         dr2_str = f"{dr2}" if dr2 is not None else "N/A"
         db1_str = f"{db1}" if db1 is not None else "N/A"
         db2_str = f"{db2}" if db2 is not None else "N/A"
-        dr1_sub = "Rest. / 1 000 hab." if dr1 is not None else "Source a venir"
-        dr2_sub = "Rest. / 1 000 hab." if dr2 is not None else "Source a venir"
-        db1_sub = "Bars / 1 000 hab." if db1 is not None else "Source a venir"
-        db2_sub = "Bars / 1 000 hab." if db2 is not None else "Source a venir"
+        dr1_sub = "Rest. / 1 000 hab." if dr1 is not None else "Source à venir"
+        dr2_sub = "Rest. / 1 000 hab." if dr2 is not None else "Source à venir"
+        db1_sub = "Bars / 1 000 hab." if db1 is not None else "Source à venir"
+        db2_sub = "Bars / 1 000 hab." if db2 is not None else "Source à venir"
         rc3, rc4 = st.columns(2)
         with rc3:
             st.markdown(ind_card_combo(
@@ -1561,9 +1561,9 @@ def main():
         sec1_val = d1.get("score_securite")
         sec2_val = d2.get("score_securite")
         sec1_str = f"{sec1_val}/100" if sec1_val is not None else "N/A"
-        sec1_sub = "Score 2025" if sec1_val is not None else "Source a venir"
+        sec1_sub = "Score 2025" if sec1_val is not None else "Source à venir"
         sec2_str = f"{sec2_val}/100" if sec2_val is not None else "N/A"
-        sec2_sub = "Score 2025" if sec2_val is not None else "Source a venir"
+        sec2_sub = "Score 2025" if sec2_val is not None else "Source à venir"
         with qv2c1:
             st.markdown(ind_card(
                 f"Securite — {sel1}",
@@ -1748,7 +1748,7 @@ def main():
         else:
             st.info("Meteo non disponible. Verifiez votre connexion.")
 
-    st.markdown('<p class="footer">Comparateur de Villes Francaises | SAE Outils Decisionnels | Matteo Cai, William Lefebre, Terryl Hassen</p>', unsafe_allow_html=True)
+    st.markdown('<p class="footer">Comparateur de Villes Francaises | SAE Outils Decisionnels | Matteo Cai, William Lefebvre, Terryl Hassen</p>', unsafe_allow_html=True)
 
 
     # ========================================================================
@@ -1910,7 +1910,7 @@ def main():
                     )
 
         st.caption("Methode : normalisation min-max (0-100) sur les 483 communes. "
-                   "Loyer, AQI et chomage sont inverses (valeur basse = meilleur score). "
+                   "Loyer, AQI et chômage sont inverses (valeur basse = meilleur score). "
                    "Score global = moyenne equiponderee des indicateurs disponibles.")
 
 
