@@ -32,15 +32,15 @@ with col1:
         **Score global par ville** — moyenne équipondérée des indicateurs suivants :
 
         Chaque indicateur est normalisé en score 0-100 (min-max sur les 483 communes).
-        Les indicateurs "inverse" (valeur basse = meilleur score) : loyer, AQI, chomage.
+        Les indicateurs "inverse" (valeur basse = meilleur score) : loyer, AQI, chômage.
 
         - **% Etudiants** : proportion d'étudiants dans la population (Minisère de l'Enseignement Supérieur)
         - **Salaire** : net mensuel moyen EQTP 2023 (INSEE Base Tous salariés)
         - **Loyer** *(inverse)* : loyer moyen €/m² (Carte des loyers 2025)
         - **Ensoleillement** : % de l'année (Open-Meteo ERA5)
         - **Qualité de l'air** *(inverse)* : indice AQI européen (Open-Meteo Air Quality / Copernicus CAMS)
-        - **Chomage** *(inverse)* : taux départemental 2024 (INSEE / data.gouv.fr)
-        - **Securité** : score 0-100, 2025 (data.gouv.fr) 
+        - **chômage** *(inverse)* : taux départemental 2024 (INSEE / data.gouv.fr)
+        - **Sécurité** : score 0-100, 2025 (data.gouv.fr) 
 
         Score global = moyenne des scores disponibles pour chaque ville.
         """)
@@ -61,10 +61,10 @@ with col1:
           - Couverture : **454 communes**
           - Champs : `Salaire_2023` (net mensuel moyen EQTP, euros), `Salaire_evol` (evolution 2023 vs 2022)
        
-        - `communes_20k_avec_chomage_final.csv` — Taux de chomage départemental 2024
+        - `communes_20k_avec_chomage_final.csv` — Taux de chômage départemental 2024
           -  Source : [insee.fr/statistiques/2045861](https://www.insee.fr/fr/statistiques/4805248#onglet-4)
           - Couverture : **483 communes**
-          - Champs : `dep_tx_chomage_24` (taux de chomage départemental, %)
+          - Champs : `dep_tx_chomage_24` (taux de chômage départemental, %)
           - Note : le taux est départemental (pas communal), attribué à chaque commune selon son département
                     
         - `communes_20k_avec_secteurs_activites_2025_final.csv` — Secteurs d'activités 2025
@@ -158,8 +158,8 @@ st.caption("Toutes les données sont issues de sources officielles ou open data.
            "Salaire : 454 communes (INSEE Base Tous salariés 2023). "
            "Ensoleillement : 410 communes (Open-Meteo ERA5). "
            "Qualité de l'air : 422 communes (Open-Meteo Air Quality). "
-           "Chomage : 483 communes (INSEE 2024). "
-           "Securité : 483 communes (data.gouv.fr 2025). "
+           "Chômage : 483 communes (INSEE 2024). "
+           "Sécurité : 483 communes (data.gouv.fr 2025). "
            "Lieux culturels : 483 communes (data.gouv.fr 2025). "
            "Restaurants & bars : 455 communes (data.gouv.fr 2025). "
            "Secteurs d'activités : 483 communes (data.gouv.fr 2025). "

@@ -20,33 +20,33 @@ st.sidebar.image(
     width=220
 )
 
-st.set_page_config(page_title="A propos", layout="wide")
+st.set_page_config(page_title="À propos", layout="wide")
 
-st.title("A propos")
+st.title("À propos")
 
 st.markdown("---")
 
 st.markdown("""
 ### Comparateur de Villes Francaises
 
-Ce projet a ete réalisé dans le cadre de la **SAE Outils Décisionnels** du BUT SD (Sciences des Données), parcours Visualisation et Conception d'Outils Décisionnels, à l'IUT de Paris - Universite Paris Cité.
+Ce projet à été réalisé dans le cadre de la **SAE Outils Décisionnels** du BUT SD (Sciences des Données), parcours Visualisation et Conception d'Outils Décisionnels, à l'IUT de Paris - Universite Paris Cité.
 
 **Objectif** : fournir aux étudiants un outil de comparaison entre villes francaises afin de les aider à choisir leur future ville d'études. Au moment de sélectionner un etablissement pour la suite de leur cursus, les étudiants sont souvent confrontés à une question essentielle : au-dela du programme, **quelle ville correspond le mieux à mes attentes et à mon mode de vie ?**
 
 L'application permet de comparer deux villes sur plusieurs dimensions :
 
 - **Population & Etudiants** : taille de la ville, part étudiante, age moyen
-- **Revenus & Emploi** : salaire moyen, taux de chomage, secteurs d'activités
+- **Revenus & Emploi** : salaire moyen, taux de chômage, secteurs d'activités
 - **Cadre de vie** : ensoleillement, qualité de l'air
 - **Logement** : loyer moyen
 - **Securité** : score de securité
 - **Culture & Loisirs** : lieux culturels, restaurants, bars
-- **Météo** : previsions à 7 jours
+- **Météo** : prévisions à 7 jours
 
 Chaque indicateur est issu de sources officielles (INSEE, data.gouv.fr, Open-Meteo) et est présenté de manière synthétique. 
 
 Un **score de sécurité** (combinaison pondérée des actes recensés : violences 40 %, vols violents 30 %, cambriolages 20 %, stupéfiants 10 %) permet une comparaison indicative du niveau de sécurité entre communes. <br>
-Un **score global** (normalisation min-max, 7 indicateurs equiponderes) permet une lecture rapide des points forts et faibles de chaque ville.
+Un **score global** (normalisation min-max, 7 indicateurs équipondérés) permet une lecture rapide des points forts et faibles de chaque ville.
 """, unsafe_allow_html=True)
 
 
