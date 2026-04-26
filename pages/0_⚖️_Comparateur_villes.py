@@ -1242,8 +1242,8 @@ def main():
         alt2_val = d2.get("alternance_par_10etudiants")
         alt1_str = f"{alt1_val}" if alt1_val is not None else "N/A"
         alt2_str = f"{alt2_val}" if alt2_val is not None else "N/A"
-        alt1_sub = "Alternance pour 10 etudiants" if alt1_val is not None else "Source a venir"
-        alt2_sub = "Alternance pour 10 etudiants" if alt2_val is not None else "Source a venir"
+        alt1_sub = "Alternance /10 étudiants - taux départemental" if alt1_val is not None else "Source a venir"
+        alt2_sub = "Alternance /10 étudiants - taux départemental" if alt2_val is not None else "Source a venir"
         # Chomage
         ch1_val = d1.get("taux_chomage")
         ch2_val = d2.get("taux_chomage")
