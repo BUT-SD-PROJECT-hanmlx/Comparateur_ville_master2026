@@ -49,11 +49,52 @@ Un **score de sécurité** (combinaison pondérée des actes recensés : violenc
 Un **score global** (normalisation min-max, 7 indicateurs equiponderes) permet une lecture rapide des points forts et faibles de chaque ville.
 """, unsafe_allow_html=True)
 
+
 st.markdown("---")
 
 st.markdown("""
-**Auteurs** : Matteo Cai, William Lefebvre, Terryl Hassen
+**Cours** : SAE Outils Décisionnels - BUT SD, IUT de Paris - Université Paris Cité
 
-**Cours** : SAE Outils Décisionnels - BUT SD, IUT de Paris - Universite Paris Cité
+**Auteurs** : Matteo CAI, William LEFEBVRE, Terryl HASSEN  
 """)
+
+st.markdown("---")
+
+st.markdown("**Contact :** ")
+
+st.markdown("""
+<div style="display: flex; gap: 40px;">
+
+<div>
+<b>Matteo CAI</b><br>
+<a href="https://www.linkedin.com/in/matteo-cai-696b062b5/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/24/174/174857.png"/> LinkedIn
+</a><br>
+<a href="https://github.com/hanmlx" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/24/25/25231.png"/> GitHub
+</a>
+</div>
+
+<div>
+<b>William LEFEBVRE</b><br>
+<a href="https://www.linkedin.com/in/william-lefebvre-a924a1187/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/24/174/174857.png"/> LinkedIn
+</a><br>
+<a href="https://github.com/Lalmytox" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/24/25/25231.png"/> GitHub
+</a>
+</div>
+
+<div>
+<b>Terryl HASSEN</b><br>
+<a href="https://www.linkedin.com/in/terryl-hassen-394a3620b/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/24/174/174857.png"/> LinkedIn
+</a><br>
+<a href="https://github.com/Tnxhsn" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/24/25/25231.png"/> GitHub
+</a>
+</div>
+
+</div>
+""", unsafe_allow_html=True)
 

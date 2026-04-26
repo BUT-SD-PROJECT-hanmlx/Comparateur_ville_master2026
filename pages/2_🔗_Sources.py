@@ -27,26 +27,84 @@ st.markdown("---")
 col1, col2 = st.columns(2)
 
 with col1:
+    with st.expander("Methodologie des scores KPI", expanded=True):
+        st.markdown("""  
+        **Score global par ville** — moyenne équipondérée des indicateurs suivants :
+
+        Chaque indicateur est normalisé en score 0-100 (min-max sur les 483 communes).
+        Les indicateurs "inverse" (valeur basse = meilleur score) : loyer, AQI, chomage.
+
+        - **% Etudiants** : proportion d'étudiants dans la population (Minisère de l'Enseignement Supérieur)
+        - **Salaire** : net mensuel moyen EQTP 2023 (INSEE Base Tous salariés)
+        - **Loyer** *(inverse)* : loyer moyen €/m² (Carte des loyers 2025)
+        - **Ensoleillement** : % de l'année (Open-Meteo ERA5)
+        - **Qualité de l'air** *(inverse)* : indice AQI européen (Open-Meteo Air Quality / Copernicus CAMS)
+        - **Chomage** *(inverse)* : taux départemental 2024 (INSEE / data.gouv.fr)
+        - **Securité** : score 0-100, 2025 (data.gouv.fr) 
+
+        Score global = moyenne des scores disponibles pour chaque ville.
+        """)
+
     with st.expander("INSEE + DARES", expanded=True):
         st.markdown("""
-        **Fichiers CSV locaux** (dossier `data/`) :
+        **Fichiers CSV locaux** (fichiers retravaillés puis stockés dossier `data/`) :
 
         - `liste_communes_20k_2023_v2.csv` — Population 2023, INSEE Recensement
-          [insee.fr/statistiques/8680726](https://www.insee.fr/fr/statistiques/8680726?sommaire=8681011)
+          - Source : [insee.fr/statistiques/8680726](https://www.insee.fr/fr/statistiques/8680726?sommaire=8681011)
 
-        - `alternance_communes_20k_2023.csv` — Apprentissages / Alternance, DARES
-          [poem.travail-emploi.gouv.fr](https://poem.travail-emploi.gouv.fr/open-data/alternance-1#new_cap_second_stk)
+        - `communes_20k_2023_nb_alternance_26.csv` — Apprentissages / Alternance, DARES
+          - Source : [poem.travail-emploi.gouv.fr](https://poem.travail-emploi.gouv.fr/open-data/alternance-1#new_cap_second_stk)
 
+          
         - `communes_20k_salaires_final.csv` — Salaires nets mensuels moyens 2023, INSEE Base Tous salariés
-          [insee.fr/statistiques/2021266](https://www.insee.fr/fr/statistiques/2021266)
+          - Source : [insee.fr/statistiques/2021266](https://www.insee.fr/fr/statistiques/2021266)
           - Couverture : **454 communes**
           - Champs : `Salaire_2023` (net mensuel moyen EQTP, euros), `Salaire_evol` (evolution 2023 vs 2022)
+       
+        - `communes_20k_avec_chomage_final.csv` — Taux de chomage départemental 2024
+          -  Source : [insee.fr/statistiques/2045861](https://www.insee.fr/fr/statistiques/4805248#onglet-4)
+          - Couverture : **483 communes**
+          - Champs : `dep_tx_chomage_24` (taux de chomage départemental, %)
+          - Note : le taux est départemental (pas communal), attribué à chaque commune selon son département
+                    
+        - `communes_20k_avec_secteurs_activites_2025_final.csv` — Secteurs d'activités 2025
+          - Source : [https://www.insee.fr/fr/statistiques/8266010](https://www.insee.fr/fr/statistiques/8266010)
+          - Couverture : **483 communes**
+          - 17 secteurs d'activités (entreprises par secteur)
+          - Affichage : camembert top 4 + Autres
+
 
         - `url_cities_final.csv` — Thumbnails Wikipedia (API MediaWiki pre-cached)
 
         Licence : **Licence Ouverte**
         """)
 
+    
+    with st.expander("data.gouv.fr", expanded=True):
+        st.markdown("""
+        **data.gouv.fr** — Plateforme open data francaise
+
+
+        - `communes_20k_avec_score_securite_2025_final.csv` — Score de securité 2025
+          - Source : [data.gouv.fr](https://www.data.gouv.fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales)
+          - Couverture : **483 communes**
+          - Champs : `score_securite_25` (score 0-100)
+          - Note méthodologique : Le score de sécurité est un score indicatif calculé à partir d'une combinaison pondérée des actes recensés : violences 40 %, vols violents 30 %, cambriolages 20 %, stupéfiants 10 %. Il permet une comparaison indicative du niveau de sécurité entre communes.
+
+        - `communes_20k_avec_lieux_culturel_2025_final.csv` — Lieux culturels 2025 -
+          - Source : [data.gouv.fr](https://data.culture.gouv.fr/explore/dataset/base-des-lieux-et-des-equipements-culturels)
+          - Couverture : **483 communes**
+          - Champs : `nb_lieux_culturels`, `nb_lieux_culturel_par_1000_habitants`
+
+        - `restaurants_bars_filtre_communes.csv` — Restaurants et bars 2025
+          - Source : [data.gouv.fr](https://www.data.gouv.fr/datasets/base-nationale-des-commerces-ouverte)
+          - Couverture : **455 communes** (28 sans donnees)
+          - Champs : `restaurants`, `bars`, `restaurants_pour_1000`, `bars_pour_1000`
+
+        Licence : **Licence Ouverte 2.0**
+        """)
+
+with col2:
     with st.expander("Open-Meteo API", expanded=True):
         st.markdown("""
         **open-meteo.com** — Données météorologiques et qualité de l'air
@@ -69,37 +127,6 @@ with col1:
         Licence : **CC BY 4.0** (Archive API) / **CC0** (Forecast API)
         """)
 
-    with st.expander("data.gouv.fr", expanded=True):
-        st.markdown("""
-        **data.gouv.fr** — Plateforme open data francaise
-
-        - `communes_20k_avec_chomage_final.csv` — Taux de chomage départemental 2024
-          [insee.fr/statistiques/2045861](https://www.insee.fr/fr/statistiques/2045861)
-          - Couverture : **483 communes**
-          - Champs : `dep_tx_chomage_24` (taux de chomage départemental, %)
-          - Note : le taux est départemental (pas communal), attribué à chaque commune selon son departement
-
-        - `communes_20k_avec_score_securite_2025_final.csv` — Score de securité 2025
-          - Couverture : **483 communes**
-          - Champs : `score_securite_25` (score 0-100)
-
-        - `communes_20k_avec_lieux_culturel_2025_final.csv` — Lieux culturels 2025
-          - Couverture : **483 communes**
-          - Champs : `nb_lieux_culturels`, `nb_lieux_culturel_par_1000_habitants`
-
-        - `restaurants_bars_filtre_communes.csv` — Restaurants et bars 2025
-          - Couverture : **455 communes** (28 sans donnees)
-          - Champs : `restaurants`, `bars`, `restaurants_pour_1000`, `bars_pour_1000`
-
-        - `communes_20k_avec_secteurs_activites_2025_final.csv` — Secteurs d'activités 2025
-          - Couverture : **483 communes**
-          - 17 secteurs d'activités (emplois par secteur)
-          - Affichage : camembert top 4 + Autres
-
-        Licence : **Licence Ouverte 2.0**
-        """)
-
-with col2:
     with st.expander("Carte des loyers 2025 (ANIL / data.gouv.fr)", expanded=True):
         st.markdown("""
         **Carte des loyers 2025** — Indicateurs de loyers d'annonce par commune
@@ -123,23 +150,7 @@ with col2:
         Licence : **Licence Ouverte 2.0**
         """)
 
-    with st.expander("Methodologie des scores KPI", expanded=True):
-        st.markdown("""  
-        **Score global par ville** — moyenne équipondérée des indicateurs suivants :
-
-        Chaque indicateur est normalisé en score 0-100 (min-max sur les 483 communes).
-        Les indicateurs "inverse" (valeur basse = meilleur score) : loyer, AQI, chomage.
-
-        - **% Etudiants** : proportion d'étudiants dans la population (Minisère de l'Enseignement Supérieur)
-        - **Salaire** : net mensuel moyen EQTP 2023 (INSEE Base Tous salariés)
-        - **Loyer** *(inverse)* : loyer moyen €/m² (Carte des loyers 2025)
-        - **Ensoleillement** : % de l'année (Open-Meteo ERA5)
-        - **Qualité de l'air** *(inverse)* : indice AQI européen (Open-Meteo Air Quality / Copernicus CAMS)
-        - **Chomage** *(inverse)* : taux départemental 2024 (INSEE / data.gouv.fr)
-        - **Securité** : score 0-100, 2025 (data.gouv.fr) 
-
-        Score global = moyenne des scores disponibles pour chaque ville.
-        """)
+    
 
 st.markdown("---")
 st.caption("Toutes les données sont issues de sources officielles ou open data. "
