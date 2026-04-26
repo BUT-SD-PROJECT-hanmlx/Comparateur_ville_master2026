@@ -2,7 +2,7 @@
 
 Application web interactive permettant de comparer deux villes francaises sur plusieurs dimensions : population, revenus, logement, qualite de vie, meteo et scores globalises. Concue pour aider les etudiants a choisir leur ville d'etudes pour un master.
 
-**Auteurs** : Matteo Cai, William Lefebre, Terryl Hassen  
+**Auteurs** : Matteo Cai, William Lefebvre, Terryl Hassen  
 **Cours** : SAE Outils Decisionnels — IUT de Paris, BUT Sciences des Donnees
 
 ---
