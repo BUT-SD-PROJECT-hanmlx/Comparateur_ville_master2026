@@ -1300,50 +1300,74 @@ def main():
                 variant=""
             ), unsafe_allow_html=True)
 
-        # Row 3: Secteurs d'activités (camembert top 4 + Autres)
+        # Row 3: Secteurs d'activités — 2 histogrammes (1 par ville)
         sec1_data = d1.get("secteurs")
         sec2_data = d2.get("secteurs")
         if sec1_data or sec2_data:
+            AUTRES_KEY = "Autres activités de services"
+            def _aggregate_secteurs(sd):
+                """Top 4 (sans Autres secteurs)."""
+                if not sd:
+                    return {}
+                sorted_items = sorted(sd.items(), key=lambda x: x[1], reverse=True)
+                result = {}
+                for name, val in sorted_items:
+                    if name == AUTRES_KEY:
+                        continue
+                    short = _SECTEUR_SHORT.get(name, name[:22])
+                    if len(result) < 4:
+                        result[short] = val
+                    else:
+                        break
+                return result
+
+            def _make_bar(sd, ville, color):
+                agg = _aggregate_secteurs(sd)
+                if not agg:
+                    return None
+                labels = list(agg.keys())
+                raw = list(agg.values())
+                # Pourcentages sur le total GLOBAL de la ville (tous secteurs)
+                total = sum(sd.values()) or 1
+                pcts = [round(v / total * 100, 1) for v in raw]
+                # Trier par valeur décroissante
+                pairs = sorted(zip(labels, pcts), key=lambda x: x[1], reverse=True)
+                labels, pcts = zip(*pairs)
+                fig = go.Figure(go.Bar(
+                    x=list(labels),
+                    y=list(pcts),
+                    marker_color=color,
+                    hovertemplate='<b>%{x}</b><br>' + ville + ' : %{y:.1f}%<extra></extra>',
+                ))
+                fig.update_layout(
+                    title=dict(text=f"Secteurs d'activite — {ville}", font=dict(size=13, color='#2c3e50')),
+                    height=300,
+                    margin=dict(t=40, b=10, l=10, r=10),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    showlegend=False,
+                    xaxis=dict(
+                        tickfont=dict(size=11, color='#2c3e50'),
+                        tickangle=-25,
+                        showgrid=False,
+                    ),
+                    yaxis=dict(
+                        tickfont=dict(size=11, color='#2c3e50'),
+                        gridcolor='#e5e5e5',
+                        ticksuffix='%',
+                        title=dict(text="Part (%)", font=dict(size=11, color='#2c3e50')),
+                    ),
+                )
+                return fig
+
             r3c1, r3c2 = st.columns(2)
             with r3c1:
-                labels1, values1 = build_pie_data(sec1_data)
-                if labels1:
-                    fig1 = go.Figure(data=[go.Pie(
-                        labels=labels1, values=values1,
-                        hole=0.4,
-                        marker=dict(colors=['#5d7a8c','#7d9aac','#9dbacc','#bddaec','#d5d5d5']),
-                        textinfo='label+percent',
-                        textposition='outside',
-                        textfont=dict(size=10, color='#2c3e50'),
-                        hovertemplate='<b>%{label}</b><br>%{value:,} entreprises<br>%{percent}<extra></extra>',
-                        pull=[0.03]*len(labels1),
-                    )])
-                    fig1.update_layout(
-                        title=dict(text=f"Secteurs d'activite — {sel1}", font=dict(size=13, color='#2c3e50')),
-                        height=260, margin=dict(t=40, b=10, l=10, r=10),
-                        paper_bgcolor='rgba(0,0,0,0)',
-                        showlegend=False,
-                    )
+                fig1 = _make_bar(sec1_data, sel1, '#5d7a8c')
+                if fig1:
                     st.plotly_chart(fig1, use_container_width=True)
             with r3c2:
-                labels2, values2 = build_pie_data(sec2_data)
-                if labels2:
-                    fig2 = go.Figure(data=[go.Pie(
-                        labels=labels2, values=values2,
-                        hole=0.4,
-                        marker=dict(colors=['#a67c5b','#bf9a78','#d4b895','#e9d6b2','#d5d5d5']),
-                        textinfo='label+percent',
-                        textposition='outside',
-                        textfont=dict(size=10, color='#2c3e50'),
-                        hovertemplate='<b>%{label}</b><br>%{value:,} entreprises<br>%{percent}<extra></extra>',
-                        pull=[0.03]*len(labels2),
-                    )])
-                    fig2.update_layout(
-                        title=dict(text=f"Secteurs d'activite — {sel2}", font=dict(size=13, color='#2c3e50')),
-                        height=260, margin=dict(t=40, b=10, l=10, r=10),
-                        paper_bgcolor='rgba(0,0,0,0)',
-                        showlegend=False,
-                    )
+                fig2 = _make_bar(sec2_data, sel2, '#a67c5b')
+                if fig2:
                     st.plotly_chart(fig2, use_container_width=True)
 
 
