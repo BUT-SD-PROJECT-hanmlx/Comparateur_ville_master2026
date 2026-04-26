@@ -14,7 +14,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Comparateur de Villes Françaises",
-    page_icon="",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -1300,11 +1300,12 @@ def main():
                 variant=""
             ), unsafe_allow_html=True)
 
-        # Row 3: Secteurs d'activités — 2 histogrammes (1 par ville)
+        # Row 3: Secteurs d'activités — 2 histogrammes côte à côte
         sec1_data = d1.get("secteurs")
         sec2_data = d2.get("secteurs")
         if sec1_data or sec2_data:
             AUTRES_KEY = "Autres activités de services"
+
             def _aggregate_secteurs(sd):
                 """Top 4 + Autres secteurs."""
                 if not sd:
@@ -1325,22 +1326,21 @@ def main():
                     result["Autres secteurs"] = autres
                 return result
 
-            def _make_bar(sd, ville, color):
+            def _make_bar(sd, ville, color, color_autres="#c8c3ba"):
                 agg = _aggregate_secteurs(sd)
                 if not agg:
                     return None
                 labels = list(agg.keys())
                 raw = list(agg.values())
-                # Pourcentages sur le total GLOBAL de la ville (tous secteurs)
                 total = sum(sd.values()) or 1
                 pcts = [round(v / total * 100, 1) for v in raw]
-                # Trier par valeur décroissante
                 pairs = sorted(zip(labels, pcts), key=lambda x: x[1], reverse=True)
                 labels, pcts = zip(*pairs)
+                colors = [color_autres if l == "Autres secteurs" else color for l in labels]
                 fig = go.Figure(go.Bar(
                     x=list(labels),
                     y=list(pcts),
-                    marker_color=color,
+                    marker_color=colors,
                     hovertemplate='<b>%{x}</b><br>' + ville + ' : %{y:.1f}%<extra></extra>',
                 ))
                 fig.update_layout(
